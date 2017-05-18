@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="<%= require('../src/assets').Images.FrontendFavicon.getICO() %>"/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="Survive and build your base, defending it from rivals. Fight for glory!">
+    <meta name="keywords" content="game,games,gaming,online,io,multiplayer,glory,glorio,village,castle">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Roboto|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<%= require('../src/assets').Misc.CssStyle.getCSS() %>">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="preroll"></div>
+<script type="text/javascript">
+    function initAipPreroll() {
+        if (typeof aipPlayer != "undefined") {
+            window.adplayer = new aipPlayer({
+                AD_WIDTH: 960,
+                AD_HEIGHT: 540,
+                AD_FULLSCREEN: true,
+                PREROLL_ELEM: document.getElementById('preroll'),
+                AIP_COMPLETE: function () {
+                    /*******************
+                     ***** WARNING *****
+                     *******************
+                     Please do not remove the PREROLL_ELEM
+                     from the page, it will be hidden automaticly.
+                     If you do want to remove it use the AIP_REMOVE callback below
+                     */
+                    if (window.adplayer.onadcompleted) {
+                        window.adplayer.onadcompleted();
+                    }
+                },
+                AIP_REMOVE: function () {
+                    // Here it's save to remove the PREROLL_ELEM from the page
+                    // But it's not necessary
+                }
+            });
+        } else {
+            // Failed to load the adslib ads are probably blocked
+            // don't call the startPreRoll function.
+            // it will result in an error.
+        }
+    }
+
+    function getScript(src, callback) {
+        var headElm = document.head || document.getElementsByTagName('head')[0];
+        var script = document.createElement("script");
+        var once = true;
+        script.async = "async";
+        script.type = "text/javascript";
+        script.charset = "UTF-8";
+        script.src = src;
+        script.onload = script.onreadystatechange = function () {
+            if (once && (!script.readyState || /loaded|complete/.test(script.readyState))) {
+                once = false;
+                callback();
+                script.onload = script.onreadystatechange = null;
+            }
+        };
+
+        headElm.appendChild(script);
+    }
+
+    getScript('//api.adinplay.com/player/v2/GLR/glor.io/player.min.js', initAipPreroll);
+</script>
+<script type="text/javascript">
+    function showInstructions() {
+        document.getElementById('instructions').style.display = 'block';
+    }
+    function showYoutubers() {
+        document.getElementById('youtubers').style.display = 'block';
+    }
+
+    function hideChangelog() {
+        document.getElementById('changelog').style.display = 'none';
+    }
+    function hideInstructions() {
+        document.getElementById('instructions').style.display = 'none';
+    }
+    function hideYoutubers() {
+        document.getElementById('youtubers').style.display = 'none';
+    }
+    function reload() {
+        window.location.replace('/');
+    }
+</script>
+<div class="preloader" id="preloader-screen">
+    <div class="preloader-content">
+        <div class="loading-logo">
+            <img src="<%= require('../src/assets').Images.FrontendLoad.getGIF() %>" width="400px" height="213px"/>
+        </div>
+        <div class="loading-message">
+            Launching imagination machine...
+        </div>
+    </div>
+</div>
+<div id="crashscreen">
+    <div class="crashcontent">
+        <div class="crashimage"><img width="300px" height="300px"
+                                     src="<%= require('../src/assets').Images.FrontendCrash.getPNG() %>"/></div>
+        <div class="crashtitle">Our imagination machine is broken :(</div>
+        <div class="crashtitle">Dwarf-Engineers are already on their way to fix it!</div>
+        <div class="crashtitle">Try you luck and push &darr; button &darr;</div>
+        <div class="crashbutton" onclick="reload();">Try again!</div>
+    </div>
+</div>
+
+<div id="serverfullscreen">
+    <div class="serverfullcontent">
+        <div class="serverfullimage"><img width="300px" height="300px"
+                                          src="<%= require('../src/assets').Images.FrontendCrash.getPNG() %>"/></div>
+        <div class="serverfulltitle">Server is full of knights :(</div>
+        <div class="serverfulltitle">New servers on the way!</div>
+        <div class="serverfulltitle">Try you luck and push &darr; button &darr;</div>
+        <div class="serverfullbutton" onclick="reload();">Try again!</div>
+    </div>
+</div>
+
+<div id="game-layout">
+    <div id="bottom-panel" class="menu">
+    </div>
+    <div id="left-panel" class="menu">
+    </div>
+    <div id="levelText">
+
+    </div>
+    <div id="levelProgressContainer">
+        <div id="levelProgress">
+            <div id="levelProgressBody"></div>
+        </div>
+    </div>
+    <div id="left-top-container">
+        <div id="respanel">
+
+        </div>
+        <div id="top-panel" class="menu">
+        </div>
+    </div>
+    <div id="inventory">
+    </div>
+    <div id="position-container">
+        0x0
+    </div>
+    <div class="leaderboard" id="leaderboard">
+
+    </div>
+    <div class="shop" id="shop">
+        <div class="list" id="shop-list">
+        </div>
+    </div>
+</div>
+<div id="lobby-layout" class="modal">
+    <div class="discord">
+        <a target="_blank" href="https://discord.gg/mAqmdZS"><img
+                    src="<%= require('../src/assets').Images.FrontendDiscordLogo.getSVG() %>" width="100px"
+                    height="30px"/></a>
+    </div>
+    <div class="reddit">
+        <a target="_blank" href="https://www.reddit.com/r/glor/"><img
+                    src="<%= require('../src/assets').Images.FrontendRedditLogo.getSVG() %>" width="100px"
+                    height="30px"/></a>
+    </div>
+
+    <div class="motd" id="motd">
+        <div class="motdtitle">Message Of The Day</div>
+        <div class="motdcontent" id="motdcontent">
+            If you are a Youtuber, simply follow "For Youtubers" link at the bottom of the page!
+        </div>
+        <div class="motdtwitter">
+            <a href="https://twitter.com/gloriogame" class="twitter-follow-button" data-show-count="false"
+               data-size="large">Follow @gloriogame</a>
+            <script>!function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');</script>
+        </div>
+    </div>
+
+    <div id="featuredyoutuber">
+        <div class="header">Featured youtuber:</div>
+    </div>
+    <div id="title-logo">GLOR.IO</div>
+    <div id="subtitle-logo">Ver 0.4.1-beta</div>
+    <div class="container">
+        <div class="card" id="login">
+            <input type="text" id="login-input" placeholder="Enter Name" maxlength="15">
+            <div class="cardButton" id="login-button" onclick="">Enter Game</div>
+            <script type="text/javascript">
+                (function () {
+                    document.getElementById('login-input').addEventListener('keydown', function (e) {
+                        if (e.keyCode === 13) {
+                            // do whatever you want with the value
+                            document.getElementById('login-button').onclick();
+                        }
+                    });
+                })();
+            </script>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="mailto:gloriogame@gmail.com">Contacts</a>
+        <a target="_blank" href="/changelog.txt">What's new?</a>
+        <a href="#" onclick="showInstructions();">How to play?</a>
+        <a href="#" onclick="showYoutubers();">For Youtubers</a>
+        <a target="_blank" href="http://iogames.space">More IO games</a>
+    </div>
+
+    <div class="window-darkbox" id="youtubers">
+        <div class="bigwindow">
+            <div class="wcontent">
+                <div class="cardHeader">For Youtubers</div>
+                <div class="cardText">
+                    <p>The main page of the game displays featured Youtubers in random order. In order to get to this
+                        list you will need to record a video / gameplay of our game, and send the link to our
+                        e-mail.</p>
+                    <p>After that, we will add you to the list of featured ones, and the addition will occur with the
+                        next game update.</p>
+                    <p> It is important that your video does not contain content prohibited by the rules of YouTube!</p>
+                    <p>Looking forward to seeing your letters!</p>
+                </div>
+            </div>
+            <div class="window-close-button" onclick="hideYoutubers();">
+                Close
+            </div>
+        </div>
+    </div>
+    <div class="window-darkbox" id="instructions">
+        <div class="bigwindow">
+            <div class="wcontent">
+                <div class="cardHeader">How to play?</div>
+                <div class="cardText">
+                    <p>Collect the resources around you, build walls and construct doors for protection.</p>
+                    <p>Collect eggs, kill animals, plant beds in order to get food.</p>
+                    <p>Create assistants: guards, peasants, mercenaries. Beware of wolves and other players.</p>
+                    <p>You can create your clan using "Create Party Link" button at the bottom of the page. After
+                        clicking on it, copy the link on the address bar of the browser and send it to your friends.</p>
+                    <p>The more gold you have, the higher your ranking in the leaderboard will be. Build towers to
+                        extract gold!</p>
+                    <p>You can hire units to accelerate your progress.</p>
+                </div>
+                <div class="cardHeader">Control:</div>
+                <div class="cardText">
+                    Move: W, A, S, D or arrows<br/>
+                    Look: Mouse<br/>
+                    Select building: 1-9 or click on the icon<br/>
+                    Attack / Gather: Click<br/>
+                </div>
+            </div>
+            <div class="window-close-button" onclick="hideInstructions();">
+                Close
+            </div>
+        </div>
+    </div>
+    <div id="gadmainmenubottom">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- glor.io mainmenu bottom -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-0334388716151269"
+             data-ad-slot="4492531527"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</div>
+<div id="common-layout">
+    <div id="ping-container">
+        100 ms
+    </div>
+    <div id="partylink">
+        Create party link
+    </div>
+</div>
+<div id="respawn-layout">
+    <div class="window-darkbox" id="respawn-window">
+        <div class="window">
+            <div class="window-ad">
+                <div id="respawn-ad">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- glor.io respawn-medium -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:336px;height:280px"
+                         data-ad-client="ca-pub-0334388716151269"
+                         data-ad-slot="8345491529"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <div id="respawn-button" class="inactive">
+                Spawn in 5 seconds...
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-96362141-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

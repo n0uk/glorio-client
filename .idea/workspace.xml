@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d0edfd1-46ab-4c96-9a54-f886ca69191b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/animals.ts" afterPath="$PROJECT_DIR$/src/factory/animals.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/bots.ts" afterPath="$PROJECT_DIR$/src/factory/bots.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/buildings.ts" afterPath="$PROJECT_DIR$/src/factory/buildings.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/components/playerlabel.ts" afterPath="$PROJECT_DIR$/src/factory/components/playerlabel.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/entity.ts" afterPath="$PROJECT_DIR$/src/factory/entity.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/entityfactory.ts" afterPath="$PROJECT_DIR$/src/factory/entityfactory.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/generators.ts" afterPath="$PROJECT_DIR$/src/factory/generators.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/pickups.ts" afterPath="$PROJECT_DIR$/src/factory/pickups.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/player.ts" afterPath="$PROJECT_DIR$/src/factory/player.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/spectator.ts" afterPath="$PROJECT_DIR$/src/factory/spectator.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/protocol/protocol.json" afterPath="$PROJECT_DIR$/src/protocol/protocol.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/buildingservice.ts" afterPath="$PROJECT_DIR$/src/services/buildingservice.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/childservice.ts" afterPath="$PROJECT_DIR$/src/services/childservice.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/craftmenuservice.ts" afterPath="$PROJECT_DIR$/src/services/craftmenuservice.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/servicemanager.ts" afterPath="$PROJECT_DIR$/src/services/servicemanager.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/game.ts" afterPath="$PROJECT_DIR$/src/states/game.ts" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="glorio-client" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="bots.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/bots.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="68" column="50" lean-forward="false" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entityfactory.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/entityfactory.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/states/game.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="252" column="32" lean-forward="false" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#164#205#0" expanded="true" />
+                <element signature="e#1200#1251#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="servermanager.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servermanager.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pingservice.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/pingservice.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="servicemanager.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/servicemanager.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="craftmenuservice.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/craftmenuservice.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="588" column="0" lean-forward="false" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#255#297#0" expanded="true" />
+                <marker date="1495116077233" expanded="true" signature="4906:4952" ph="..." />
+                <marker date="1495116077233" expanded="true" signature="5605:5651" ph="..." />
+                <marker date="1495116077233" expanded="true" signature="6762:6808" ph="..." />
+                <marker date="1495116077233" expanded="true" signature="8127:8205" ph="..." />
+                <marker date="1495116077233" expanded="true" signature="8239:8446" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="minimap.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/minimap.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="64" column="10" lean-forward="false" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="childservice.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/childservice.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerlabel.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/factory/components/playerlabel.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>HIDE&quot;</find>
+      <find>conso</find>
+      <find>console.</find>
+      <find>console.l</find>
+      <find>console.lo</find>
+      <find>create party</find>
+      <find>partylin</find>
+      <find>teamId =</find>
+      <find>console.log</find>
+      <find>par</find>
+      <find>partylink</find>
+      <find>party</find>
+      <find>getTeam</find>
+      <find>clanId</find>
+      <find>C</find>
+      <find>Comm</find>
+      <find>Commbi</find>
+      <find>Commb</find>
+      <find>Commit</find>
+      <find>Commit</find>
+      <find>initializeParty</find>
+      <find>cleanup</find>
+      <find>playerNa</find>
+      <find>Commit bu</find>
+      <find>s</find>
+      <find>set</find>
+      <find>setPlayer</find>
+      <find>setPlayerN</find>
+      <find>setPlayerNa</find>
+      <find>setPlayerName</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/factory/components/health.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/angryanimalanimator.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/redonhit.ts" />
+        <option value="$PROJECT_DIR$/src/factory/follower.ts" />
+        <option value="$PROJECT_DIR$/src/classes/door.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/playeranimator.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/dooranimator.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/networkinput.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/jumponhit.ts" />
+        <option value="$PROJECT_DIR$/src/config/config.json" />
+        <option value="$PROJECT_DIR$/src/states/lobby.ts" />
+        <option value="$PROJECT_DIR$/templates/css/style.css" />
+        <option value="$PROJECT_DIR$/scripts/generateAssetsClass.js" />
+        <option value="$PROJECT_DIR$/src/classes/adcontroller.ts" />
+        <option value="$PROJECT_DIR$/src/classes/respawn-window.ts" />
+        <option value="$PROJECT_DIR$/webpack.dist.config.js" />
+        <option value="$PROJECT_DIR$/src/states/connection.ts" />
+        <option value="$PROJECT_DIR$/src/services/networkviewportservice.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/networktransform.ts" />
+        <option value="$PROJECT_DIR$/src/services/pingservice.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/level.ts" />
+        <option value="$PROJECT_DIR$/assets/atlases/whitebear.json" />
+        <option value="$PROJECT_DIR$/src/assets.ts" />
+        <option value="$PROJECT_DIR$/src/services/minimap.ts" />
+        <option value="$PROJECT_DIR$/src/app.ts" />
+        <option value="$PROJECT_DIR$/src/globals.d.ts" />
+        <option value="$PROJECT_DIR$/templates/index.ejs" />
+        <option value="$PROJECT_DIR$/src/services/resources.ts" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/src/states/preloader.ts" />
+        <option value="$PROJECT_DIR$/src/services/actionservice.ts" />
+        <option value="$PROJECT_DIR$/src/protocol/protocol.ts" />
+        <option value="$PROJECT_DIR$/src/socket/socket.ts" />
+        <option value="$PROJECT_DIR$/src/servermanager.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/sprite.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/teamcomponent.ts" />
+        <option value="$PROJECT_DIR$/src/services/buildingservice.ts" />
+        <option value="$PROJECT_DIR$/src/factory/animals.ts" />
+        <option value="$PROJECT_DIR$/src/factory/player.ts" />
+        <option value="$PROJECT_DIR$/src/factory/spectator.ts" />
+        <option value="$PROJECT_DIR$/src/factory/entity.ts" />
+        <option value="$PROJECT_DIR$/src/factory/pickups.ts" />
+        <option value="$PROJECT_DIR$/src/factory/buildings.ts" />
+        <option value="$PROJECT_DIR$/src/factory/generators.ts" />
+        <option value="$PROJECT_DIR$/src/factory/entityfactory.ts" />
+        <option value="$PROJECT_DIR$/src/factory/bots.ts" />
+        <option value="$PROJECT_DIR$/src/states/game.ts" />
+        <option value="$PROJECT_DIR$/src/services/servicemanager.ts" />
+        <option value="$PROJECT_DIR$/src/services/craftmenuservice.ts" />
+        <option value="$PROJECT_DIR$/src/services/childservice.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/playerlabel.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="states" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="typescript-compiler-editor-notification" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/GitHub/glorio-client/src/services/resources.ts" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\glorio-client\assets\frontend" />
+      <recent name="C:\GitHub\glorio-client\assets\icon" />
+      <recent name="C:\GitHub\glorio-client\assets\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\glorio-client\src\states" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.Unnamed">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="npm.Unnamed" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d0edfd1-46ab-4c96-9a54-f886ca69191b" name="Default" comment="" />
+      <created>1493287076415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1493287076415</updated>
+      <workItem from="1493287078769" duration="150869000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="150869000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.50421494" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33802816" sideWeight="0.49367756" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49789253" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/states/crash.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/connection.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/networksendservice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/networkviewportservice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="24" column="89" lean-forward="false" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/networktransform.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/buildmanager.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="123" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="283" column="17" lean-forward="false" selection-start-line="283" selection-start-column="17" selection-end-line="283" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/networkinput.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/atlases/wolf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/atlases/whitebear.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="434" column="21" lean-forward="false" selection-start-line="434" selection-start-column="9" selection-end-line="434" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="138" column="8" lean-forward="false" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/additionalbuildingsmanager.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/globals.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/resources.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="100" lean-forward="true" selection-start-line="41" selection-start-column="100" selection-end-line="41" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.dist.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/preloader.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="56" column="153" lean-forward="false" selection-start-line="56" selection-start-column="153" selection-end-line="56" selection-end-column="153" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/playeranimator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/actionservice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/protocol/protocol.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="125" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/packageElectronApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/socket/socket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="268" column="62" lean-forward="true" selection-start-line="268" selection-start-column="62" selection-end-line="268" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/game_old.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="305" column="18" lean-forward="false" selection-start-line="305" selection-start-column="18" selection-end-line="305" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/resourcedisplay.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/respawn-window.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="272" column="14" lean-forward="false" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/sprite.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/redonhit.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/level.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/teamcomponent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="31" column="98" lean-forward="true" selection-start-line="31" selection-start-column="98" selection-end-line="31" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/buildingservice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="214" column="11" lean-forward="false" selection-start-line="214" selection-start-column="11" selection-end-line="214" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/protocol/protocol.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <marker date="1495114457460" expanded="true" signature="185:1324" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="203:1318" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="1175:1310" ph="{&quot;id&quot;: 13...}" />
+            <marker date="1495114457460" expanded="true" signature="1350:1485" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="1368:1479" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="1384:1471" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="1504:1952" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="1522:1946" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="1538:1625" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="1640:1726" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="1741:1827" ph="{&quot;id&quot;: 3...}" />
+            <marker date="1495114457460" expanded="true" signature="1851:1938" ph="{&quot;id&quot;: 4...}" />
+            <marker date="1495114457460" expanded="true" signature="1977:2223" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="1995:2217" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2011:2098" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="2122:2209" ph="{&quot;id&quot;: 4...}" />
+            <marker date="1495114457460" expanded="true" signature="2249:2384" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2267:2378" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2283:2370" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="2413:2548" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2431:2542" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2447:2534" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="2569:2812" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2587:2806" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2603:2690" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="2711:2798" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="2834:3036" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2852:3030" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="2872:3022" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="2971:3012" ph="{&quot;packed&quot;: false...}" />
+            <marker date="1495114457460" expanded="true" signature="3050:3186" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3068:3180" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3086:3172" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="3213:3239" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3267:3516" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3285:3510" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3310:3396" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="3416:3502" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="3540:3845" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3558:3839" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3574:3661" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="3681:3831" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="3780:3821" ph="{&quot;packed&quot;: false...}" />
+            <marker date="1495114457460" expanded="true" signature="3865:4238" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3883:4232" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="3901:4051" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="4000:4041" ph="{&quot;packed&quot;: false...}" />
+            <marker date="1495114457460" expanded="true" signature="4073:4224" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="4173:4214" ph="{&quot;packed&quot;: false...}" />
+            <marker date="1495114457460" expanded="true" signature="4266:4644" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="4284:4638" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="4307:4457" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="4406:4447" ph="{&quot;packed&quot;: false...}" />
+            <marker date="1495114457460" expanded="true" signature="4479:4630" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="4579:4620" ph="{&quot;packed&quot;: false...}" />
+            <marker date="1495114457460" expanded="true" signature="4669:4695" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="4718:4997" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="4736:4991" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="4755:4906" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="4855:4896" ph="{&quot;packed&quot;: false...}" />
+            <marker date="1495114457460" expanded="true" signature="4927:4983" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="5018:5360" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="5036:5354" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="5051:5137" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="5152:5238" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="5260:5346" ph="{&quot;id&quot;: 3...}" />
+            <marker date="1495114457460" expanded="true" signature="5381:5632" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="5399:5626" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="5422:5509" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="5531:5618" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="5654:5995" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="5672:5989" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="5687:5773" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="5788:5874" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="5894:5981" ph="{&quot;id&quot;: 3...}" />
+            <marker date="1495114457460" expanded="true" signature="6023:6207" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6041:6201" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6059:6116" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="6136:6193" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="6235:6582" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6253:6576" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6268:6354" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="6369:6455" ph="{&quot;id&quot;: 2...}" />
+            <marker date="1495114457460" expanded="true" signature="6481:6568" ph="{&quot;id&quot;: 3...}" />
+            <marker date="1495114457460" expanded="true" signature="6611:6749" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6629:6743" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6650:6735" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="6776:6916" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6794:6910" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="6815:6902" ph="{&quot;id&quot;: 1...}" />
+            <marker date="1495114457460" expanded="true" signature="6946:6972" ph="{...}" />
+            <marker date="1495114457460" expanded="true" signature="7040:7126" ph="{&quot;id&quot;: 1...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/animals.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/player.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/spectator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="37" column="33" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/pickups.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="35" column="60" lean-forward="false" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/buildings.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="102" column="35" lean-forward="false" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/generators.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/bots.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="68" column="50" lean-forward="false" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/entityfactory.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/game.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="252" column="32" lean-forward="false" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#164#205#0" expanded="true" />
+            <element signature="e#1200#1251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servermanager.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/pingservice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/servicemanager.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/minimap.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="64" column="10" lean-forward="false" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/craftmenuservice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="588" column="0" lean-forward="false" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#255#297#0" expanded="true" />
+            <marker date="1495116077233" expanded="true" signature="4906:4952" ph="..." />
+            <marker date="1495116077233" expanded="true" signature="5605:5651" ph="..." />
+            <marker date="1495116077233" expanded="true" signature="6762:6808" ph="..." />
+            <marker date="1495116077233" expanded="true" signature="8127:8205" ph="..." />
+            <marker date="1495116077233" expanded="true" signature="8239:8446" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/childservice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/playerlabel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

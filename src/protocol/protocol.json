@@ -1,0 +1,385 @@
+﻿{
+  "nested": {
+    "Assign": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "SyncObject": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "objectType": {
+          "type": "uint32",
+          "id": 2
+        },
+        "x": {
+          "type": "float",
+          "id": 3
+        },
+        "y": {
+          "type": "float",
+          "id": 4
+        },
+        "rotation": {
+          "type": "float",
+          "id": 5
+        },
+        "health": {
+          "type": "float",
+          "id": 6
+        },
+        "maxHealth": {
+          "type": "float",
+          "id": 7
+        },
+        "level": {
+          "type": "uint32",
+          "id": 8
+        },
+        "exp": {
+          "type": "float",
+          "id": 9
+        },
+        "teamId": {
+          "type": "string",
+          "id": 10
+        },
+        "playerName": {
+          "type": "string",
+          "id": 11
+        },
+        "transportId": {
+          "type": "int32",
+          "id": 12
+        },
+        "isOpened": {
+          "type": "bool",
+          "id": 13
+        },
+        "parentId": {
+          "type": "int32",
+          "id": 14
+        }
+      }
+    },
+    "SyncObjectDelete": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "SyncChild": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "x": {
+          "rule": "required",
+          "type": "float",
+          "id": 2
+        },
+        "y": {
+          "rule": "required",
+          "type": "float",
+          "id": 3
+        },
+        "objectType": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 4
+        }
+      }
+    },
+    "SyncChildDelete": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "objectType": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 4
+        }
+      }
+    },
+    "ObjectSendDamage": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "ObjectReceiveDamage": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "ChatMessage": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "message": {
+          "rule": "required",
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "SyncBackpack": {
+      "fields": {
+        "counts": {
+          "rule": "repeated",
+          "type": "int32",
+          "id": 1,
+          "options": {
+            "packed": false
+          }
+        }
+      }
+    },
+    "Ping": {
+      "fields": {
+        "time": {
+          "rule": "required",
+          "type": "float",
+          "id": 1
+        }
+      }
+    },
+    "RequestServerInfo": {
+      "fields": {}
+    },
+    "ResponseServerInfo": {
+      "fields": {
+        "clientCount": {
+          "rule": "required",
+          "type": "int32",
+          "id": 1
+        },
+        "health": {
+          "rule": "required",
+          "type": "int32",
+          "id": 2
+        }
+      }
+    },
+    "FloatResources": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "counts": {
+          "rule": "repeated",
+          "type": "int32",
+          "id": 2,
+          "options": {
+            "packed": false
+          }
+        }
+      }
+    },
+    "MapMessage": {
+      "fields": {
+        "data": {
+          "rule": "repeated",
+          "type": "int32",
+          "id": 1,
+          "options": {
+            "packed": false
+          }
+        },
+        "teamData": {
+          "rule": "repeated",
+          "type": "string",
+          "id": 2,
+          "options": {
+            "packed": false
+          }
+        }
+      }
+    },
+    "LeaderboardMessage": {
+      "fields": {
+        "scoreData": {
+          "rule": "repeated",
+          "type": "int32",
+          "id": 1,
+          "options": {
+            "packed": false
+          }
+        },
+        "nameData": {
+          "rule": "repeated",
+          "type": "string",
+          "id": 2,
+          "options": {
+            "packed": false
+          }
+        }
+      }
+    },
+    "ForceDisconnect": {
+      "fields": {}
+    },
+    "PackedMessage": {
+      "fields": {
+        "sizes": {
+          "rule": "repeated",
+          "type": "uint32",
+          "id": 1,
+          "options": {
+            "packed": false
+          }
+        },
+        "message": {
+          "type": "bytes",
+          "id": 2
+        }
+      }
+    },
+    "PlayerInput": {
+      "fields": {
+        "x": {
+          "rule": "required",
+          "type": "float",
+          "id": 1
+        },
+        "y": {
+          "rule": "required",
+          "type": "float",
+          "id": 2
+        },
+        "rotation": {
+          "rule": "required",
+          "type": "float",
+          "id": 3
+        }
+      }
+    },
+    "PlayerCheat": {
+      "fields": {
+        "cheatType": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "password": {
+          "rule": "required",
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "PlayerAction": {
+      "fields": {
+        "x": {
+          "rule": "required",
+          "type": "float",
+          "id": 1
+        },
+        "y": {
+          "rule": "required",
+          "type": "float",
+          "id": 2
+        },
+        "action": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 3
+        }
+      }
+    },
+    "PlayerSpawnRequest": {
+      "fields": {
+        "name": {
+          "type": "string",
+          "id": 1
+        },
+        "teamId": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "PlayerBuildRequest": {
+      "fields": {
+        "x": {
+          "rule": "required",
+          "type": "float",
+          "id": 1
+        },
+        "y": {
+          "rule": "required",
+          "type": "float",
+          "id": 2
+        },
+        "buildingType": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 3
+        }
+      }
+    },
+    "PlayerBuildResponse": {
+      "fields": {
+        "success": {
+          "rule": "required",
+          "type": "bool",
+          "id": 1
+        }
+      }
+    },
+    "PlayerChatRequest": {
+      "fields": {
+        "message": {
+          "rule": "required",
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "PlayerUnmountRequest": {
+      "fields": {}
+    },
+    "PlayerSetViewportSize": {
+      "fields": {
+        "width": {
+          "rule": "required",
+          "type": "int32",
+          "id": 1
+        },
+        "height": {
+          "rule": "required",
+          "type": "int32",
+          "id": 2
+        }
+      }
+    }
+  }
+}

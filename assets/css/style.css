@@ -1,0 +1,1228 @@
+    /* The Modal (background) */
+    body {
+        background-color: rgb(255,255,255);
+        background-color: rgba(255,255,255,1);
+        margin: 0px;/*This removes the border around the canvas that Phaser adds, making the game actually take up all the available space*/
+        overflow: hidden;
+    }
+
+    /* Modal window */
+    .preloader {
+      text-align:center;
+      display: block;
+      position: fixed;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,1);     
+    }
+    
+    .speechbubble {
+        position: absolute;
+        display: block;
+        color: #222222;
+        font-size: 25px;
+        background-color: rgba(255,255,255,1);
+        border-radius: 25px;
+        padding: 10px;
+        user-select: none;
+        cursor: default;
+        pointer-events: none;
+    }
+    
+    .speechbubble input {
+        text-align: center;
+        color: #222222;
+        font-size: 25px;
+        border-width:0px;
+        border:none;
+        pointer-events: all;
+    }
+    
+    .speechbubble input:focus {
+        outline: none;
+    }    
+    
+    .preloader-content {
+        user-select: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -200px;
+        margin-top: -200px;
+        padding: 10px;
+        width: 400px;
+        height: 400px;
+        max-width:400px;
+        cursor: default;
+    }
+    
+    .loading-logo { 
+        padding-bottom: 50px;
+        user-select: none;
+    }
+    
+    .loading-message {
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        font-size: 35px;
+    }
+    
+    .modal {
+      text-align:center;
+      display: block;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }    
+    
+    #lobby-layout {
+        display: none;
+    }
+    
+    /* Logo */
+    #title-logo {
+        font-family: 'Amatic SC', cursive;
+    	text-shadow: 0 1px 0 #c4c4c4, 0 2px 0 #c4c4c4, 0 3px 0 #c4c4c4, 0 4px 0 #c4c4c4, 0 5px 0 #c4c4c4, 0 6px 0 #c4c4c4, 0 7px 0 #c4c4c4, 0 8px 0 #c4c4c4, 0 9px 0 #c4c4c4;
+    	color: white;
+    	font-size:10em;
+    	padding-top: 2%;
+    	padding-bottom: 2%;
+    	user-select: none;
+    	cursor: default;
+    }
+    
+    #subtitle-logo {
+        position:absolute;
+        left: 50%;
+        top: 0px;
+        margin-left: -100px;
+        width: 200px;
+        font-family: 'Amatic SC', cursive;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+    	color: white;
+    	font-size:24px;
+    	user-select: none;
+    	cursor: default;
+    }    
+    
+    /* Container for cards */
+    .container {
+        display: block;
+        text-align: center;
+        user-select: none;
+        white-space: nowrap;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        margin-top: -150px;
+        width: 400px;
+        left: 50%;
+        margin-left: -200px;
+    }
+    
+    .container .card {
+    	vertical-align: top;
+    	text-align: left;
+    	white-space: normal;
+    	word-wrap: break-word;
+    	margin: 5px;
+    	display: inline-block;
+    	width: 350px;
+    	padding: 18px;
+    	background-color: #fff;
+    	-moz-box-shadow: 0px 7px #c4c4c4;
+    	-webkit-box-shadow: 0px 7px #c4c4c4;
+    	box-shadow: 0px 7px #c4c4c4;
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	overflow: hidden;
+    }
+    
+    .adc300x250 {
+        width: 300px;
+        height: 250px;
+    }
+    
+    .cardButton {
+        font-family:  'Slabo 27px', serif;
+    	text-align: center;
+    	font-size: 23px;
+    	padding: 6px;
+    	box-sizing: border-box;
+    	color: #fff;
+    	background-color: #4286f4;
+    	width: 100%;
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	cursor: pointer;
+    }
+    
+    #login-input {
+        font-family:  'Slabo 27px', serif;
+    	text-align: center;
+    	font-size: 23px;
+    	margin-bottom: 16px;
+    	padding: 6px;
+    	border: none;
+    	outline: none;
+    	box-sizing: border-box;
+    	color: #4A4A4A;
+    	background-color: #dedede;
+    	width: 100%;
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;        
+    }
+    
+    .cardButton:hover {
+        font-family:  'Slabo 27px', serif;
+    	background-color: #1c6ced;
+    }    
+    
+    #guide {
+	    height: 300px;
+	    overflow-y: auto;    
+    
+    }
+    
+    .cardHeader {
+    	font-size: 45px;
+    	color: #292929;
+    	padding-top: 20px;
+    	padding-bottom: 10px;
+	    font-family: 'Amatic SC', cursive;    	
+        width: 100%;
+	    text-align: center;
+    }
+    
+    .cardSubHeader {
+        padding: 15px;
+    	font-size: 35px;
+    	color: #292929;
+    	margin-bottom: 5px;        
+    	font-family:  'Slabo 27px', serif;
+    }    
+    
+    .cardText {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+    	font-size: 25px;
+    	color: #222222;
+    	margin-bottom: 10px;        
+        font-family:  'Slabo 27px', serif;	
+    }
+    
+    /* Footer block */
+    .footer {  
+        font-family: 'Amatic SC', cursive;
+        font-size: 2em;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 800px;
+        margin-left: -400px;
+        text-align: center;
+        z-index: 2;
+        margin-bottom: 0px;
+        padding-bottom: 0.5em;
+        user-select: none;
+    }
+      
+    .footer a {
+        color:white;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: underline;
+    }
+    
+    .footer .title {
+        padding-bottom: 0px;
+        user-select: none;
+        cursor: default;
+    }
+
+    #position-container {
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        color: white;
+        bottom:  0;
+        padding-right: 0.5em;
+        padding-bottom: 2.5em;
+        font-size: 2em;
+        font-family:  'Amatic SC', cursive;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        display: none;
+        user-select: none;
+        cursor: default;
+    }
+        
+    #partylink {
+        z-index: 2;
+        font-family:  'Amatic SC', cursive;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;        
+        color: white;        
+        cursor: pointer;        
+    	position: absolute;
+    	right: 0;
+    	bottom: 0;
+    	visibility: hidden;
+    	text-decoration: underline;
+        padding-right: 0.5em;
+        padding-bottom: 0.5em;    	
+        font-size: 2em;
+    }
+    
+    #ping-container {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        color: white;
+        bottom:  0;
+        padding-left: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 2em;
+        font-family:  'Amatic SC', cursive;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        display: none;
+        user-select: none;
+        cursor: default;
+    }
+    
+    .leaderboard {
+        display: block;
+        visibility: hidden;
+    	color: #fff;
+    	font-size: 31px;
+    	text-align: left;
+    	position: absolute;
+    	right: 20px;
+    	top: 20px;
+    	padding: 10px;
+    	padding-top: 7px;
+    	padding-bottom: 5px;
+    	width: 220px;
+    	background-color: rgba(0, 0, 0, 0.25);
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	z-index: 2;
+    	user-select: none;
+    	cursor: default;
+    }
+    
+    .leaderboard .record {
+        overflow: hidden;
+        white-space: nowrap;        
+        font-family: 'Amatic SC', cursive;
+    }    
+    
+    .leaderboard .score {
+    	text-align: right;
+    	float: right;
+    	margin-left: 10px;
+    	display: inline-block;
+    	font-size: 32px;
+    }
+    
+    .leaderboard .nickname {
+        float: left;
+    	display: block;
+    	max-width: 150px;
+    	white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+    	-o-text-overflow: ellipsis;
+    	font-size: 32px;
+    }
+    
+    #inventory {
+    	position: absolute;
+    	bottom: 17px;
+    	width: 100%;
+    	text-align: center;
+    	visibility: hidden;
+    	user-select: none;
+    }
+
+    .inventoryItem {
+    	width: 64px;
+    	height: 64px;
+    	margin-left: 10px;
+    	margin-right: 10px;
+    	background-color: rgba(0, 0, 0, 0.25);
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	display: inline-block;
+    	cursor: pointer;
+    	pointer-events: all;
+    }
+    
+    .inventoryItem:hover {
+    	background-color: rgba(50, 50, 50, 0.25);
+    }
+    
+    .itemIcon {
+    	width: 64px;
+    	height: 64px;
+    }
+    
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+    }
+    
+    .tooltip-top {
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+    }    
+    
+    .tooltiptext .tooltipheader {
+        font-size: 24px;
+    }
+    
+    .tooltiptext .costs {
+        text-align: left;
+    }
+    
+    .tooltiptext .limit {
+        text-align: right;
+    }
+    
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 300px;
+        background-color: rgba(255,255,255,1);
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+     
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 2;
+        bottom: 100%;
+        left: 50%; 
+        margin-left: -150px;
+
+        font-size: 24px;
+        font-family:  'Slabo 27px', serif;
+        color: #222;
+        user-select: none;
+        cursor: default;
+    }
+    
+    .tooltiptextdown .tooltipheader {
+        font-size: 24px;
+    }
+    
+    .tooltiptextdown .costs {
+        text-align: left;
+    }
+    
+    .tooltiptextdown .limit {
+        text-align: right;
+    }    
+    
+    .tooltiptextright .tooltipheader {
+        font-size: 24px;
+    }
+    
+    .tooltiptextright .costs {
+        text-align: left;
+    }
+    
+    .tooltiptextright .limit {
+        text-align: right;
+    }        
+    
+    .tooltip .tooltiptextdown {
+        visibility: hidden;
+        width: 300px;
+        background-color: rgba(255,255,255,1);
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+     
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 2;
+        top: 100%;
+        left: 50%; 
+        margin-left: -150px;
+
+        font-size: 24px;
+        font-family:  'Slabo 27px', serif;
+        color: #222;
+        user-select: none;
+        cursor: default;        
+    }
+    
+    .tooltip .tooltiptextright {
+        visibility: hidden;
+        width: 200px;
+        background-color: rgba(255,255,255,1);
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+     
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 2;
+        top: -5px;
+        left: 105%;
+
+        font-size: 24px;
+        font-family:  'Slabo 27px', serif;
+        color: #222;
+        user-select: none;
+        cursor: default;
+    }
+    
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }    
+    
+    .tooltip:hover .tooltiptextdown {
+        visibility: visible;
+    }        
+    
+    .tooltip:hover .tooltiptextright {
+        visibility: visible;
+    }            
+    
+    #game-layout {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+    }
+    
+    #left-top-container {
+        position:absolute;
+        display: block;
+        left: 20px;
+        top: 20px;
+        pointer-events: none;
+    }
+    
+    #actions {
+    	text-align: center;
+    	user-select: none;
+    	float: left;
+    	display: block;
+    }
+    
+    .actionItem {
+        position: relative;
+    	width: 48px;
+    	height: 48px;
+    	margin-left: 10px;
+    	margin-right: 10px;
+    	background-color: rgba(0, 0, 0, 0.25);
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	display: inline-block;
+    	cursor: pointer;
+    	pointer-events: all;
+    }
+    
+    .actionItem.available {
+        display: inline-block;
+    }
+    
+    .actionItem.unavailable {
+        display: none;
+    }
+    
+    .actionItem:hover {
+    	background-color: rgba(50, 50, 50, 0.25);
+    }
+    
+    .actionItemIcon {
+    	width: 48px;
+    	height: 48px;
+    }    
+    
+    .actionItem .keylimit {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        width: 48px;
+        text-align: center;
+        color: rgba(255,255,255,1);
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;        
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        pointer-event: none;
+        user-select: none;        
+    }    
+    
+    #respanel {
+    	background-color: rgba(0, 0, 0, 0.25);
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	color: #fff;
+    	font-family:  'Slabo 27px', serif;
+    	font-size: 1.5em;
+        display: none;
+        padding: 10px;
+        user-select: none;
+        pointer-events: none;
+        float: left;
+    }
+    
+    #levelProgressContainer {
+        visibility: hidden;
+    	width: 100%;
+    	position: absolute;
+    	bottom: 83px;
+    	text-align: center;
+    }
+
+    #levelText {
+        visibility: hidden;
+    	width: 100%;
+    	position: absolute;
+    	bottom: 105px;
+    	text-align: center;
+    	color: #fff;
+    	font-size: 24px;
+    	font-family:  'Slabo 27px', serif;
+    	user-select: none;
+    	cursor: default;
+    }
+    
+    #levelProgress {
+    	background-color: rgba(0, 0, 0, 0.25);
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	padding: 5px;
+    	width: 314px;
+    	height: 9px;
+    	display: inline-block;
+    }
+    
+    #levelProgressBody {
+    	background-color: rgba(255, 255, 255, 1);
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	width: 0px;
+    	height: 100%;
+    }    
+    
+    #gadmainmenubottom {
+        display: block;
+        z-index: 2;
+        width: 728px;
+        height: 90px;
+        bottom: 15%;
+        position: absolute;
+        left: 50%;
+        margin-left: -364px;
+    }
+    
+    .window-darkbox {
+        position: fixed;
+        display: block;
+        z-index: 3;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.7);        
+    }
+    
+    .window {
+        background-color: rgba(255,255,255,1);
+        position: absolute;
+        z-index: 3;
+        width: 336px;
+        height: 320px;
+        left: 50%;
+        top: 50%;
+        margin-top: -168px;
+        margin-left: -160px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    
+    .window .window-ad {
+        width: 100%;
+        height: 280px;
+        cursor: pointer;
+    }
+    /* background: url("image") center center / contain no-repeat */
+    
+    #respawn-window {
+        display: none;
+    }
+    
+    #respawn-button {
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        user-select: none;
+        height: 40px;
+        width: 100%;
+        font-family:  'Slabo 27px', serif;
+        font-size: 24px;
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+    }
+    
+    #respawn-button.active {
+        background-color: #60a04b;
+    }
+    
+    #respawn-button.inactive {
+        background-color: #ec7777;
+    }
+
+    .bigwindow {
+        background-color: rgba(255,255,255,1);
+        position: absolute;
+        z-index: 3;
+        width: 600px;
+        height: 540px;
+        left: 50%;
+        top: 50%;
+        margin-top: -270px;
+        margin-left: -300px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    
+    .wcontent {
+        width: 100%;
+        height: 500px;
+        cursor: default;
+        overflow-y: scroll;
+    }
+    
+    .window-close-button {
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        user-select: none;
+        height: 40px;
+        width: 100%;
+        font-family:  'Slabo 27px', serif;
+        font-size: 24px;
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;        
+        background-color: #60a04b;
+    }
+    
+    #changelog {
+        display: none;
+    }
+    #youtubers {
+        display: none;
+    }
+    #instructions {
+        display: none;
+    }
+    
+    #featuredyoutuber {
+        user-select: none;
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        margin: 10px;
+        text-align: left;
+        width: 300px;
+        color: white;
+        font-family:  'Slabo 27px', serif;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;        
+        font-size: 30px;
+    }
+    #featuredyoutuber.header {
+        padding-bottom: 10px;
+    }
+    
+    #respawn-ad {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #crashscreen {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 6;
+        background-color: rgba(0,0,0,1);
+        color: white;
+    }
+    
+    .crashcontent {
+        user-select: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -300px;
+        margin-top: -300px;
+        padding: 10px;
+        width: 600px;
+        height: 600px;
+        cursor: default;
+        text-align: center;
+    }
+    
+    .crashtitle {
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        font-size: 45px;
+        margin: 10px;
+    }
+    
+    .crashbutton {
+        margin-top: 20px;
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        font-size: 35px;
+        font-family:  'Slabo 27px', serif;
+        cursor: pointer;
+    }
+    
+    .motd {
+        user-select: none;
+        display: none;
+        position: absolute;
+        top: 200px;
+        left: 0px;
+        width: 300px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(26, 26, 26, 0.8);
+        padding-bottom: 10px;
+    }
+    
+    .motdtitle {
+        margin: 10px;
+        font-size: 35px;
+        color: #ffffff;
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+    }
+    
+    .motdcontent {
+        margin: 10px;
+        color: white;
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;
+    }
+    
+    .keyhint {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        color: rgba(255,255,255,0.7);
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;        
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        pointer-event: none;
+        user-select: none;
+    }
+    
+    .inventoryItem .keylimit {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 64px;
+        text-align: center;
+        color: rgba(255,255,255,1);
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;        
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        pointer-event: none;
+        user-select: none;        
+    }
+    
+    #serverfullscreen {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 6;
+        background-color: rgba(0,0,0,1);
+        color: white;
+    }
+    
+    .serverfullcontent {
+        user-select: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -300px;
+        margin-top: -300px;
+        padding: 10px;
+        width: 600px;
+        height: 600px;
+        cursor: default;
+        text-align: center;
+    }
+    
+    .serverfulltitle {
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        font-size: 45px;
+        margin: 10px;
+    }
+    
+    .serverfullbutton {
+        margin-top: 20px;
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        font-size: 35px;
+        font-family:  'Slabo 27px', serif;
+        cursor: pointer;
+    }    
+    
+    .discord {
+        position: absolute;
+        left: 50%;
+        margin-left: -220px;
+        padding-top: 5px;
+        border-radius: 0px 0px 5px 5px;
+        background-color: #7289DA;
+        color: #333333;
+        text-decoration: none;
+    }
+    
+    .discord a {
+        max-width: 150px;
+        text-decoration: underline;
+        color: #333333;
+        user-select: none;
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;            
+    }
+    
+    .reddit {
+        position: absolute;
+        right: 50%;
+        margin-right: -220px;
+        padding-top: 5px;
+        border-radius: 0px 0px 5px 5px;
+        background-color: #ffffff;
+        color: #333333;
+        text-decoration: none;
+    }
+    
+    .reddit a {
+        max-width: 150px;
+        text-decoration: underline;
+        color: #333333;
+        user-select: none;
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;            
+    }    
+    
+    #preroll {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+    
+    #side-inventory {
+        position: absolute;
+        display: block;
+        left: -10px;
+        top: 150px;
+        pointer-events: none;        
+    	text-align: left;
+    	user-select: none;
+    }
+    
+    .sideItem {
+    	width: 48px;
+    	height: 48px;
+    	margin-bottom: 20px;
+    	margin-left: 10px;
+    	margin-right: 10px;
+    	background-color: rgba(0, 0, 0, 0.25);
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	display: inline-block;
+    	cursor: pointer;
+    	pointer-events: all;
+    }
+    
+    .sideItem.available {
+        display: inline-block;
+    }
+    
+    .sideItem.unavailable {
+        display: inline-block;
+    }
+    
+    .sideItem:hover {
+    	background-color: rgba(50, 50, 50, 0.25);
+    }
+    
+    .sideItemIcon {
+    	width: 48px;
+    	height: 48px;
+    }    
+    
+    .sideItem .keylimit {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        width: 48px;
+        text-align: center;
+        color: rgba(255,255,255,1);
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;        
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        pointer-event: none;
+        user-select: none;        
+    }    
+
+    #bottom-panel.menu {
+        width: 100%;
+        bottom: 10px;
+        position:absolute;
+        text-align:center;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    #left-panel.menu {
+        left: 15px;
+        top: 160px;
+        position:absolute;
+        text-align:center;
+        user-select: none;
+        pointer-events: none;
+        width: 64px;
+        height: 300px;
+    }
+
+    #top-panel.menu {
+        float: left;
+        display: block;
+        user-select: none;
+        pointer-events: none;
+        width: 300px;
+        height: 64px;
+    }
+
+    .item > img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item.available {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .item.unavailable {
+        background-color: rgba(255, 0, 0, 0.25);
+    }
+
+    .item {
+        width: 50px;
+        height: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: rgba(0, 0, 0, 0.25);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        display: inline-block;
+        cursor: pointer;
+        pointer-events: all;
+    }
+
+    .item > .hotkey {
+        display: block;
+        position: absolute;
+        visibility: visible;
+        top: 0px;
+        margin-top: -2px;
+        left: 5px;
+        color: rgba(255,255,255,0.7);
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        pointer-event: none;
+        user-select: none;
+    }
+
+    .item > .limit {
+        display: block;
+        position: absolute;
+        visibility: visible;
+        top: 100%;
+        margin-top: -25px;
+        left: 5px;
+        color: rgba(255,255,255,0.7);
+        font-size: 20px;
+        font-family: 'Slabo 27px', serif;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+        pointer-event: none;
+        user-select: none;
+    }
+
+    .menu > .item {
+        position: relative;
+        display: inline-block;
+    }
+
+    #shop {
+        width: 320px;
+        height:  420px;
+        position:  absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -260px;
+        background-color: rgba(0,0,0,0);
+        pointer-events: all;
+        z-index: 2;
+    }
+
+    #shop > #close-button {
+        color: white;
+        position: absolute;
+        right: 5px;
+        top: 2px;
+        cursor: pointer;
+        display: block;
+        user-select: none;
+        pointer-events: all;
+    }
+
+    #shop > .list {
+        max-width: 320px;
+        max-height: 420px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .shop-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        user-select: none;
+        pointer-events: all;
+        width: 100%;
+        display: block;
+        height: 60px;
+        vertical-align: middle;
+        color: white;
+        font-size: 18px;
+        font-family:  'Slabo 27px', serif;
+        cursor: pointer;
+        border-bottom: rgb(100,100,100) 1px dashed;
+        border-top: rgb(100,100,100) 1px dashed;
+    }
+
+
+    .shop-item.available {
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    .shop-item.unavailable {
+        background-color: rgba(50, 0, 0, 1);
+    }
+
+
+    .shop-item.available:hover {
+        background-color: rgba(0, 128, 0, 1);
+    }
+
+    .shop-item.unavailable:hover {
+        background-color: rgba(128, 0, 0, 1);
+    }
+
+    .shop-item > .price {
+        float: right;
+        position: relative;
+        top: 0px;
+        padding-top: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        text-align: right;
+    }
+
+    .shop-item > .icon {
+        float: left;
+        padding-right: 10px;
+        padding-top: 6px;
+        padding-left: 10px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .shop-item > .content {
+        width: 300px;
+        padding-top: 5px;
+    }
+
+    .content > .content-name {
+
+    }
+
+    .content > .content-description {
+        font-size: 14px;
+    }
+
+    #shop > .list::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    #shop > .list::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+    #shop > .list::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+    }
