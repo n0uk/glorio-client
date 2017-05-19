@@ -48,6 +48,7 @@ export namespace Protocol {
         WinterWoodGenerator = 34,
         WinterStoneGenerator = 35,
         WhiteBearSpawner = 36,
+        SoccerBall = 37,
     }
 
     /**
@@ -69,6 +70,7 @@ export namespace Protocol {
         Mannequin = 12,
         RideableWolf = 13,
         GardenBot = 14,
+        SoccerBall = 15,
     }
 
     export function BuildingTypeToEntityType(buildingType: BuildingType): EntityType {

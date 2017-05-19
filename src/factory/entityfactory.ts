@@ -9,7 +9,7 @@ import {BearMeatPickup, BoxPickup, CarrotPickup, EggPickup, PigMeatPickup} from 
 import {StoneGenerator, WinterStoneGenerator, WinterWoodGenerator, WoodGenerator} from "./generators";
 import {
     WoodBlock, StoneBlock, Door, Garden, Tower, Heartstone, FoodCrate, WoodCrate, StoneCrate,
-    Mannequin
+    Mannequin, SoccerBall
 } from "./buildings";
 import {FollowerBot, FarmerBot, GuardBot, GardenBot} from "./bots";
 
@@ -80,6 +80,8 @@ export class EntityFactory {
             return new WinterStoneGenerator(world, id, parentId);
         } else if (type === EntityType.WinterWoodGenerator) {
             return new WinterWoodGenerator(world, id, parentId);
+        } else if (type === EntityType.SoccerBall) {
+            return new SoccerBall(world, id, parentId);
         }
 
         return new Entity(world, id, parentId);

@@ -551,6 +551,12 @@ export class CraftMenuService extends Service {
                 name: BuildingType.Mannequin,
                 tooltip: this.getTooltipFor(BuildingType.Mannequin),
                 maxLimit: Config.buildings[BuildingType[BuildingType.Mannequin].toLowerCase()].limit
+            },
+            {
+                img: Assets.Images.ImagesSoccerball.getPNG(),
+                name: BuildingType.SoccerBall,
+                tooltip: this.getTooltipFor(BuildingType.SoccerBall),
+                maxLimit: Config.buildings[BuildingType[BuildingType.SoccerBall].toLowerCase()].limit
             }
         ]);
 

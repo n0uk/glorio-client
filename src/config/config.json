@@ -1,7 +1,15 @@
 {
   "server": {
-    "port": 8080,
-    "host": "127.0.0.1"
+    "ws_port": 8080,
+    "port": 80,
+    "host": "127.0.0.1",
+    "connections_limit": 100
+  },
+  "bounds": {
+    "x": 256,
+    "y": 256,
+    "width": 25088,
+    "height": 25088
   },
   "client": {
     "build_radius": 300
@@ -10,7 +18,7 @@
     "speed": 250.0,
     "health": 100,
     "damage": 30,
-    "attack_distance": 80,
+    "attack_distance": 60,
     "punch_timeout": 0.5,
     "punch_move_lock": 0.3,
     "radius": 30,
@@ -62,7 +70,7 @@
       "scare_timeout": 5,
       "walk_timeout": 7,
       "drop": {
-        "food": 2
+        "food": 3
       },
       "drop_entity_type": "EggPickup",
       "drop_timeout": 40
@@ -83,7 +91,7 @@
         "Pig",
         "Mannequin"
       ],
-      "chase_distance": 600,
+      "chase_distance": 500,
       "walk_speed": 150,
       "run_speed": 260,
       "walk_radius": 650,
@@ -122,6 +130,34 @@
       "walk_timeout": 7,
       "drop": {
         "food": 150
+      },
+      "drop_entity_type": "BearMeatPickup"
+    },
+    "whitebear": {
+      "punch_move_lock": 1,
+      "attack_distance": 80,
+      "search_radius": 250,
+      "punch_timeout": 1.5,
+      "damage": 80,
+      "health": 1000,
+      "radius": 70,
+      "target_types": [
+        "Player",
+        "FarmerBot",
+        "GuardBot",
+        "FollowerBot",
+        "Mannequin"
+      ],
+      "chase_distance": 600,
+      "walk_speed": 150,
+      "run_speed": 230,
+      "walk_radius": 450,
+      "idle_timeout_min": 5,
+      "idle_timeout_max": 7,
+      "scare_timeout": 5,
+      "walk_timeout": 7,
+      "drop": {
+        "food": 300
       },
       "drop_entity_type": "BearMeatPickup"
     },
@@ -184,7 +220,9 @@
       "search_radius": 600,
       "target_types": [
         "WoodGenerator",
-        "StoneGenerator"
+        "StoneGenerator",
+        "WinterWoodGenerator",
+        "WinterStoneGenerator"
       ],
       "speed": 200.0,
       "price": {
@@ -198,13 +236,14 @@
     },
     "gardenbot": {
       "radius": 30,
-      "search_radius": 600,
+      "search_radius": 800,
       "target_types": [
         "CarrotPickup"
       ],
       "speed": 200.0,
       "price": {
-        "food": 12
+        "food": 50,
+        "gold": 250
       },
       "name": "Gardener",
       "limit": 2,
@@ -247,6 +286,7 @@
         "FollowerBot",
         "Wolf",
         "Bear",
+        "WhiteBear",
         "Mannequin"
       ]
     },
@@ -270,6 +310,7 @@
         "FollowerBot",
         "Wolf",
         "Bear",
+        "WhiteBear",
         "Mannequin"
       ]
     },
@@ -347,7 +388,7 @@
       },
       "name": "Tower",
       "limit": 5,
-      "radius": 60,
+      "radius": 64,
       "description": "The tower produces gold, making you richer!",
       "health": 300,
       "resource_count": 5
@@ -369,6 +410,16 @@
 
       "name": "Black Wolf",
       "description": "You can ride on it and regenerate faster!",
+      "limit": 1
+    },
+    "soccerball": {
+      "price": {
+        "gold": 500
+      },
+      "radius": 32,
+
+      "name": "Ball",
+      "description": "For football fans",
       "limit": 1
     }
   }

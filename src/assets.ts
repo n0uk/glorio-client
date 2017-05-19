@@ -116,6 +116,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/pickupbot.png'); };
     }
+    export class ImagesSoccerball {
+        static getName(): string { return 'soccerball'; };
+
+        static getPNG(): string { return require('assets/images/soccerball.png'); };
+    }
     export class ImagesStonecrate {
         static getName(): string { return 'stonecrate'; };
 

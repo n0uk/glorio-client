@@ -102,6 +102,9 @@ export default class NetworkTransformComponent extends Component {
 
     private tmpNetworkPoint: Phaser.Point = new Phaser.Point();
 
+    public interpolateRotation: boolean = true;
+    public interpolatePosition: boolean = true;
+
     constructor() {
         super();
     }
@@ -133,12 +136,16 @@ export default class NetworkTransformComponent extends Component {
     }
 
     public update(dt: number) {
-        this.positionInterpolator.interpolate(
-            this.cachedTransform.position, 
-            this.world.game.time.totalElapsedSeconds(),
-            this.cachedPingService.getAveragePing());
-        this.cachedTransform.rotation = this.rotationInterpolator.interpolate(
-            this.world.game.time.totalElapsedSeconds(),
-            this.cachedPingService.getAveragePing());
+        if (this.interpolatePosition) {
+            this.positionInterpolator.interpolate(
+                this.cachedTransform.position,
+                this.world.game.time.totalElapsedSeconds(),
+                this.cachedPingService.getAveragePing());
+        }
+        if (this.interpolateRotation) {
+            this.cachedTransform.rotation = this.rotationInterpolator.interpolate(
+                this.world.game.time.totalElapsedSeconds(),
+                this.cachedPingService.getAveragePing());
+        }
     }
 }

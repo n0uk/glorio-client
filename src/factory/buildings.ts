@@ -6,6 +6,7 @@ import Game from "../states/game";
 import * as Assets from '../assets';
 import JumpOnHitComponent from "./components/jumponhit";
 import DoorAnimatorComponent from "./components/dooranimator";
+import BallAnimatorComponent from "./components/ballanimator";
 
 export class WoodBlock extends Entity {
     constructor(world: Game, id: number, parentId: number) {
@@ -105,5 +106,16 @@ export class Mannequin extends Entity {
         this.addComponent(new NetworkTransformComponent());
         this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Images.ImagesMannequin.getName(), new Phaser.Point(0.5, 0.5)));
         this.addComponent(new JumpOnHitComponent());
+    }
+}
+
+
+export class SoccerBall extends Entity {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, parentId);
+        this.addComponent(new TransformComponent());
+        this.addComponent(new NetworkTransformComponent());
+        this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Images.ImagesSoccerball.getName(), new Phaser.Point(0.5, 0.5)));
+        this.addComponent(new BallAnimatorComponent());
     }
 }

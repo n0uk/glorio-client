@@ -43,7 +43,7 @@ function startApp(): void {
         width: gameWidth,
         height: gameHeight,
         renderer: Phaser.AUTO,
-        antialias: false,
+        antialias: true,
         resolution: 1
     };
 

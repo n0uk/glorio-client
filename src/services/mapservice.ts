@@ -18,7 +18,7 @@ export default class MapService extends Service {
 
         map.addTilesetImage('map', 'mapimage');
         let layer = map.createLayer('Ground');
-        layer.smoothed = false;
+        // layer.smoothed = false;
 
         layer.resizeWorld();
 
