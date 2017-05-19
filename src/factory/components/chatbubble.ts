@@ -91,5 +91,7 @@ export default class ChatBubbleComponent extends Component {
     }
 
     public destroy() {
+        this.chatBubble.destroy();
+        this.chatBubble = null;
     }
 }

@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d0edfd1-46ab-4c96-9a54-f886ca69191b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/animals.ts" afterPath="$PROJECT_DIR$/src/factory/animals.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/bots.ts" afterPath="$PROJECT_DIR$/src/factory/bots.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/buildings.ts" afterPath="$PROJECT_DIR$/src/factory/buildings.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/components/playerlabel.ts" afterPath="$PROJECT_DIR$/src/factory/components/playerlabel.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/entity.ts" afterPath="$PROJECT_DIR$/src/factory/entity.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/entityfactory.ts" afterPath="$PROJECT_DIR$/src/factory/entityfactory.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/generators.ts" afterPath="$PROJECT_DIR$/src/factory/generators.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/pickups.ts" afterPath="$PROJECT_DIR$/src/factory/pickups.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/player.ts" afterPath="$PROJECT_DIR$/src/factory/player.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/spectator.ts" afterPath="$PROJECT_DIR$/src/factory/spectator.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/protocol/protocol.json" afterPath="$PROJECT_DIR$/src/protocol/protocol.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/buildingservice.ts" afterPath="$PROJECT_DIR$/src/services/buildingservice.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/childservice.ts" afterPath="$PROJECT_DIR$/src/services/childservice.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/craftmenuservice.ts" afterPath="$PROJECT_DIR$/src/services/craftmenuservice.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/servicemanager.ts" afterPath="$PROJECT_DIR$/src/services/servicemanager.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/game.ts" afterPath="$PROJECT_DIR$/src/states/game.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/components/chatbubble.ts" afterPath="$PROJECT_DIR$/src/factory/components/chatbubble.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,117 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bots.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/bots.ts">
+      <file leaf-file-name="chatbubble.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/factory/components/chatbubble.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="68" column="50" lean-forward="false" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
+            <state relative-caret-position="560">
+              <caret line="94" column="31" lean-forward="false" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entityfactory.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/factory/entityfactory.ts">
+      <file leaf-file-name="chatinput.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/factory/components/chatinput.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/game.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="252" column="32" lean-forward="false" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <element signature="e#164#205#0" expanded="true" />
-                <element signature="e#1200#1251#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="servermanager.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servermanager.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pingservice.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/pingservice.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="servicemanager.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/servicemanager.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="craftmenuservice.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/craftmenuservice.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="588" column="0" lean-forward="false" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#255#297#0" expanded="true" />
-                <marker date="1495116077233" expanded="true" signature="4906:4952" ph="..." />
-                <marker date="1495116077233" expanded="true" signature="5605:5651" ph="..." />
-                <marker date="1495116077233" expanded="true" signature="6762:6808" ph="..." />
-                <marker date="1495116077233" expanded="true" signature="8127:8205" ph="..." />
-                <marker date="1495116077233" expanded="true" signature="8239:8446" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="minimap.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/minimap.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="64" column="10" lean-forward="false" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="childservice.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/childservice.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playerlabel.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/factory/components/playerlabel.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="-1599">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -196,7 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/factory/components/health.ts" />
         <option value="$PROJECT_DIR$/src/factory/components/angryanimalanimator.ts" />
         <option value="$PROJECT_DIR$/src/factory/components/redonhit.ts" />
         <option value="$PROJECT_DIR$/src/factory/follower.ts" />
@@ -247,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/services/craftmenuservice.ts" />
         <option value="$PROJECT_DIR$/src/services/childservice.ts" />
         <option value="$PROJECT_DIR$/src/factory/components/playerlabel.ts" />
+        <option value="$PROJECT_DIR$/src/factory/components/chatbubble.ts" />
       </list>
     </option>
   </component>
@@ -353,6 +243,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="socket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -372,6 +280,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glorio-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,12 +458,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493287076415</updated>
-      <workItem from="1493287078769" duration="150869000" />
+      <workItem from="1493287078769" duration="151621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150869000" />
+    <option name="totallyTimeSpent" value="151621000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -580,26 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/states/crash.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/connection.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/networksendservice.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1066,7 +976,7 @@
     <entry file="file://$PROJECT_DIR$/src/services/pingservice.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1106,7 +1016,7 @@
     <entry file="file://$PROJECT_DIR$/src/services/childservice.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
-          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+          <caret line="49" column="22" lean-forward="false" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1117,6 +1027,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/chatinput.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1599">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/components/chatbubble.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="94" column="31" lean-forward="false" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
