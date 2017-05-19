@@ -4,14 +4,17 @@ import {Protocol} from "../protocol/protocol";
 import Message = Protocol.Message;
 import ChildService from "./childservice";
 import EntityType = Protocol.EntityType;
+import * as Assets from '../assets';
 import LevelComponent from "../factory/components/level";
 import TransformComponent from "../factory/components/transform";
+import Rectangle = Phaser.Rectangle;
 
 export default class MinimapService extends Service {
     private bitmapData: Phaser.BitmapData;
+    private preRenderBitmapData: Phaser.BitmapData;
     private image: Phaser.Image;
     private childService: ChildService;
-    private x_ratio: number = 150.0 / (200.0 * 64.0);
+    private x_ratio: number = 150.0 / (400.0 * 64.0);
     private y_ratio: number = 150.0 / (400.0 * 64.0);
 
     constructor(world: Game) {
@@ -22,6 +25,34 @@ export default class MinimapService extends Service {
         this.image.cameraOffset.setTo(15, this.world.game.height - 220);
         this.image.alpha = 0.5;
         this.childService = world.services.getService(ChildService) as ChildService;
+        // Pre-rendered map
+        this.preRenderBitmapData = this.world.game.add.bitmapData(150, 150);
+        this.initializePrerendered();
+    }
+
+    private initializePrerendered() {
+        this.preRenderBitmapData.clear(0, 0, this.preRenderBitmapData.width, this.preRenderBitmapData.height);
+        // Draw trees and stones
+        let hash: any = this.world.game.cache.getTilemapData('mapdata').data;
+        for (let layer of hash.layers) {
+            if (layer.type === 'objectgroup') {
+                for (let obj of layer.objects) {
+                    let x: number = obj.x;
+                    let y: number = obj.y;
+                    if (obj.type === 'woodgenerator' || obj.type === 'winterwoodgenerator') {
+                        this.preRenderBitmapData.ctx.beginPath();
+                        this.preRenderBitmapData.ctx.rect(x * this.x_ratio - 1, y * this.y_ratio - 1, 2, 2);
+                        this.preRenderBitmapData.ctx.fillStyle = '#00ff00';
+                        this.preRenderBitmapData.ctx.fill();
+                    } else if (obj.type === 'stonegenerator' || obj.type === 'winterstonegenerator') {
+                        this.preRenderBitmapData.ctx.beginPath();
+                        this.preRenderBitmapData.ctx.rect(x * this.x_ratio - 1, y * this.y_ratio - 1, 2, 2);
+                        this.preRenderBitmapData.ctx.fillStyle = '#ffffff';
+                        this.preRenderBitmapData.ctx.fill();
+                    }
+                }
+            }
+        }
     }
 
     public onMapMessage(msg: Message) {
@@ -30,6 +61,7 @@ export default class MinimapService extends Service {
         this.bitmapData.ctx.rect(0, 0, 150, 150);
         this.bitmapData.ctx.fillStyle = '#222222';
         this.bitmapData.ctx.fill();
+        this.bitmapData.copyRect(this.preRenderBitmapData, new Rectangle(0, 0, this.bitmapData.width, this.bitmapData.height), 0, 0, 0.2);
         for (let i = 0; i < this.childService.childs.length; i++) {
             let child = this.childService.childs[i];
             let x = child.position.x * this.x_ratio;
