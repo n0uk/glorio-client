@@ -40,29 +40,30 @@ export default class AdController {
     }
     
     static is_need_play_ad() {
-        return false;
-        /*
-        // If user press F5 while playing ads
-        if (!AdController.check_integrity()) {
-            AdController.drop_counts();
-            AdController.set_start_count(2);
-            AdController.set_end_count(2);
-            return true;
+        if (DEBUG) {
+            return false;
+        } else {
+            // If user press F5 while playing ads
+            if (!AdController.check_integrity()) {
+                AdController.drop_counts();
+                AdController.set_start_count(2);
+                AdController.set_end_count(2);
+                return true;
+            }
+
+            let ad_start = AdController.get_start_count();
+            // Every second play (default: 1)
+            if (ad_start === 2) {
+                return true;
+            }
+
+            // Every 5 play, after 2
+            if ((ad_start - 2) % 5 === 0) {
+                return true;
+            }
+
+            return false;
         }
-        
-        let ad_start = AdController.get_start_count();
-        // Every second play (default: 1)
-        if (ad_start === 2) {
-            return true;
-        }
-        
-        // Every 5 play, after 2
-        if ((ad_start - 2) % 5 === 0) {
-            return true;
-        }
-        
-        return false;
-        */
     }
     
     static play(callback) {
