@@ -1,0 +1,426 @@
+{
+    "server": {
+        "ws_port": 8080,
+        "port": 80,
+        "host": "127.0.0.1",
+        "connections_limit": 100
+    },
+    "bounds": {
+        "x": 256,
+        "y": 256,
+        "width": 25088,
+        "height": 25088
+    },
+    "client": {
+        "build_radius": 300
+    },
+    "player": {
+        "speed": 250.0,
+        "health": 100,
+        "damage": 30,
+        "attack_distance": 60,
+        "punch_timeout": 0.5,
+        "punch_move_lock": 0.3,
+        "radius": 30,
+        "reward_for_punch": 1,
+        "reward_for_building": 3,
+        "reward_for_killing": 10
+    },
+    "pickups": {
+        "egg": {
+            "lifetime": 120,
+            "radius": 15
+        },
+        "box": {
+            "lifetime": 120,
+            "radius": 32
+        },
+        "meat": {
+            "lifetime": 120,
+            "radius": 15
+        },
+        "carrot": {
+            "radius": 15
+        }
+    },
+    "animals": {
+        "pig": {
+            "health": 100,
+            "radius": 30,
+            "walk_radius": 650,
+            "idle_timeout_min": 3,
+            "idle_timeout_max": 6,
+            "scare_timeout": 5,
+            "walk_timeout": 7,
+            "walk_speed": 150.0,
+            "run_speed": 270.0,
+            "drop": {
+                "food": 5
+            },
+            "drop_entity_type": "PigMeatPickup"
+        },
+        "chicken": {
+            "health": 50,
+            "radius": 20,
+            "walk_speed": 150,
+            "run_speed": 270,
+            "walk_radius": 650,
+            "idle_timeout_min": 3,
+            "idle_timeout_max": 6,
+            "scare_timeout": 5,
+            "walk_timeout": 7,
+            "drop": {
+                "food": 3
+            },
+            "drop_entity_type": "EggPickup",
+            "drop_timeout": 40
+        },
+        "wolf": {
+            "punch_move_lock": 1.5,
+            "attack_distance": 80,
+            "search_radius": 400,
+            "punch_timeout": 2,
+            "damage": 30,
+            "health": 100,
+            "radius": 30,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "FollowerBot",
+                "Pig",
+                "Mannequin"
+            ],
+            "chase_distance": 500,
+            "walk_speed": 150,
+            "run_speed": 260,
+            "walk_radius": 650,
+            "idle_timeout_min": 3,
+            "idle_timeout_max": 6,
+            "scare_timeout": 5,
+            "walk_timeout": 7,
+            "drop": {
+                "food": 7
+            },
+            "drop_entity_type": "PigMeatPickup"
+        },
+        "bear": {
+            "punch_move_lock": 1,
+            "attack_distance": 80,
+            "search_radius": 250,
+            "punch_timeout": 1.5,
+            "damage": 49,
+            "health": 500,
+            "radius": 70,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "FollowerBot",
+                "Pig",
+                "Mannequin"
+            ],
+            "chase_distance": 600,
+            "walk_speed": 150,
+            "run_speed": 230,
+            "walk_radius": 450,
+            "idle_timeout_min": 5,
+            "idle_timeout_max": 7,
+            "scare_timeout": 5,
+            "walk_timeout": 7,
+            "drop": {
+                "food": 150
+            },
+            "drop_entity_type": "BearMeatPickup"
+        },
+        "whitebear": {
+            "punch_move_lock": 1,
+            "attack_distance": 80,
+            "search_radius": 250,
+            "punch_timeout": 1.5,
+            "damage": 80,
+            "health": 1000,
+            "radius": 70,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "FollowerBot",
+                "Mannequin"
+            ],
+            "chase_distance": 600,
+            "walk_speed": 150,
+            "run_speed": 230,
+            "walk_radius": 450,
+            "idle_timeout_min": 5,
+            "idle_timeout_max": 7,
+            "scare_timeout": 5,
+            "walk_timeout": 7,
+            "drop": {
+                "food": 300
+            },
+            "drop_entity_type": "BearMeatPickup"
+        },        
+        "rideable_pig": {
+            "radius": 30,
+            "walk_radius": 650,
+            "idle_timeout_min": 3,
+            "idle_timeout_max": 6,
+            "walk_timeout": 7,
+            "walk_speed": 150.0,
+            "run_speed": 270.0,
+            "driver_speed": 300.0
+        }
+    },
+    "buildings": {
+        "woodgenerator": {
+            "radius": 65
+        },
+        "stonegenerator": {
+            "radius": 45
+        },
+        "woodblock": {
+            "price": {
+                "wood": 25
+            },
+            "name": "Wooden Wall",
+            "description": "Strong wooden wall.",
+            "health": 1000,
+            "width": 64,
+            "height": 64,
+            "limit": 50
+        },
+        "stoneblock": {
+            "price": {
+                "stone": 50
+            },
+            "name": "Stone Wall",
+            "description": "Very strong stone wall.",
+            "health": 2000,
+            "width": 64,
+            "height": 64,
+            "limit": 50
+        },
+        "door": {
+            "price": {
+                "wood": 25,
+                "stone": 50
+            },
+            "name": "Door",
+            "limit": 6,
+            "description": "Opens only for you and your clan.",
+            "health": 2000,
+            "width": 64,
+            "height": 64
+        },
+        "farmerbot": {
+            "attack_distance": 60,
+            "punch_timeout": 2,
+            "radius": 30,
+            "search_radius": 600,
+            "target_types": [
+                "WoodGenerator",
+                "StoneGenerator",
+                "WinterWoodGenerator",
+                "WinterStoneGenerator"
+            ],
+            "speed": 200.0,
+            "price": {
+                "food": 12
+            },
+            "name": "Peasant",
+            "limit": 2,
+            "reward_for_punch": 2,
+            "description": "Gather the nearest resource available.",
+            "health": 80
+        },
+        "gardenbot": {
+            "radius": 30,
+            "search_radius": 800,
+            "target_types": [
+                "CarrotPickup"
+            ],
+            "speed": 200.0,
+            "price": {
+                "food": 50,
+                "gold": 250
+            },
+            "name": "Gardener",
+            "limit": 2,
+            "description": "Gather carrots from gardens.",
+            "health": 80
+        },        
+        "garden": {
+            "price": {
+                "food": 20
+            },
+            "health": 300,
+            "name": "Bed",
+            "limit": 5,
+            "width": 128,
+            "height": 128,
+            "description": "You can grow carrots on a bed!",
+            "drop": {
+                "food": 5
+            },
+            "drop_entity_type": "CarrotPickup",
+            "drop_timeout": 20
+        },
+        "guardbot": {
+            "punch_timeout": 1,
+            "radius": 30,
+            "search_radius": 600,
+            "speed": 200.0,
+            "price": {
+                "food": 40
+            },
+            "name": "Guard",
+            "limit": 3,
+            "description": "Defends the area you place him on.",
+            "reward_for_punch": 3,
+            "health": 200,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "FollowerBot",
+                "Wolf",
+                "Bear",
+                "WhiteBear",
+                "Mannequin"
+            ]
+        },
+        "followerbot": {
+            "punch_timeout": 1.5,
+            "radius": 30,
+            "search_radius": 400,
+            "speed": 200.0,
+            "price": {
+                "food": 15
+            },
+            "name": "Mercenary",
+            "reward_for_punch": 3,
+            "limit": 3,
+            "description": "Follows you wherever you go and helps in everything!",
+            "health": 100,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "FollowerBot",
+                "Wolf",
+                "Bear",
+                "WhiteBear",
+                "Mannequin"
+            ]
+        },
+        "mannequin": {
+            "price": {
+                "food": 100,
+                "gold": 500
+            },
+            "name": "Mannequin",
+            "description": "Used for training",
+            "limit": 1,
+            "health": 80,
+            "width": 64,
+            "height": 64,
+            "additional_punch_reward": 5
+        },
+        "foodcrate": {
+            "price": {
+                "food": 100
+            },
+            "name": "Food Container",
+            "description": "Food container",
+            "limit": 5,
+            "health": 10,
+            "width": 64,
+            "height": 64,
+            "drop": {
+                "food": 100
+            }
+        },
+        "woodcrate": {
+            "price": {
+                "wood": 100
+            },
+            "name": "Wood Container",
+            "description": "Wood container",
+            "limit": 5,
+            "health": 10,
+            "width": 64,
+            "height": 64,
+            "drop": {
+                "wood": 100
+            }
+        },
+        "stonecrate": {
+            "price": {
+                "stone": 100
+            },
+            "name": "Stone Container",
+            "description": "Stone container",
+            "limit": 5,
+            "health": 10,
+            "width": 64,
+            "height": 64,
+            "drop": {
+                "stone": 100
+            }
+        },
+        "heartstone": {
+            "price": {
+                "food": 50,
+                "gold": 100
+            },
+            "name": "The Stone of Life",
+            "limit": 1,
+            "width": 64,
+            "height": 64,
+            "description": "Resurrects you after your death. Make sure it is not destroyed!",
+            "health": 500
+        },
+        "tower": {
+            "price": {
+                "wood": 40,
+                "stone": 40
+            },
+            "name": "Tower",
+            "limit": 5,
+            "radius": 64,
+            "description": "The tower produces gold, making you richer!",
+            "health": 300,
+            "resource_count": 5
+        },
+        "rideablewolf": {
+            "price": {
+                "food": 1000,
+                "gold": 10000
+            },            
+            "radius": 32,
+            "walk_radius": 650,
+            "idle_timeout_min": 3,
+            "idle_timeout_max": 6,
+            "walk_timeout": 7,
+            "walk_speed": 150.0,
+            "run_speed": 270.0,
+            "driver_speed": 320.0,
+            "driver_regeneration_speed": 0.5,
+            
+            "name": "Black Wolf",
+            "description": "You can ride on it and regenerate faster!",
+            "limit": 1
+        },
+        "soccerball": {
+            "price": {
+                "gold": 500
+            },            
+            "radius": 22,
+
+            "name": "Ball",
+            "description": "For football fans",
+            "limit": 1
+        }                
+    }
+}
