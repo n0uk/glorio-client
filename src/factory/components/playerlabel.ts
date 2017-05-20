@@ -26,7 +26,8 @@ export default class PlayerLabelComponent extends Component {
         this.cachedSprite = this.entity.components.sprite as SpriteComponent;
 
         this.label = this.world.game.add.text(this.cachedTransform.position.x, this.cachedTransform.position.y + this.offset - this.cachedSprite.sprite.height / 2, "", {
-            font: '16px ' + Assets.GoogleWebFonts.RobotoMono
+            fontSize: '18px',
+            font: 'Roboto Mono'
         });
         this.label.anchor.set(0.5, 1);
         // Stroke color and thickness
