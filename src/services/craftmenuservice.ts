@@ -160,9 +160,9 @@ class LeftMenuItem extends MenuItem {
         this.world = world;
         this.maxLimit = maxLimit;
 
-        this.element.className = 'tooltip item';
+        this.element.className = 'ui-tooltip item';
         this.element.innerHTML = `
-            <div class="tooltiptextright">
+            <div class="ui-tooltip-content ui-tooltip-right">
                 ${tooltip}
             </div>
             <img src="${img}" />
@@ -179,9 +179,9 @@ class LeftMenuItem extends MenuItem {
         this.name = name;
         this.img = img;
         this.maxLimit = maxLimit;
-        this.element.className = 'tooltip item';
+        this.element.className = 'ui-tooltip item';
         this.element.innerHTML = `
-            <div class="tooltiptextright">
+            <div class="ui-tooltip-content ui-tooltip-right">
                 ${tooltip}
             </div>
             <img src="${img}" />
@@ -220,9 +220,9 @@ class BottomMenuItem extends MenuItem {
         this.world = world;
         this.maxLimit = maxLimit;
 
-        this.element.className = 'tooltip item';
+        this.element.className = 'ui-tooltip item';
         this.element.innerHTML = `
-            <div class="tooltiptext">
+            <div class="ui-tooltip-content ui-tooltip-up">
                 ${tooltip}
             </div>
             <img src="${img}" />
@@ -372,10 +372,10 @@ export class CraftMenuService extends Service {
         let config = Config.buildings[BuildingType[buildingType].toLowerCase()];
         for (let key of Object.keys(config.price)) {
             let capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
-            costs += `<div class="costs"><span>${capitalizedKey}: </span><span>${config.price[key]}</span></div>`;
+            costs += `<div class="ui-tooltip-costs"><span>${capitalizedKey}: </span><span>${config.price[key]}</span></div>`;
         }
         return `
-            <div class="tooltipheader">${config.name}</div>
+            <div class="ui-tooltip-header">${config.name}</div>
             <span>${config.description}</span>
             ${costs}
         `;

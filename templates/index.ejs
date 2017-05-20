@@ -6,7 +6,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="description" content="Survive and build your base, defending it from rivals. Fight for glory!">
     <meta name="keywords" content="game,games,gaming,online,io,multiplayer,glory,glorio,village,castle">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Roboto|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Roboto|Slabo+27px|Hammersmith One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<%= require('../src/assets').Misc.CssStyle.getCSS() %>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -123,16 +123,11 @@
     </div>
     <div id="left-panel" class="menu">
     </div>
-    <div id="levelText">
-
-    </div>
-    <div id="levelProgressContainer">
-        <div id="levelProgress">
-            <div id="levelProgressBody"></div>
-        </div>
+    <div class="ui-stats-level">
+        <div id="ui-level-bar" class="ui-level-bar" style="width:100%;"><span class="ui-stats-level-text" id="ui-stats-level-text">LEVEL: 1</span></div>
     </div>
     <div id="left-top-container">
-        <div id="respanel">
+        <div class="ui-stats-resources" id="ui-stats-resources">
 
         </div>
         <div id="top-panel" class="menu">
@@ -140,11 +135,12 @@
     </div>
     <div id="inventory">
     </div>
-    <div id="position-container">
-        0x0
-    </div>
-    <div class="leaderboard" id="leaderboard">
-
+    <div class="ui-leaderboard" id="leaderboard">
+        <div class="ui-leaderboard-player is-header">
+            <span class="player-rank">Rank</span>
+            <span class="player-name">Name</span>
+            <span class="player-score">Score</span>
+        </div>
     </div>
     <div class="shop" id="shop">
         <div class="list" id="shop-list">

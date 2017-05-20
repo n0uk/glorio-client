@@ -14,13 +14,14 @@ export default class ResourceService extends Service {
     public constructor(world: Game) {
         super(world);
 
-        this.container = document.getElementById('respanel');
+        this.container = document.getElementById('ui-stats-resources');
 
         for (let resource in ResourceType) {
             // isNaN(parseInt()) - Really? Yep.
             if (isNaN(parseInt(resource))) {
                 let resourceElement: HTMLDivElement = document.createElement('div') as HTMLDivElement;
-                resourceElement.innerText = `${resource}: 0`;
+                resourceElement.innerText = `0`;
+                resourceElement.className = `ui-stats-${resource.toLowerCase()}`;
                 this.elements.push(resourceElement);
 
                 this.container.appendChild(resourceElement);
@@ -37,7 +38,7 @@ export default class ResourceService extends Service {
     public sync(counts: Array<number>) {
         this.currentResources = counts;
         for (let idx in this.elements) {
-            this.elements[idx].innerText = `${ResourceType[idx]}: ${counts[idx]}`;
+            this.elements[idx].innerText = `${counts[idx]}`;
         }
         (this.world.services.getService(CraftMenuService) as CraftMenuService).updateAvailability();
     }

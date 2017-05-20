@@ -254,101 +254,7 @@
         cursor: default;
     }
 
-    #position-container {
-        z-index: 2;
-        position: absolute;
-        right: 0;
-        color: white;
-        bottom:  0;
-        padding-right: 0.5em;
-        padding-bottom: 2.5em;
-        font-size: 2em;
-        font-family:  'Amatic SC', cursive;
-        text-shadow: 1px 1px 2px black, 0 0 1em black;
-        display: none;
-        user-select: none;
-        cursor: default;
-    }
-        
-    #partylink {
-        z-index: 2;
-        font-family:  'Amatic SC', cursive;
-        text-shadow: 1px 1px 2px black, 0 0 1em black;        
-        color: white;        
-        cursor: pointer;        
-    	position: absolute;
-    	right: 0;
-    	bottom: 0;
-    	visibility: hidden;
-    	text-decoration: underline;
-        padding-right: 0.5em;
-        padding-bottom: 0.5em;    	
-        font-size: 2em;
-    }
-    
-    #ping-container {
-        z-index: 2;
-        position: absolute;
-        left: 0;
-        color: white;
-        bottom:  0;
-        padding-left: 0.5em;
-        padding-bottom: 0.5em;
-        font-size: 2em;
-        font-family:  'Amatic SC', cursive;
-        text-shadow: 1px 1px 2px black, 0 0 1em black;
-        display: none;
-        user-select: none;
-        cursor: default;
-    }
-    
-    .leaderboard {
-        display: block;
-        visibility: hidden;
-    	color: #fff;
-    	font-size: 31px;
-    	text-align: left;
-    	position: absolute;
-    	right: 20px;
-    	top: 20px;
-    	padding: 10px;
-    	padding-top: 7px;
-    	padding-bottom: 5px;
-    	width: 220px;
-    	background-color: rgba(0, 0, 0, 0.25);
-    	-webkit-border-radius: 4px;
-    	-moz-border-radius: 4px;
-    	border-radius: 4px;
-    	z-index: 2;
-    	user-select: none;
-    	cursor: default;
-    }
-    
-    .leaderboard .record {
-        overflow: hidden;
-        white-space: nowrap;        
-        font-family: 'Amatic SC', cursive;
-    }    
-    
-    .leaderboard .score {
-    	text-align: right;
-    	float: right;
-    	margin-left: 10px;
-    	display: inline-block;
-    	font-size: 32px;
-    }
-    
-    .leaderboard .nickname {
-        float: left;
-    	display: block;
-    	max-width: 150px;
-    	white-space: nowrap;
-    	overflow: hidden;
-    	text-overflow: ellipsis;
-    	-o-text-overflow: ellipsis;
-    	font-size: 32px;
-    }
-    
+
     #inventory {
     	position: absolute;
     	bottom: 17px;
@@ -380,135 +286,7 @@
     	width: 64px;
     	height: 64px;
     }
-    
-    /* Tooltip container */
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
-    }
-    
-    .tooltip-top {
-        bottom: 125%;
-        left: 50%;
-        margin-left: -60px;
-    }    
-    
-    .tooltiptext .tooltipheader {
-        font-size: 24px;
-    }
-    
-    .tooltiptext .costs {
-        text-align: left;
-    }
-    
-    .tooltiptext .limit {
-        text-align: right;
-    }
-    
-    /* Tooltip text */
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 300px;
-        background-color: rgba(255,255,255,1);
-        text-align: center;
-        padding: 10px;
-        border-radius: 6px;
-     
-        /* Position the tooltip text - see examples below! */
-        position: absolute;
-        z-index: 2;
-        bottom: 100%;
-        left: 50%; 
-        margin-left: -150px;
 
-        font-size: 24px;
-        font-family:  'Slabo 27px', serif;
-        color: #222;
-        user-select: none;
-        cursor: default;
-    }
-    
-    .tooltiptextdown .tooltipheader {
-        font-size: 24px;
-    }
-    
-    .tooltiptextdown .costs {
-        text-align: left;
-    }
-    
-    .tooltiptextdown .limit {
-        text-align: right;
-    }    
-    
-    .tooltiptextright .tooltipheader {
-        font-size: 24px;
-    }
-    
-    .tooltiptextright .costs {
-        text-align: left;
-    }
-    
-    .tooltiptextright .limit {
-        text-align: right;
-    }        
-    
-    .tooltip .tooltiptextdown {
-        visibility: hidden;
-        width: 300px;
-        background-color: rgba(255,255,255,1);
-        text-align: center;
-        padding: 10px;
-        border-radius: 6px;
-     
-        /* Position the tooltip text - see examples below! */
-        position: absolute;
-        z-index: 2;
-        top: 100%;
-        left: 50%; 
-        margin-left: -150px;
-
-        font-size: 24px;
-        font-family:  'Slabo 27px', serif;
-        color: #222;
-        user-select: none;
-        cursor: default;        
-    }
-    
-    .tooltip .tooltiptextright {
-        visibility: hidden;
-        width: 200px;
-        background-color: rgba(255,255,255,1);
-        text-align: center;
-        padding: 10px;
-        border-radius: 6px;
-     
-        /* Position the tooltip text - see examples below! */
-        position: absolute;
-        z-index: 2;
-        top: -5px;
-        left: 105%;
-
-        font-size: 24px;
-        font-family:  'Slabo 27px', serif;
-        color: #222;
-        user-select: none;
-        cursor: default;
-    }
-    
-    /* Show the tooltip text when you mouse over the tooltip container */
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-    }    
-    
-    .tooltip:hover .tooltiptextdown {
-        visibility: visible;
-    }        
-    
-    .tooltip:hover .tooltiptextright {
-        visibility: visible;
-    }            
-    
     #game-layout {
         display: none;
         position: absolute;
@@ -580,62 +358,6 @@
         text-shadow: 1px 1px 2px black, 0 0 1em black;
         pointer-event: none;
         user-select: none;        
-    }    
-    
-    #respanel {
-    	background-color: rgba(0, 0, 0, 0.25);
-    	-webkit-border-radius: 4px;
-    	-moz-border-radius: 4px;
-    	border-radius: 4px;
-    	color: #fff;
-    	font-family:  'Slabo 27px', serif;
-    	font-size: 1.5em;
-        display: none;
-        padding: 10px;
-        user-select: none;
-        pointer-events: none;
-        float: left;
-    }
-    
-    #levelProgressContainer {
-        visibility: hidden;
-    	width: 100%;
-    	position: absolute;
-    	bottom: 83px;
-    	text-align: center;
-    }
-
-    #levelText {
-        visibility: hidden;
-    	width: 100%;
-    	position: absolute;
-    	bottom: 105px;
-    	text-align: center;
-    	color: #fff;
-    	font-size: 24px;
-    	font-family:  'Slabo 27px', serif;
-    	user-select: none;
-    	cursor: default;
-    }
-    
-    #levelProgress {
-    	background-color: rgba(0, 0, 0, 0.25);
-    	-webkit-border-radius: 4px;
-    	-moz-border-radius: 4px;
-    	border-radius: 4px;
-    	padding: 5px;
-    	width: 314px;
-    	height: 9px;
-    	display: inline-block;
-    }
-    
-    #levelProgressBody {
-    	background-color: rgba(255, 255, 255, 1);
-    	-webkit-border-radius: 4px;
-    	-moz-border-radius: 4px;
-    	border-radius: 4px;
-    	width: 0px;
-    	height: 100%;
     }    
     
     #gadmainmenubottom {
@@ -1111,13 +833,13 @@
     }
 
     #shop {
-        width: 320px;
+        width: 340px;
         height:  420px;
         position:  absolute;
         left: 0;
         top: 50%;
         margin-top: -260px;
-        background-color: rgba(0,0,0,0);
+        background-color: rgba(0,0,0,0.4);
         pointer-events: all;
         z-index: 2;
     }
@@ -1134,45 +856,41 @@
     }
 
     #shop > .list {
-        max-width: 320px;
+        max-width: 340px;
         max-height: 420px;
         overflow-x: hidden;
         overflow-y: auto;
     }
 
     .shop-item {
-        margin-top: 5px;
-        margin-bottom: 5px;
         user-select: none;
         pointer-events: all;
         width: 100%;
         display: block;
-        height: 60px;
+        height: 64px;
         vertical-align: middle;
         color: white;
         font-size: 18px;
         font-family:  'Slabo 27px', serif;
         cursor: pointer;
-        border-bottom: rgb(100,100,100) 1px dashed;
-        border-top: rgb(100,100,100) 1px dashed;
     }
 
 
     .shop-item.available {
-        background-color: rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, .7);
     }
 
     .shop-item.unavailable {
-        background-color: rgba(50, 0, 0, 1);
+        background-color: rgba(25, 0, 0, .7);
     }
 
 
     .shop-item.available:hover {
-        background-color: rgba(0, 128, 0, 1);
+        background-color: rgba(0, 50, 0, .7);
     }
 
     .shop-item.unavailable:hover {
-        background-color: rgba(128, 0, 0, 1);
+        background-color: rgba(50, 0, 0, .7);
     }
 
     .shop-item > .price {
@@ -1183,12 +901,13 @@
         padding-right: 10px;
         font-size: 16px;
         text-align: right;
+        color: rgba(255,255,255, .7);
     }
 
     .shop-item > .icon {
         float: left;
         padding-right: 10px;
-        padding-top: 6px;
+        padding-top: 8px;
         padding-left: 10px;
         width: 48px;
         height: 48px;
@@ -1200,29 +919,277 @@
     }
 
     .content > .content-name {
-
+        font-size: 16px;
+        color: rgba(216, 191, 73, 1);
     }
 
     .content > .content-description {
         font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        color: rgba(255,255,255, .7);
     }
 
     #shop > .list::-webkit-scrollbar-track
     {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
         border-radius: 10px;
-        background-color: #F5F5F5;
+        background-color: #444;
     }
 
     #shop > .list::-webkit-scrollbar
     {
         width: 12px;
-        background-color: #F5F5F5;
+        background-color: #444;
     }
 
     #shop > .list::-webkit-scrollbar-thumb
     {
         border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-        background-color: #555;
+        -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,.4);
+        background-color: #FFFFFF;
+    }
+
+    /** LEADERBOARDS **/
+    .ui-leaderboard {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.4);
+        color: #eee;
+        font-family: 'Hammersmith One', sans-serif;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        user-select: none;
+        cursor: default;
+    }
+
+    .ui-leaderboard .ui-leaderboard-player {
+        position: relative;
+        display: block;
+        margin: 0 0 8px;
+        padding: 0 40px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 13px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .ui-leaderboard .ui-leaderboard-player:last-child {
+        margin-bottom: 0;
+    }
+
+    .ui-leaderboard .ui-leaderboard-player.is-header * {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .ui-leaderboard .ui-leaderboard-player .player-rank {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .ui-leaderboard .ui-leaderboard-player .player-name {
+        display: block;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .ui-leaderboard .ui-leaderboard-player .player-score {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .ui-leaderboard .ui-leaderboard-player.is-active {
+        color: rgba(216, 191, 73, 1);
+    }
+
+    .ui-leaderboard .ui-leaderboard-player.is-active .player-score {
+        color: rgba(216, 191, 73, 1);
+    }
+
+    .ui-leaderboard .ui-leaderboard-player.is-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        height: 30px;
+        margin: 0 -10px;
+        padding: 10px 50px 0;
+    }
+
+    .ui-leaderboard .ui-leaderboard-player.is-bottom .player-rank {
+        top: 10px;
+        left: 10px;
+    }
+
+    .ui-leaderboard .ui-leaderboard-player.is-bottom .player-score {
+        top: 10px;
+        right: 50px;
+    }
+
+    /** Level display **/
+    .ui-stats-level {
+        display: block;
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        width: 200px;
+        margin-left: -100px;
+        height: 26px;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 5px;
+        font-family: 'Open Sans', sans-serif;
+        border-radius: 4px;
+    }
+
+    .ui-stats-level-text {
+        display: block;
+        position: absolute;
+        text-align: center;
+        top: 5px;
+        left: 80px;
+        bottom: 5px;
+        line-height: 27px;
+        font-size: 16px;
+        color: #eee;
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    }
+
+    .ui-stats-level .ui-level-bar {
+        display: block;
+        height: 26px;
+        background: #64a10a;
+        border-radius: 3px;
+        transition: width 0.15s ease-in-out;
+    }
+
+    /** Resources **/
+    .ui-stats-resources {
+        background: rgba(0, 0, 0, 0.4);
+        margin: 0 0 20px;
+        padding: 5px 0;
+        font-family: 'Open Sans', sans-serif;
+        border-radius: 4px;
+        user-select: none;
+        pointer-events: none;
+        width: 150px;
+        float: left;
+    }
+
+    .ui-stats-resources > div {
+        height: 30px;
+        line-height: 30px;
+        color: #eee;
+        text-align: right;
+        padding: 0 10px;
+    }
+
+    .ui-stats-resources > div::before {
+        display: block;
+        float: left;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .ui-stats-resources .ui-stats-food::before {
+        content: 'FOOD';
+    }
+
+    .ui-stats-resources .ui-stats-stone::before {
+        content: 'STONE';
+    }
+
+    .ui-stats-resources .ui-stats-wood::before {
+        content: 'WOOD';
+    }
+
+    .ui-stats-resources .ui-stats-gold::before {
+        content: 'GOLD';
+    }
+
+    /** Tooltips **/
+    .ui-tooltip {
+        position: relative;
+        display: inline-block;
+        /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+    }
+
+    .ui-tooltip-content > .ui-tooltip-header {
+        font-size: 20px;
+        font-family:  'Slabo 27px', serif;
+        color: rgba(216, 191, 73, 1);
+        padding-bottom: 5px;
+    }
+
+    .ui-tooltip-content > .ui-tooltip-costs {
+        text-align: left;
+        padding-top: 5px;
+    }
+
+    .ui-tooltip-content {
+        visibility: hidden;
+        width: 200px;
+        background-color: rgba(0, 0, 0, .7);
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+
+        font-size: 18px;
+        font-family:  'Slabo 27px', serif;
+        color: #ffffff;
+        user-select: none;
+        cursor: default;
+    }
+
+    .ui-tooltip-content.ui-tooltip-up {
+        position: absolute;
+        z-index: 2;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+    .ui-tooltip-content.ui-tooltip-right {
+        position: absolute;
+        z-index: 2;
+        top: -5px;
+        left: 105%;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .ui-tooltip:hover .ui-tooltip-content {
+        visibility: visible;
+    }
+
+    /** Party link **/
+    #partylink {
+        z-index: 2;
+        font-family: 'Amatic SC', cursive;
+        text-shadow: 1px 1px 2px black, 0 0 3px black;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        visibility: hidden;
+        text-decoration: underline;
+        font-size: 24px;
+    }
+
+    /** Ping **/
+    #ping-container {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom:  0;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow: 1px 1px 1px #555, 0 0 1px #555;
+        display: none;
+        user-select: none;
+        cursor: default;
+        color: rgba(255, 255, 255, .6);
     }

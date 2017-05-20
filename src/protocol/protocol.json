@@ -241,6 +241,38 @@
           "options": {
             "packed": false
           }
+        },
+        "idData": {
+          "rule": "repeated",
+          "type": "int32",
+          "id": 3,
+          "options": {
+            "packed": false
+          }
+        }
+      }
+    },
+    "LeaderboardMessagePlayer": {
+      "fields": {
+        "score": {
+          "rule": "required",
+          "type": "int32",
+          "id": 1
+        },
+        "name": {
+          "rule": "required",
+          "type": "string",
+          "id": 2
+        },
+        "id": {
+          "rule": "required",
+          "type": "int32",
+          "id": 3
+        },
+        "rank": {
+          "rule": "required",
+          "type": "int32",
+          "id": 4
         }
       }
     },

@@ -135,6 +135,7 @@ export namespace Protocol {
         ForceDisconnect = 23,
         PlayerSetViewportSize = 24,
         PackedMessage = 25,
+        LeaderboardMessagePlayer = 26,
     }
 
     /**

@@ -7,20 +7,12 @@ import EntityType = Protocol.EntityType;
 export default class LevelService extends Service {
     private levelText: HTMLElement;
     private levelProgressBody: HTMLElement;
-    private levelContainer: HTMLElement;
 
     constructor(world: Game) {
         super(world);
-        this.levelText = document.getElementById('levelText');
+        this.levelText = document.getElementById('ui-stats-level-text');
         this.levelText.innerText = 'Level 1';
-        this.levelProgressBody = document.getElementById('levelProgressBody');
-        this.levelContainer = document.getElementById('levelProgressContainer');
-        this.toggle(true);
-    }
-
-    public toggle(flag: boolean) {
-        this.levelText.style.visibility = flag ? 'visible' : 'hidden';
-        this.levelContainer.style.visibility = flag ? 'visible' : 'hidden';
+        this.levelProgressBody = document.getElementById('ui-level-bar');
     }
 
     public setLevel(level) {
@@ -28,11 +20,14 @@ export default class LevelService extends Service {
     }
 
     public setProgress(progress) {
-        this.levelProgressBody.style.width = `${Math.round(progress * 100)}%`;
+        let percents = Math.round(progress * 100);
+        if (percents > 100) {
+            percents = 100;
+        }
+        this.levelProgressBody.style.width = `${percents}%`;
     }
 
     public destroy() {
         super.destroy();
-        this.toggle(false);
     }
 }

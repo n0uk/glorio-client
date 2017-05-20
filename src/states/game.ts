@@ -70,6 +70,7 @@ export default class Game extends Phaser.State {
         this.socket.onMessage(MessageType.SyncChild, this.onSyncChild.bind(this));
         this.socket.onMessage(MessageType.SyncChildDelete, this.onSyncChildDelete.bind(this));
         this.socket.onMessage(MessageType.LeaderboardMessage, this.onLeaderboardMessage.bind(this));
+        this.socket.onMessage(MessageType.LeaderboardMessagePlayer, this.onLeaderboardMessagePlayer.bind(this));
         this.socket.onMessage(MessageType.MapMessage, this.onMapMessage.bind(this));
         this.socket.onMessage(MessageType.ChatMessage, this.onChatMessage.bind(this));
         this.socket.onMessage(MessageType.PlayerBuildResponse, this.onBuildResponse.bind(this));
@@ -136,6 +137,10 @@ export default class Game extends Phaser.State {
 
     private onLeaderboardMessage(message: Message) {
         (this.services.getService(LeaderboardService) as LeaderboardService).onScoreMessage(message);
+    }
+
+    private onLeaderboardMessagePlayer(message: Message) {
+        (this.services.getService(LeaderboardService) as LeaderboardService).onScoreMessagePlayer(message);
     }
 
     private onSyncChild(message: Message) {

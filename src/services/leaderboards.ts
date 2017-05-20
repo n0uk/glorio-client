@@ -2,9 +2,16 @@ import {Service} from "./servicemanager";
 import Game from "../states/game";
 import {Protocol} from "../protocol/protocol";
 import Message = Protocol.Message;
+import {escapeHtml} from "../utils/escape";
 
 export default class LeaderboardService extends Service {
     private container: HTMLElement;
+
+    private latestLeaderboardMessage: any;
+
+    private currentRank: number;
+    private currentScore: number;
+    private currentName: string;
 
     constructor(world: Game) {
         super(world);
@@ -12,14 +19,34 @@ export default class LeaderboardService extends Service {
 
     }
 
+    public onScoreMessagePlayer(message: Message) {
+        this.currentName = message.content['name'];
+        this.currentRank = message.content['rank'];
+        this.currentScore = message.content['score'];
+    }
+
     public onScoreMessage(message: Message) {
+        this.latestLeaderboardMessage = message.content;
+
         let innerHTML: Array<string> = [];
+
         let score_data: Array<number> = message.content['scoreData'];
         let name_data: Array<string> = message.content['nameData'];
+        let id_data: Array<number> = message.content['idData'];
+
         for (let i = 0; i < score_data.length; i++) {
-            innerHTML.push(this.format(i + 1, name_data[i], score_data[i]));
+            innerHTML.push(this.format(i + 1, name_data[i], score_data[i], id_data[i] === this.world.networkId));
         }
-        this.container.innerHTML = innerHTML.join('');
+        if (this.currentRank > 9) {
+            innerHTML.push(this.format(this.currentRank + 1, this.currentName, this.currentScore, true));
+        }
+        this.container.innerHTML = `
+        <div class="ui-leaderboard-player is-header">
+            <span class="player-rank">Rank</span>
+            <span class="player-name">Name</span>
+            <span class="player-score">Score</span>
+        </div>        
+        ${innerHTML.join('')}`;
 
         this.toggle(score_data.length > 0);
     }
@@ -28,10 +55,12 @@ export default class LeaderboardService extends Service {
         this.container.style.visibility = flag ? 'visible' : 'hidden';
     }
 
-    private format(num: number, nickname: string, score: number): string {
+    private format(num: number, nickname: string, score: number, isActive: boolean): string {
         return `
-        <div class="record">
-            <div class="nickname">${num}. ${nickname}</div><div class="score">${score}</div>
+        <div class="ui-leaderboard-player ${isActive ? "is-active" : ""}">
+            <span class="player-rank">#${num}</span>
+            <span class="player-name">${escapeHtml(nickname)}</span>
+            <span class="player-score">${score}</span>
         </div>
         `;
     }

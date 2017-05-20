@@ -22,8 +22,8 @@ export default class MinimapService extends Service {
         this.bitmapData = this.world.game.add.bitmapData(150, 150);
         this.image = this.bitmapData.addToWorld();
         this.image.fixedToCamera = true;
-        this.image.cameraOffset.setTo(15, this.world.game.height - 220);
-        this.image.alpha = 0.5;
+        this.image.cameraOffset.setTo(15, this.world.game.height - 170);
+        this.image.alpha = 0.7;
         this.childService = world.services.getService(ChildService) as ChildService;
         // Pre-rendered map
         this.preRenderBitmapData = this.world.game.add.bitmapData(150, 150);
@@ -82,19 +82,6 @@ export default class MinimapService extends Service {
 
         let data = msg.content['data'];
         let team_data = msg.content['teamData'];
-        /*
-        if (this.world.assignedObject) {
-            let levelComponent = this.world.assignedObject.components.level as LevelComponent;
-            let transformComponent = this.world.assignedObject.components.transform as TransformComponent;
-            if (levelComponent && transformComponent && levelComponent.currentLevel < 1) {
-                // Draw player byself
-                this.bitmapData.ctx.beginPath();
-                this.bitmapData.ctx.rect(transformComponent.position.x * this.x_ratio - 4, transformComponent.position.y * this.y_ratio - 4, 10, 10);
-                this.bitmapData.ctx.fillStyle = '#00ff00';
-                this.bitmapData.ctx.fill();
-            }
-        }
-        */
 
         for (let i = 0; i < data.length; i += 4) {
             let id: number = data[i];
@@ -123,7 +110,7 @@ export default class MinimapService extends Service {
 
             }
         }
-        this.image.cameraOffset.setTo(15, this.world.game.height - 220);
+        this.image.cameraOffset.setTo(20, this.world.game.height - 170);
     }
 
     public destroy() {
