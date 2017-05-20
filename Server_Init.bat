@@ -1,6 +1,4 @@
-cd .\glorio-client-master
 npm i
+start npm run server:dev
 cd test-server-build\win64\
 glorio.exe
-npm run server:dev
-
