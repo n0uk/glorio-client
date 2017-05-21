@@ -29,6 +29,7 @@ import NetworkViewportService from "../services/networkviewportservice";
 import {CraftMenuService} from "../services/craftmenuservice";
 import {ActionService} from "../services/actionservice";
 import ServerManager from "../servermanager";
+import ServerSelectionService from "../services/serverselection";
 
 enum eGameState {
     LOBBY,
@@ -296,6 +297,9 @@ export default class Game extends Phaser.State {
         this.services.registerService(new LevelService(this));
         this.services.registerService(new CraftMenuService(this));
         this.services.registerService(new ActionService(this));
+        $.ajax('http://status.glor.io').done(function (data) {
+            this.services.registerService(new ServerSelectionService(this, data));
+        }.bind(this));
     }
 
     public update(): void {

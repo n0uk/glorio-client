@@ -183,11 +183,14 @@
         <div class="header">Featured youtuber:</div>
     </div>
     <div id="title-logo">GLOR.IO</div>
-    <div id="subtitle-logo">Ver 0.4.2</div>
+    <div id="subtitle-logo">Ver 0.4.3</div>
     <div class="container">
         <div class="card" id="login">
             <input type="text" id="login-input" placeholder="Enter Name" maxlength="15">
             <div class="cardButton" id="login-button" onclick="">Enter Game</div>
+            <select id="server-select">
+                <option disabled selected>Loading...</option>
+            </select>
             <script type="text/javascript">
                 (function () {
                     document.getElementById('login-input').addEventListener('keydown', function (e) {
