@@ -56,6 +56,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'glor.io',
+            hash: true,
             template: path.join(__dirname, 'templates/index.ejs')
         })
     ],
