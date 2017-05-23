@@ -16,15 +16,17 @@ export default class Leaderboard {
     
     update(scoredata) {
         let text: string = '';
-        for (let i = 0; i < scoredata.length; i++) {
+        //More efficient to call just 1 time .lenght
+        var score_Length = scoredata.length;
+        for (let i = 0; i < score_Length; i++) {
             let part: string = this.getstring(i + 1, scoredata[i].name, scoredata[i].score);
             text = text + part;
         }
         this.div.innerHTML = text;
         
-        if (scoredata.length > 0 && !this.isVisible) {
+        if (score_Length > 0 && !this.isVisible) {
             this.show();
-        } else if (scoredata.length === 0 && this.isVisible) {
+        } else if (score_Length === 0 && this.isVisible) {
             this.hide();
         }
     }
