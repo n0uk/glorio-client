@@ -277,7 +277,13 @@
       }
     },
     "ForceDisconnect": {
-      "fields": {}
+      "fields": {
+        "reason": {
+          "rule": "required",
+          "type": "int32",
+          "id": 1
+        }
+      }
     },
     "PackedMessage": {
       "fields": {

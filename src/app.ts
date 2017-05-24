@@ -13,6 +13,8 @@ import Connection from './states/connection';
 import Game from './states/game';
 import Crash from './states/crash';
 import Full from './states/full';
+import Kicked from './states/kicked';
+
 import * as $ from "jquery";
 
 import * as Utils from './utils/utils';
@@ -29,6 +31,7 @@ class App extends Phaser.Game {
         this.state.add('game', Game);
         this.state.add('crash', Crash);
         this.state.add('full', Full);
+        this.state.add('kicked', Kicked);
 
         this.state.start('boot');
     }

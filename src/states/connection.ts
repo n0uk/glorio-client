@@ -2,6 +2,7 @@ import ServerManager from '../servermanager';
 import Socket from '../socket/socket';
 import {Protocol} from "../protocol/protocol";
 import MessageType = Protocol.MessageType;
+import Message = Protocol.Message;
 
 /**
  * Connection state, try to connect and move on to "game" state
@@ -9,18 +10,22 @@ import MessageType = Protocol.MessageType;
 export default class Connection extends Phaser.State {
 
     private socket: Socket;
-    private isServerFullDisconnect: boolean = false;
+    private disconnectReason: number = -1;
 
 
     public onDisconnected() {
-        if (!this.isServerFullDisconnect) {
+        if (this.disconnectReason < 0) {
             this.game.state.start('crash', true, true);
         }
     }
 
-    public onServerFullDisconnect() {
-        this.isServerFullDisconnect = true;
-        this.game.state.start('full', true, true);
+    public onServerFullDisconnect(msg: Message) {
+        this.disconnectReason = msg.content['reason'];
+        if (this.disconnectReason == 0) {
+            this.game.state.start('full', true, true);
+        } else {
+            this.game.state.start('kicked', true, true);
+        }
     }
 
 

@@ -594,7 +594,19 @@
         pointer-event: none;
         user-select: none;        
     }
-    
+
+    #kickedscreen {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 6;
+        background-color: rgba(0,0,0,1);
+        color: white;
+    }
+
     #serverfullscreen {
         display: none;
         position: absolute;
