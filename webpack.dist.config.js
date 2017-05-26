@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var path = require('path');
-var GitRevisionPlugin = require('git-revision-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var WebpackShellPlugin = require('webpack-shell-plugin');
@@ -10,7 +9,7 @@ module.exports = {
         path.join(__dirname, 'src/app.ts')
     ],
     output: {
-        path: path.join(__dirname, '../glorio/public/'),
+        path: path.join(__dirname, '../glorio-rust/public/'),
         filename: 'game.min.js'
     },
     resolve: {

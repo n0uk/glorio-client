@@ -136,7 +136,7 @@ if (!Object.keys(loaderTypes.image).length) {
 } else {
     for (var i in loaderTypes.image) {
         shell.ShellString('\n    export class ' + toPascalCase(i) + ' {').toEnd(assetsClassFile);
-        shell.ShellString('\n        static getName(): string { return \'' + i.split('/').pop() + '\'; };\n').toEnd(assetsClassFile);
+        shell.ShellString('\n        static getName(): string { return \'' + i.replace('/', '_') + '\'; };\n').toEnd(assetsClassFile);
 
         for (var t in loaderTypes.image[i]) {
             shell.ShellString('\n        static get' + loaderTypes.image[i][t].toUpperCase() + '(): string { return require(\'assets/' + i + '.' + loaderTypes.image[i][t] + '\'); };').toEnd(assetsClassFile);
@@ -221,7 +221,7 @@ if (!Object.keys(loaderTypes.atlas).length) {
         }
 
         shell.ShellString('\n    export class ' + toPascalCase(i) + ' {').toEnd(assetsClassFile);
-        shell.ShellString('\n        static getName(): string { return \'' + i.split('/').pop() + '\'; };').toEnd(assetsClassFile);
+        shell.ShellString('\n        static getName(): string { return \'' + i.replace('/', '_') + '\'; };').toEnd(assetsClassFile);
         for (var e in dataExtensions) {
             shell.ShellString('\n\n        static get' + dataExtensions[e].toUpperCase() + dataTypes[e] + '(): string { return require(\'assets/' + i + '.' + dataExtensions[e] + '\'); };').toEnd(assetsClassFile);
         }

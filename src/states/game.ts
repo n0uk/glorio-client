@@ -187,8 +187,10 @@ export default class Game extends Phaser.State {
 
     private onSyncMessageDelete(message: Message) {
         let id: number = message.content['id'];
-        this.entityHash[id].destroy();
-        delete this.entityHash[id];
+        if (this.entityHash.hasOwnProperty(id.toString())) {
+            this.entityHash[id].destroy();
+            delete this.entityHash[id];
+        }
     }
 
     private initializePartyLink() {

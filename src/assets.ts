@@ -2,172 +2,172 @@
 
 export namespace Images {
     export class FrontendCrash {
-        static getName(): string { return 'crash'; };
+        static getName(): string { return 'frontend_crash'; };
 
         static getPNG(): string { return require('assets/frontend/crash.png'); };
     }
     export class FrontendDiscordLogo {
-        static getName(): string { return 'discord-logo'; };
+        static getName(): string { return 'frontend_discord-logo'; };
 
         static getSVG(): string { return require('assets/frontend/discord-logo.svg'); };
     }
     export class FrontendFavicon {
-        static getName(): string { return 'favicon'; };
+        static getName(): string { return 'frontend_favicon'; };
 
         static getICO(): string { return require('assets/frontend/favicon.ico'); };
     }
     export class FrontendLoad {
-        static getName(): string { return 'load'; };
+        static getName(): string { return 'frontend_load'; };
 
         static getGIF(): string { return require('assets/frontend/load.gif'); };
     }
     export class FrontendRedditLogo {
-        static getName(): string { return 'reddit-logo'; };
+        static getName(): string { return 'frontend_reddit-logo'; };
 
         static getSVG(): string { return require('assets/frontend/reddit-logo.svg'); };
     }
     export class ImagesBackgroundTemplate {
-        static getName(): string { return 'background_template'; };
+        static getName(): string { return 'images_background_template'; };
 
         static getPNG(): string { return require('assets/images/background_template.png'); };
     }
     export class ImagesBox {
-        static getName(): string { return 'box'; };
+        static getName(): string { return 'images_box'; };
 
         static getPNG(): string { return require('assets/images/box.png'); };
     }
     export class ImagesBuild {
-        static getName(): string { return 'build'; };
+        static getName(): string { return 'images_build'; };
 
         static getPNG(): string { return require('assets/images/build.png'); };
     }
     export class ImagesCarrot {
-        static getName(): string { return 'carrot'; };
+        static getName(): string { return 'images_carrot'; };
 
         static getPNG(): string { return require('assets/images/carrot.png'); };
     }
     export class ImagesCarwolf {
-        static getName(): string { return 'carwolf'; };
+        static getName(): string { return 'images_carwolf'; };
 
         static getPNG(): string { return require('assets/images/carwolf.png'); };
     }
     export class ImagesDoor {
-        static getName(): string { return 'door'; };
+        static getName(): string { return 'images_door'; };
 
         static getPNG(): string { return require('assets/images/door.png'); };
     }
     export class ImagesEgg {
-        static getName(): string { return 'egg'; };
+        static getName(): string { return 'images_egg'; };
 
         static getPNG(): string { return require('assets/images/egg.png'); };
     }
     export class ImagesFollower {
-        static getName(): string { return 'follower'; };
+        static getName(): string { return 'images_follower'; };
 
         static getPNG(): string { return require('assets/images/follower.png'); };
     }
     export class ImagesFoodcrate {
-        static getName(): string { return 'foodcrate'; };
+        static getName(): string { return 'images_foodcrate'; };
 
         static getPNG(): string { return require('assets/images/foodcrate.png'); };
     }
     export class ImagesFoodgenerator {
-        static getName(): string { return 'foodgenerator'; };
+        static getName(): string { return 'images_foodgenerator'; };
 
         static getPNG(): string { return require('assets/images/foodgenerator.png'); };
     }
     export class ImagesGarden {
-        static getName(): string { return 'garden'; };
+        static getName(): string { return 'images_garden'; };
 
         static getPNG(): string { return require('assets/images/garden.png'); };
     }
     export class ImagesGardener {
-        static getName(): string { return 'gardener'; };
+        static getName(): string { return 'images_gardener'; };
 
         static getPNG(): string { return require('assets/images/gardener.png'); };
     }
     export class ImagesGuard {
-        static getName(): string { return 'guard'; };
+        static getName(): string { return 'images_guard'; };
 
         static getPNG(): string { return require('assets/images/guard.png'); };
     }
     export class ImagesHeartstone {
-        static getName(): string { return 'heartstone'; };
+        static getName(): string { return 'images_heartstone'; };
 
         static getPNG(): string { return require('assets/images/heartstone.png'); };
     }
     export class ImagesKnight {
-        static getName(): string { return 'knight'; };
+        static getName(): string { return 'images_knight'; };
 
         static getPNG(): string { return require('assets/images/knight.png'); };
     }
     export class ImagesMannequin {
-        static getName(): string { return 'mannequin'; };
+        static getName(): string { return 'images_mannequin'; };
 
         static getPNG(): string { return require('assets/images/mannequin.png'); };
     }
     export class ImagesMeat {
-        static getName(): string { return 'meat'; };
+        static getName(): string { return 'images_meat'; };
 
         static getPNG(): string { return require('assets/images/meat.png'); };
     }
     export class ImagesPickupbot {
-        static getName(): string { return 'pickupbot'; };
+        static getName(): string { return 'images_pickupbot'; };
 
         static getPNG(): string { return require('assets/images/pickupbot.png'); };
     }
     export class ImagesSoccerball {
-        static getName(): string { return 'soccerball'; };
+        static getName(): string { return 'images_soccerball'; };
 
         static getPNG(): string { return require('assets/images/soccerball.png'); };
     }
     export class ImagesStonecrate {
-        static getName(): string { return 'stonecrate'; };
+        static getName(): string { return 'images_stonecrate'; };
 
         static getPNG(): string { return require('assets/images/stonecrate.png'); };
     }
     export class ImagesStonegenerator {
-        static getName(): string { return 'stonegenerator'; };
+        static getName(): string { return 'images_stonegenerator'; };
 
         static getPNG(): string { return require('assets/images/stonegenerator.png'); };
     }
     export class ImagesStonewall {
-        static getName(): string { return 'stonewall'; };
+        static getName(): string { return 'images_stonewall'; };
 
         static getPNG(): string { return require('assets/images/stonewall.png'); };
     }
     export class ImagesTower {
-        static getName(): string { return 'tower'; };
+        static getName(): string { return 'images_tower'; };
 
         static getPNG(): string { return require('assets/images/tower.png'); };
     }
     export class ImagesUnmount {
-        static getName(): string { return 'unmount'; };
+        static getName(): string { return 'images_unmount'; };
 
         static getPNG(): string { return require('assets/images/unmount.png'); };
     }
     export class ImagesWinterstonegenerator {
-        static getName(): string { return 'winterstonegenerator'; };
+        static getName(): string { return 'images_winterstonegenerator'; };
 
         static getPNG(): string { return require('assets/images/winterstonegenerator.png'); };
     }
     export class ImagesWinterwoodgenerator {
-        static getName(): string { return 'winterwoodgenerator'; };
+        static getName(): string { return 'images_winterwoodgenerator'; };
 
         static getPNG(): string { return require('assets/images/winterwoodgenerator.png'); };
     }
     export class ImagesWoodcrate {
-        static getName(): string { return 'woodcrate'; };
+        static getName(): string { return 'images_woodcrate'; };
 
         static getPNG(): string { return require('assets/images/woodcrate.png'); };
     }
     export class ImagesWoodgenerator {
-        static getName(): string { return 'woodgenerator'; };
+        static getName(): string { return 'images_woodgenerator'; };
 
         static getPNG(): string { return require('assets/images/woodgenerator.png'); };
     }
     export class ImagesWoodwall {
-        static getName(): string { return 'woodwall'; };
+        static getName(): string { return 'images_woodwall'; };
 
         static getPNG(): string { return require('assets/images/woodwall.png'); };
     }
@@ -193,7 +193,7 @@ export namespace Atlases {
         Walk8 = <any>'walk8.png',
     }
     export class AtlasesBear {
-        static getName(): string { return 'bear'; };
+        static getName(): string { return 'atlases_bear'; };
 
         static getJSONHash(): string { return require('assets/atlases/bear.json'); };
 
@@ -212,7 +212,7 @@ export namespace Atlases {
         Walk8 = <any>'walk8.png',
     }
     export class AtlasesCarpig {
-        static getName(): string { return 'carpig'; };
+        static getName(): string { return 'atlases_carpig'; };
 
         static getJSONHash(): string { return require('assets/atlases/carpig.json'); };
 
@@ -231,7 +231,7 @@ export namespace Atlases {
         Walk8 = <any>'walk8.png',
     }
     export class AtlasesCarwolf {
-        static getName(): string { return 'carwolf'; };
+        static getName(): string { return 'atlases_carwolf'; };
 
         static getJSONHash(): string { return require('assets/atlases/carwolf.json'); };
 
@@ -250,7 +250,7 @@ export namespace Atlases {
         Walk8 = <any>'walk8.png',
     }
     export class AtlasesChicken {
-        static getName(): string { return 'chicken'; };
+        static getName(): string { return 'atlases_chicken'; };
 
         static getJSONHash(): string { return require('assets/atlases/chicken.json'); };
 
@@ -263,7 +263,7 @@ export namespace Atlases {
         DoorOpen = <any>'door_open.png',
     }
     export class AtlasesDoor {
-        static getName(): string { return 'door'; };
+        static getName(): string { return 'atlases_door'; };
 
         static getJSONHash(): string { return require('assets/atlases/door.json'); };
 
@@ -300,7 +300,7 @@ export namespace Atlases {
         Walk16 = <any>'walk16.png',
     }
     export class AtlasesFollower {
-        static getName(): string { return 'follower'; };
+        static getName(): string { return 'atlases_follower'; };
 
         static getJSONHash(): string { return require('assets/atlases/follower.json'); };
 
@@ -337,7 +337,7 @@ export namespace Atlases {
         Walk16 = <any>'walk16.png',
     }
     export class AtlasesGardener {
-        static getName(): string { return 'gardener'; };
+        static getName(): string { return 'atlases_gardener'; };
 
         static getJSONHash(): string { return require('assets/atlases/gardener.json'); };
 
@@ -374,7 +374,7 @@ export namespace Atlases {
         Walk16 = <any>'walk16.png',
     }
     export class AtlasesGuard {
-        static getName(): string { return 'guard'; };
+        static getName(): string { return 'atlases_guard'; };
 
         static getJSONHash(): string { return require('assets/atlases/guard.json'); };
 
@@ -420,7 +420,7 @@ export namespace Atlases {
         Walk16 = <any>'walk16.png',
     }
     export class AtlasesKnight {
-        static getName(): string { return 'knight'; };
+        static getName(): string { return 'atlases_knight'; };
 
         static getJSONHash(): string { return require('assets/atlases/knight.json'); };
 
@@ -447,7 +447,7 @@ export namespace Atlases {
         Walk16 = <any>'walk16.png',
     }
     export class AtlasesPickupbot {
-        static getName(): string { return 'pickupbot'; };
+        static getName(): string { return 'atlases_pickupbot'; };
 
         static getJSONHash(): string { return require('assets/atlases/pickupbot.json'); };
 
@@ -466,7 +466,7 @@ export namespace Atlases {
         Walk8 = <any>'walk8.png',
     }
     export class AtlasesPig {
-        static getName(): string { return 'pig'; };
+        static getName(): string { return 'atlases_pig'; };
 
         static getJSONHash(): string { return require('assets/atlases/pig.json'); };
 
@@ -493,7 +493,7 @@ export namespace Atlases {
         Walk8 = <any>'walk8.png',
     }
     export class AtlasesWhitebear {
-        static getName(): string { return 'whitebear'; };
+        static getName(): string { return 'atlases_whitebear'; };
 
         static getJSONHash(): string { return require('assets/atlases/whitebear.json'); };
 
@@ -520,7 +520,7 @@ export namespace Atlases {
         Walk8 = <any>'walk8.png',
     }
     export class AtlasesWolf {
-        static getName(): string { return 'wolf'; };
+        static getName(): string { return 'atlases_wolf'; };
 
         static getJSONHash(): string { return require('assets/atlases/wolf.json'); };
 
@@ -531,7 +531,7 @@ export namespace Atlases {
     enum MapMapFrames {
     }
     export class MapMap {
-        static getName(): string { return 'map'; };
+        static getName(): string { return 'map_map'; };
 
         static getJSONHash(): string { return require('assets/map/map.json'); };
 

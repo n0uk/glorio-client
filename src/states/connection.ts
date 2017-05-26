@@ -21,7 +21,7 @@ export default class Connection extends Phaser.State {
 
     public onServerFullDisconnect(msg: Message) {
         this.disconnectReason = msg.content['reason'];
-        if (this.disconnectReason == 0) {
+        if (this.disconnectReason === 0) {
             this.game.state.start('full', true, true);
         } else {
             this.game.state.start('kicked', true, true);
