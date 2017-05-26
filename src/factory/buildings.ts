@@ -33,7 +33,7 @@ export class Door extends Entity {
         super(world, id, parentId);
         this.addComponent(new TransformComponent());
         this.addComponent(new NetworkTransformComponent());
-        this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Images.ImagesDoor.getName(), new Phaser.Point(0.5, 0.5)));
+        this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Images.AtlasesDoor.getName(), new Phaser.Point(0.5, 0.5)));
         this.addComponent(new DoorAnimatorComponent());
         this.addComponent(new JumpOnHitComponent());
     }
