@@ -3,7 +3,7 @@ import TransformComponent from './transform';
 import {Message} from "protobufjs";
 import PingService from "../../services/pingservice";
 
-class RotationInterpolator {
+export class RotationInterpolator {
     private serverRotation: number = 0;
     private clientRotation: number = 0;
     private updateTime: number = 0;
@@ -22,7 +22,7 @@ class RotationInterpolator {
             this.updateTime = currentTime;
     }
 
-    protected interpolateAngle(a1: number,
+    public static interpolateAngle(a1: number,
         a2: number,
         weight: number,
         radians: boolean = true): number {  
@@ -51,11 +51,11 @@ class RotationInterpolator {
         let timeLeft: number = currentTime - this.updateTime;
         let lerpValue: number = timeLeft / (this.interpolationTime + averagePing / 2);
         lerpValue = Phaser.Math.clamp(lerpValue, 0, 1);
-        return this.interpolateAngle(this.clientRotation, this.serverRotation, lerpValue);
+        return RotationInterpolator.interpolateAngle(this.clientRotation, this.serverRotation, lerpValue);
     }
 }
 
-class PositionInterpolator {
+export class PositionInterpolator {
     private serverPosition: Phaser.Point = new Phaser.Point();
     private clientPosition: Phaser.Point = new Phaser.Point();
     private updateTime: number = 0;
@@ -105,8 +105,10 @@ export default class NetworkTransformComponent extends Component {
     public interpolateRotation: boolean = true;
     public interpolatePosition: boolean = true;
 
-    constructor() {
+    constructor(interpolatePosition: boolean = true, interpolateRotation: boolean = true) {
         super();
+        this.interpolateRotation = interpolateRotation;
+        this.interpolatePosition = interpolatePosition;
     }
 
     public start() {
@@ -118,20 +120,24 @@ export default class NetworkTransformComponent extends Component {
 
     private onNetworkSync(message: Message) {
         if (message.hasOwnProperty('x')) {
-            this.tmpNetworkPoint.set(message['x'], message['y']);
-            this.positionInterpolator.updateFrame(
-                this.cachedTransform.position,
-                this.tmpNetworkPoint,
-                this.world.game.time.totalElapsedSeconds()
-            );
+            if (this.interpolatePosition) {
+                this.tmpNetworkPoint.set(message['x'], message['y']);
+                this.positionInterpolator.updateFrame(
+                    this.cachedTransform.position,
+                    this.tmpNetworkPoint,
+                    this.world.game.time.totalElapsedSeconds()
+                );
+            }
         }
 
         if (message.hasOwnProperty('rotation')) {
-            this.rotationInterpolator.updateFrame(
-                this.cachedTransform.rotation,
-                message['rotation'],
-                this.world.game.time.totalElapsedSeconds()
-            );
+            if (this.interpolateRotation) {
+                this.rotationInterpolator.updateFrame(
+                    this.cachedTransform.rotation,
+                    message['rotation'],
+                    this.world.game.time.totalElapsedSeconds()
+                );
+            }
         }
     }
 

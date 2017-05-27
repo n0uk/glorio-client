@@ -181,7 +181,7 @@ export default class Game extends Phaser.State {
     private onSendDamage(message: Message) {
         let id: number = message.content['id'];
         if (this.entityHash.hasOwnProperty(id.toString())) {
-            this.entityHash[id].emit('senddamage');
+            this.entityHash[id].emit('senddamage', message.content);
         }
     }
 

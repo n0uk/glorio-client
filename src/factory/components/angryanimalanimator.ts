@@ -1,4 +1,5 @@
 import AnimatorComponent from "./animator";
+import {Message} from "protobufjs";
 
 export default class AngryAnimalAnimatorComponent extends AnimatorComponent {
 
@@ -21,7 +22,7 @@ export default class AngryAnimalAnimatorComponent extends AnimatorComponent {
         this.play('walk');
     }
 
-    private onSendDamage() {
+    private onSendDamage(_: Message) {
         this.play('punch');
     }
 

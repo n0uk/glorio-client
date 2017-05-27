@@ -70,6 +70,7 @@ export default class NetworkInputComponent extends Component {
             this.punchDirection.set(this.world.game.input.activePointer.worldX - this.cachedTransform.position.x,
                 this.world.game.input.activePointer.worldY - this.cachedTransform.position.y);
             this.needSendPunch = true;
+            this.entity.emit('sendpunch');
         }
     }
 

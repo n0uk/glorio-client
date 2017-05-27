@@ -9,7 +9,6 @@ export default class BallAnimatorComponent extends AnimatorComponent {
 
     public start() {
         super.start();
-        (this.entity.components.networktransform as NetworkTransformComponent).interpolateRotation = false;
     }
 
     public update(dt: number) {

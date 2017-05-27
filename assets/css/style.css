@@ -964,6 +964,7 @@
 
     /** LEADERBOARDS **/
     .ui-leaderboard {
+        text-align: left;
         position: fixed;
         top: 20px;
         right: 20px;
@@ -1024,6 +1025,23 @@
     }
 
     .ui-leaderboard .ui-leaderboard-player.is-active .player-score {
+        color: rgba(216, 191, 73, 1);
+    }
+
+    .ui-leaderboard .ui-leaderboard-header {
+        position: relative;
+        display: block;
+        margin: 0 0 8px;
+        padding: 0 10px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 13px;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+
+    .ui-leaderboard .ui-leaderboard-header .leaderboard-name {
+        width: 100%;
         color: rgba(216, 191, 73, 1);
     }
 

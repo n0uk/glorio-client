@@ -36,7 +36,7 @@ export default class LevelComponent extends Component {
 
     private updateLevel(level: number) {
         this.currentLevel = level;
-        let scale = Phaser.Math.clamp(0.6 + level / 50, 0.6, 1.3);
+        let scale = Phaser.Math.clamp(0.6 + level / 50, 0.6, 1.2);
         (this.entity.components.sprite as SpriteComponent).sprite.scale.set(scale, scale);
     }
 }

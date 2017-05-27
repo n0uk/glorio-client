@@ -114,7 +114,7 @@ export class SoccerBall extends Entity {
     constructor(world: Game, id: number, parentId: number) {
         super(world, id, parentId);
         this.addComponent(new TransformComponent());
-        this.addComponent(new NetworkTransformComponent());
+        this.addComponent(new NetworkTransformComponent(true, false));
         this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Images.ImagesSoccerball.getName(), new Phaser.Point(0.5, 0.5)));
         this.addComponent(new BallAnimatorComponent());
     }

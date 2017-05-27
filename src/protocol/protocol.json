@@ -1,4 +1,4 @@
-﻿{
+{
   "nested": {
     "Assign": {
       "fields": {
@@ -123,6 +123,14 @@
           "rule": "required",
           "type": "uint32",
           "id": 1
+        },
+        "directionX": {
+          "type": "float",
+          "id": 2
+        },
+        "directionY": {
+          "type": "float",
+          "id": 3
         }
       }
     },

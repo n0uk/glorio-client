@@ -40,7 +40,7 @@ export default class PlayerAnimatorComponent extends AnimatorComponent {
         }
     }
 
-    private onSendDamage() {
+    private onSendDamage(_: Message) {
         if (this.transportId > -1) {
             this.play('pigpunch');
         } else {
