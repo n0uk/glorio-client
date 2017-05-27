@@ -4,7 +4,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         }
       }
@@ -13,7 +13,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         },
         "objectType": {
@@ -74,7 +74,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         }
       }
@@ -83,7 +83,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         },
         "x": {
@@ -107,7 +107,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         },
         "objectType": {
@@ -121,7 +121,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         },
         "directionX": {
@@ -138,7 +138,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         }
       }
@@ -147,7 +147,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         },
         "message": {
@@ -199,7 +199,7 @@
       "fields": {
         "id": {
           "rule": "required",
-          "type": "uint32",
+          "type": "int32",
           "id": 1
         },
         "counts": {
