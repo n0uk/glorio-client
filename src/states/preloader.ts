@@ -82,7 +82,7 @@ export default class Preloader extends Phaser.State {
                     <div class="ui-leaderboard-player">
                         <span class="player-rank">#${Math.floor(i / 2) + 1}</span>
                         <span class="player-name">${escapeHtml(name)}</span>
-                        <span class="player-score">${parseFloat((score / 1000.0).toPrecision(1))}k</span>
+                        <span class="player-score">${(score / 1000.0).toPrecision(3)}k</span>
                     </div>`);
             }
 
