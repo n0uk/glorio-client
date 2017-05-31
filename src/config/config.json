@@ -188,7 +188,10 @@
       "health": 1000,
       "width": 64,
       "height": 64,
-      "limit": 50
+      "limit": 50,
+      "drop": {
+        "wood": 10
+      }
     },
     "stoneblock": {
       "price": {
@@ -199,7 +202,10 @@
       "health": 2000,
       "width": 64,
       "height": 64,
-      "limit": 50
+      "limit": 50,
+      "drop": {
+        "stone": 10
+      }
     },
     "door": {
       "price": {
@@ -211,7 +217,11 @@
       "description": "Opens only for you and your clan.",
       "health": 2000,
       "width": 64,
-      "height": 64
+      "height": 64,
+      "drop": {
+        "wood": 10,
+        "stone": 20
+      }
     },
     "farmerbot": {
       "attack_distance": 60,
@@ -259,6 +269,7 @@
       "limit": 5,
       "width": 128,
       "height": 128,
+      "subtile": true,
       "description": "You can grow carrots on a bed!",
       "drop": {
         "food": 5
@@ -274,6 +285,7 @@
       "price": {
         "food": 40
       },
+      "damage": 30,
       "name": "Guard",
       "limit": 3,
       "description": "Defends the area you place him on.",
@@ -298,6 +310,7 @@
       "price": {
         "food": 15
       },
+      "damage": 30,
       "name": "Mercenary",
       "reward_for_punch": 3,
       "limit": 3,
@@ -328,6 +341,7 @@
       "additional_punch_reward": 5
     },
     "foodcrate": {
+      "allow_reward": false,
       "price": {
         "food": 100
       },
@@ -342,6 +356,7 @@
       }
     },
     "woodcrate": {
+      "allow_reward": false,
       "price": {
         "wood": 100
       },
@@ -356,6 +371,7 @@
       }
     },
     "stonecrate": {
+      "allow_reward": false,
       "price": {
         "stone": 100
       },
@@ -379,7 +395,11 @@
       "width": 64,
       "height": 64,
       "description": "Resurrects you after your death. Make sure it is not destroyed!",
-      "health": 500
+      "health": 500,
+      "drop": {
+        "food": 25,
+        "gold": 100
+      }
     },
     "tower": {
       "price": {
@@ -391,7 +411,11 @@
       "radius": 64,
       "description": "The tower produces gold, making you richer!",
       "health": 300,
-      "resource_count": 5
+      "resource_count": 5,
+      "drop": {
+        "wood": 20,
+        "stone": 20
+      }
     },
     "rideablewolf": {
       "price": {
@@ -416,7 +440,7 @@
       "price": {
         "gold": 500
       },
-      "radius": 32,
+      "radius": 28,
 
       "name": "Ball",
       "description": "For football fans",

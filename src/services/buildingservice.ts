@@ -188,7 +188,7 @@ export default class BuildingService extends Service {
             let halfTileHeight: number = tileHeight / 2;
 
             // Aligning
-            if (Config.buildings[BuildingType[this.currentBuildingId].toLowerCase()].radius) {
+            if (Config.buildings[BuildingType[this.currentBuildingId].toLowerCase()].radius || Config.buildings[BuildingType[this.currentBuildingId].toLowerCase()].subtile) {
                 // Subtile based
                 this.currentBuildingPosition.x = Math.floor(this.currentBuildingPosition.x / halfTileWidth) * halfTileWidth;
                 this.currentBuildingPosition.y = Math.floor(this.currentBuildingPosition.y / halfTileHeight) * halfTileHeight;
