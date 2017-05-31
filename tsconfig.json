@@ -6,7 +6,8 @@
     "allowJs": true,
     "types": [
       "node"
-    ]
+    ],
+    "lib": ["DOM", "ES5", "ScriptHost", "ES2015.Promise"]
   },
   "files": [
     "./src/globals.d.ts",
