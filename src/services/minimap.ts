@@ -81,19 +81,19 @@ export default class MinimapService extends Service {
         }
 
         let data = msg.content['data'];
-        let team_data = msg.content['teamData'];
+        let team_data = msg.content['teamIdData'];
 
         for (let i = 0; i < data.length; i += 4) {
             let id: number = data[i];
             let x: number = data[i + 1] * this.x_ratio;
             let y: number = data[i + 2] * this.y_ratio;
             let level: number = data[i + 3];
-            let teamId: string = team_data[i / 4];
+            let teamId: number = team_data[i / 4];
             this.bitmapData.ctx.beginPath();
-            if (this.world.networkId === id) {
+            if (this.world.id === id) {
                 this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
                 this.bitmapData.ctx.fillStyle = '#00ff00';
-            } else if (this.world.teamId === teamId) {
+            } else if (this.world.teamId === teamId && teamId > -1) {
                 this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
                 this.bitmapData.ctx.fillStyle = '#00ff00';
             } else if (level > 0) {

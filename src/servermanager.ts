@@ -11,6 +11,16 @@ export default class ServerManager {
 
     public static init(callback: Function) {
         // Here we need to ping every region server
+        if (DEBUG) {
+            callback();
+        } else {
+            Ajax.call('/ip', function (obj) {
+                ServerManager.IP = obj.ip;
+                ServerManager.PORT = obj.port;
+                callback();
+            });
+        }
+        /*
         ServerManager.getNearestServer().then(val => {
             ServerManager.IP = val as string;
             ServerManager.PORT = '8080';
@@ -19,7 +29,7 @@ export default class ServerManager {
             ServerManager.IP = '45.77.57.202';
             ServerManager.PORT = '8080';
             callback();
-        });
+        });*/
     }
 
     public static getHostAddress(): string {

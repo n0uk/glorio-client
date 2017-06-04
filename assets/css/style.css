@@ -1242,3 +1242,249 @@
         font-size: 16px;
         cursor: pointer;
     }
+
+    /** Team-management **/
+    #ui-team-list-container {
+        z-index: 3;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(0, 0, 0, .3);
+        user-select: none;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        user-select: none;
+        visibility: hidden;
+        pointer-events: all;
+    }
+
+    .ui-team-list-item {
+        user-select: none;
+        width: 100%;
+        display: block;
+        height: 44px;
+        vertical-align: middle;
+        color: white;
+        font-size: 18px;
+        font-family:  'Slabo 27px', serif;
+        background-color: rgba(0, 0, 0, .8);
+        margin: 2px;
+        user-select: none;
+        cursor: default;
+    }
+
+    .ui-team-name {
+        color: rgba(216, 191, 73, 1);
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .ui-join-button {
+        background-color: #4CAF50; /* Green background */
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 12px 24px; /* Some padding */
+        font-size: 16px; /* Set a font-size */
+        pointer-events: all;
+        cursor: pointer;
+        float: right;
+        user-select: none;
+    }
+
+    .ui-join-button:hover:not(.loading) {
+        background-color: #4CBF70; /* Green background */
+    }
+
+
+    .ui-create-button {
+        background-color: #4CAF50; /* Green background */
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 12px 24px; /* Some padding */
+        font-size: 16px; /* Set a font-size */
+        pointer-events: all;
+        cursor: pointer;
+        float: right;
+        user-select: none;
+        margin-top: 4px;
+    }
+
+    .ui-create-button:hover:not(.loading) {
+        background-color: #4CBF70; /* Green background */
+    }
+
+    .ui-join-button.loading {
+        background-color: #444444; /* Green background */
+        pointer-events: all;
+        cursor: default;
+    }
+
+    .ui-team-list-header {
+        background-color: #4CAF50; /* Green background */
+        font-family: 'Slabo 27px', serif;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+        height: 20px;
+        user-select: none;
+        cursor: default;
+    }
+
+    .ui-team-list-content {
+        height: 320px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .ui-team-list-bottom {
+        height: 44px;
+        width: 100%;
+    }
+
+    .ui-input-team-name {
+        margin-left: 5px;
+        padding:8px;
+        display:inline;
+        border:none;
+        border-bottom:1px solid #ccc;
+        width:150px;
+        margin-top: 10px;
+        cursor: auto;
+    }
+
+    #ui-member-list-container {
+        z-index: 3;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(0, 0, 0, .3);
+        user-select: none;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        user-select: none;
+        visibility: hidden;
+        pointer-events: all;
+    }
+
+    .ui-member-list-item {
+        user-select: none;
+        width: 100%;
+        display: block;
+        height: 44px;
+        vertical-align: middle;
+        color: white;
+        font-size: 18px;
+        font-family:  'Slabo 27px', serif;
+        background-color: rgba(0, 0, 0, .8);
+        margin: 2px;
+        user-select: none;
+        cursor: default;
+    }
+
+    .ui-member-list-bottom {
+        height: 30px;
+        width: 100%;
+    }
+
+
+    .ui-member-list-content {
+        height: 340px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .ui-kick-button {
+        background-color: #ec7777;
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 12px 24px; /* Some padding */
+        font-size: 16px; /* Set a font-size */
+        pointer-events: all;
+        cursor: pointer;
+        float: right;
+        user-select: none;
+    }
+
+    .ui-kick-button:hover {
+        background-color: #fc7777;
+    }
+
+    .ui-leave-button {
+        background-color: #ec7777;
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        font-size: 16px; /* Set a font-size */
+        vertical-align: middle;
+        pointer-events: all;
+        cursor: pointer;
+        user-select: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .ui-leave-button:hover {
+        background-color: #fc7777;
+    }
+
+    #ui-join-request-list {
+        visibility: hidden;
+        text-align: center;
+        position: fixed;
+        top: 20px;
+        right: 250px;
+        vertical-align: middle;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        color: #eee;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        user-select: none;
+        cursor: default;
+        line-height: 20px;
+        font-size: 13px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .join-request-buttons {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .join-request-buttons > .approve {
+        padding: 10px;
+        cursor: pointer;
+        color: #60a04b;
+        pointer-events: all;
+        margin-right: 10px;
+    }
+
+    .join-request-buttons > .decline {
+        padding: 10px;
+        cursor: pointer;
+        color: #ec7777;
+        pointer-events: all;
+        margin-left: 10px;
+    }
+
+    /* Add a right margin to each icon */
+    .fa-left {
+        margin-left: -12px;
+        margin-right: 8px;
+    }

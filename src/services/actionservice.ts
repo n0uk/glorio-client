@@ -4,6 +4,7 @@ import {Service} from "./servicemanager";
 import {Protocol} from "../protocol/protocol";
 import MessageType = Protocol.MessageType;
 import * as Assets from '../assets';
+import TeamManager from "./teammanager";
 
 class ActionContainer extends MenuContainer {
     constructor() {
@@ -48,6 +49,7 @@ export class ActionService extends Service {
         this.actionMenu = new ActionContainer();
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesBuild.getPNG(), 'shop-show', 'B', 'B'));
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesUnmount.getPNG(), 'unmount', 'U', 'U'));
+        this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesUnmount.getPNG(), 'team', 'T', 'T'));
     }
 
     public requestWork(id: string) {
@@ -55,6 +57,8 @@ export class ActionService extends Service {
             (this.world.services.getService(CraftMenuService) as CraftMenuService).shopMenu.toggle();
         } else if (id === 'unmount') {
             this.world.socket.sendMessage(MessageType.PlayerUnmountRequest, {});
+        } else if (id === 'team') {
+            (this.world.services.getService(TeamManager) as TeamManager).toggle();
         }
     }
 }

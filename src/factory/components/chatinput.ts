@@ -65,6 +65,8 @@ class ChatInput {
 }
 
 export default class ChatInputComponent extends Component {
+    public id: string = "chatinput";
+
     protected chatInput: ChatInput = null;
     protected cachedTransform: TransformComponent;
     protected cachedSprite: SpriteComponent;

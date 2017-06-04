@@ -41,7 +41,15 @@ export class Entity extends EventEmitter {
     public addComponent(component: Component): Component {
         this._components.push(component);
         if (component.id) {
-            this.components[component.id] = component;
+            if (!this.components[component.id]) {
+                this.components[component.id] = component;
+            } else {
+                let i = 1;
+                while (this.components.hasOwnProperty(component.id + '_' + i.toString())) {
+                    i++;
+                }
+                this.components[component.id + '_' + i.toString()] = component;
+            }
         }
         component.entity = this;
         component.world = this.world;
@@ -63,6 +71,6 @@ export class Entity extends EventEmitter {
     }
 
     public isLocalPlayer(): boolean {
-        return this.id === this.world.networkId;
+        return this.id === this.world.id;
     }
 }

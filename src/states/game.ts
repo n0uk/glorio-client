@@ -30,6 +30,7 @@ import {CraftMenuService} from "../services/craftmenuservice";
 import {ActionService} from "../services/actionservice";
 import ServerManager from "../servermanager";
 import ServerSelectionService from "../services/serverselection";
+import TeamManager from "../services/teammanager";
 
 enum eGameState {
     LOBBY,
@@ -46,8 +47,11 @@ export default class Game extends Phaser.State {
     public LAYER_UI: Phaser.Group;
 
     public socket: Socket;
+    public id: number;
     public networkId: number;
-    public teamId: string;
+    public teamId: number = -1;
+    public isAdmin: boolean = false;
+
     public assignedObject: Entity;
 
     public services: ServiceManager = new ServiceManager();
@@ -79,6 +83,7 @@ export default class Game extends Phaser.State {
         this.respawnWindow = new RespawnWindow(this);
         this.initializeLoginButton();
         this.initializeGameState(eGameState.LOBBY);
+        this.initializePartyLink();
     }
 
     private initializeLoginButton() {
@@ -197,11 +202,12 @@ export default class Game extends Phaser.State {
         let partylink = document.getElementById('partylink');
         partylink.style.visibility = 'visible';
         partylink.onclick = function () {
-            history.pushState({id: 0}, '', `/?ip=${ServerManager.getHostAddressRaw()}&teamId=${this.teamId}`);
+            history.pushState({id: 0}, '', `/?ip=${ServerManager.getHostAddressRaw()}`);
         }.bind(this);
     }
 
     private onSyncMessage(message: Message) {
+        let isTeamUpdated: boolean = false;
         let id: number = message.content['id'];
         let isNew: boolean = false;
         if (!this.entityHash[id]) {
@@ -209,13 +215,28 @@ export default class Game extends Phaser.State {
             isNew = true;
         }
 
-        if (id === this.networkId && isNew && message.content['teamId']) {
-            this.teamId = message.content['teamId'];
-            this.initializePartyLink();
+        if (id === this.id) {
+            if (message.content.hasOwnProperty('networkId')) {
+                this.networkId = message.content['networkId'];
+            }
+            // Team id changed
+            if (message.content.hasOwnProperty('teamId')) {
+                this.teamId = message.content['teamId'];
+                if (!isNew) {
+                    isTeamUpdated = true;
+                }
+            }
+
+            // Is admin changed
+            if (message.content.hasOwnProperty('isTeamAdmin')) {
+                this.isAdmin = message.content['isTeamAdmin'];
+                isTeamUpdated = true;
+            }
         }
 
         this.entityHash[id].emit('networksync', message.content);
-        if (id === this.networkId && isNew) {
+
+        if (id === this.id && isNew) {
             this.assignedObject = this.entityHash[id];
 
             if (this.assignedObject instanceof Player) {
@@ -234,11 +255,27 @@ export default class Game extends Phaser.State {
                         message.content['y']);
                 }
             }
+
+            this.broadcastEvent("hostspawn");
+            (this.services.getService(TeamManager) as TeamManager).onTeamSwitch(this.teamId);
+        }
+
+        if (isTeamUpdated) {
+            this.broadcastEvent("hostteamchanged");
+            (this.services.getService(TeamManager) as TeamManager).onTeamSwitch(this.teamId);
+        }
+    }
+
+    private broadcastEvent(event: string) {
+        for (let key in this.entityHash) {
+            if (this.entityHash[key]) {
+                this.entityHash[key].emit(event);
+            }
         }
     }
 
     private onAssignMessage(message: Message): void {
-        this.networkId = message.content['id'];
+        this.id = message.content['id'];
         // console.log(`Assign id: ${this.networkId}`);
         this.camera.unfollow();
         this.cleanup();
@@ -262,7 +299,7 @@ export default class Game extends Phaser.State {
     }
 
     public getTeamId() {
-        return getUrlParameterByName('teamId') || '';
+        return getUrlParameterByName('networkId') || '';
     }
 
     public request_respawn() {
@@ -299,6 +336,7 @@ export default class Game extends Phaser.State {
         this.services.registerService(new LevelService(this));
         this.services.registerService(new CraftMenuService(this));
         this.services.registerService(new ActionService(this));
+        this.services.registerService(new TeamManager(this));
         $.ajax('http://status.glor.io').done(function (data) {
             this.services.registerService(new ServerSelectionService(this, data));
         }.bind(this));

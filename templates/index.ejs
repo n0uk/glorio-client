@@ -8,6 +8,7 @@
     <meta name="keywords" content="game,games,gaming,online,io,multiplayer,glory,glorio,village,castle">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Roboto|Slabo+27px|Hammersmith One|Open Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<%= require('../src/assets').Misc.CssStyle.getCSS() %>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -129,6 +130,34 @@
 </div>
 
 <div id="game-layout">
+    <div id="ui-member-list-container">
+        <div class="ui-team-list-header">
+            Team mates
+        </div>
+        <div class="ui-member-list-content" id="ui-member-list-content">
+        </div>
+        <div class="ui-member-list-bottom">
+            <div class="ui-leave-button" id="ui-leave-team-button">
+                LEAVE TEAM
+            </div>
+        </div>
+    </div>
+    <div id="ui-team-list-container">
+        <div class="ui-team-list-header">
+            Teams
+        </div>
+        <div class="ui-team-list-content" id="ui-team-list-content">
+        </div>
+        <div class="ui-team-list-bottom">
+            <input class="ui-input-team-name" id="ui-input-team-name" maxlength="15" placeholder="Unique name"/>
+            <div class="ui-create-button" id="ui-create-team-button">
+                Create team
+            </div>
+        </div>
+    </div>
+    <div id="ui-join-request-list">
+
+    </div>
     <div id="bottom-panel" class="menu">
     </div>
     <div id="left-panel" class="menu">
@@ -204,7 +233,7 @@
         <div class="header">Featured youtuber:</div>
     </div>
     <div id="title-logo">GLOR.IO</div>
-    <div id="subtitle-logo">Ver 0.4.5</div>
+    <div id="subtitle-logo">Ver 0.4.6</div>
     <div class="container">
         <div class="card" id="login">
             <input type="text" id="login-input" placeholder="Enter Name" maxlength="15">

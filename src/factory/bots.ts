@@ -22,7 +22,7 @@ export class FollowerBot extends Entity {
         this.addComponent(new HealthComponent(50));
         this.addComponent(new RedOnHitComponent());
         this.addComponent(new TeamComponent());
-        if (parentId === world.networkId) {
+        if (parentId === world.id) {
             (this.addComponent(new PlayerLabelComponent(50)) as PlayerLabelComponent).setPlayerName("Mercenary");
         }
     }
@@ -39,7 +39,7 @@ export class FarmerBot extends Entity {
         this.addComponent(new HealthComponent(50));
         this.addComponent(new RedOnHitComponent());
         this.addComponent(new TeamComponent());
-        if (parentId === world.networkId) {
+        if (parentId === world.id) {
             (this.addComponent(new PlayerLabelComponent(50)) as PlayerLabelComponent).setPlayerName("Peasant");
         }
     }
@@ -57,7 +57,7 @@ export class GuardBot extends Entity {
         this.addComponent(new HealthComponent(50));
         this.addComponent(new RedOnHitComponent());
         this.addComponent(new TeamComponent());
-        if (parentId === world.networkId) {
+        if (parentId === world.id) {
             (this.addComponent(new PlayerLabelComponent(50)) as PlayerLabelComponent).setPlayerName("Guard");
         }
     }
@@ -74,7 +74,7 @@ export class GardenBot extends Entity {
         this.addComponent(new HealthComponent(50));
         this.addComponent(new RedOnHitComponent());
         this.addComponent(new TeamComponent());
-        if (parentId === world.networkId) {
+        if (parentId === world.id) {
             (this.addComponent(new PlayerLabelComponent(50)) as PlayerLabelComponent).setPlayerName("Gardener");
         }
     }

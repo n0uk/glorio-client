@@ -35,7 +35,7 @@ export default class LeaderboardService extends Service {
         let id_data: Array<number> = message.content['idData'];
 
         for (let i = 0; i < score_data.length; i++) {
-            innerHTML.push(this.format(i + 1, name_data[i], score_data[i], id_data[i] === this.world.networkId));
+            innerHTML.push(this.format(i + 1, name_data[i], score_data[i], id_data[i] === this.world.id));
         }
         if (this.currentRank > 9) {
             innerHTML.push(this.format(this.currentRank + 1, this.currentName, this.currentScore, true));

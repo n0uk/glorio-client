@@ -14,6 +14,7 @@ import PlayerLabelComponent from "./components/playerlabel";
 import RedOnHitComponent from "./components/redonhit";
 import TeamComponent from "./components/teamcomponent";
 import LocalRotationInputComponent from "./components/localrotationinput";
+import TeamLabelComponent from "./components/teamlabel";
 
 export default class Player extends Entity {
     constructor(world: Game, id: number, parentId: number) {
@@ -26,6 +27,7 @@ export default class Player extends Entity {
         this.addComponent(new HealthComponent(50));
         this.addComponent(new ChatBubbleComponent(50));
         this.addComponent(new PlayerLabelComponent(50));
+        this.addComponent(new TeamLabelComponent(25));
         this.addComponent(new RedOnHitComponent());
         if (this.isLocalPlayer()) {
             (this.components.networktransform as NetworkTransformComponent).interpolateRotation = false;

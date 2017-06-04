@@ -136,6 +136,22 @@ export namespace Protocol {
         PlayerSetViewportSize = 24,
         PackedMessage = 25,
         LeaderboardMessagePlayer = 26,
+        PlayerCreateTeam = 27,
+        PlayerJoinTeam = 28,
+        PlayerApproveRequest = 29,
+        PlayerDeclineRequest = 30,
+        PlayerLeaveTeam = 31,
+        PlayerKickRequest = 32,
+        PlayerTeamMembersRequest = 33,
+        PlayerTeamMembersResponse = 34,
+        PlayerTeamListRequest = 35,
+        PlayerTeamListResponse = 36,
+        NotifyTeamCreated = 37,
+        NotifyTeamRemoved = 38,
+        NotifyJoinRequestCreated = 39,
+        NotifyJoinRequestRemoved = 40,
+        NotifyMemberJoin = 41,
+        NotifyMemberLeave = 42,
     }
 
     /**

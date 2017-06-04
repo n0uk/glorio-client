@@ -1,4 +1,4 @@
-{
+﻿{
   "nested": {
     "Assign": {
       "fields": {
@@ -48,8 +48,8 @@
           "type": "float",
           "id": 9
         },
-        "teamId": {
-          "type": "string",
+        "networkId": {
+          "type": "uint32",
           "id": 10
         },
         "playerName": {
@@ -67,6 +67,18 @@
         "parentId": {
           "type": "int32",
           "id": 14
+        },
+        "teamId": {
+          "type": "int32",
+          "id": 15
+        },
+        "teamName": {
+          "type": "string",
+          "id": 16
+        },
+        "isTeamAdmin": {
+          "type": "bool",
+          "id": 17
         }
       }
     },
@@ -222,9 +234,9 @@
             "packed": false
           }
         },
-        "teamData": {
+        "teamIdData": {
           "rule": "repeated",
-          "type": "string",
+          "type": "int32",
           "id": 2,
           "options": {
             "packed": false
@@ -366,10 +378,6 @@
         "name": {
           "type": "string",
           "id": 1
-        },
-        "teamId": {
-          "type": "string",
-          "id": 2
         }
       }
     },
@@ -423,6 +431,203 @@
         "height": {
           "rule": "required",
           "type": "int32",
+          "id": 2
+        }
+      }
+    },
+    "PlayerCreateTeam": {
+      "fields": {
+        "name": {
+          "rule": "required",
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "PlayerJoinTeam": {
+      "fields": {
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "PlayerApproveRequest": {
+      "fields": {
+        "requestId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "PlayerDeclineRequest": {
+      "fields": {
+        "requestId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "PlayerLeaveTeam": {
+      "fields": {}
+    },
+    "PlayerKickRequest": {
+      "fields": {
+        "networkId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 2
+        }
+      }
+    },
+    "PlayerTeamMembersRequest": {
+      "fields": {
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "PlayerTeamMembersResponse": {
+      "fields": {
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "networkId": {
+          "rule": "repeated",
+          "type": "uint32",
+          "id": 2,
+          "options": {
+            "packed": false
+          }
+        },
+        "name": {
+          "rule": "repeated",
+          "type": "string",
+          "id": 3,
+          "options": {
+            "packed": false
+          }
+        }
+      }
+    },
+    "PlayerTeamListRequest": {
+      "fields": {}
+    },
+    "PlayerTeamListResponse": {
+      "fields": {
+        "teamId": {
+          "rule": "repeated",
+          "type": "uint32",
+          "id": 1,
+          "options": {
+            "packed": false
+          }
+        },
+        "teamName": {
+          "rule": "repeated",
+          "type": "string",
+          "id": 2,
+          "options": {
+            "packed": false
+          }
+        },
+        "memberCount": {
+          "rule": "repeated",
+          "type": "uint32",
+          "id": 3,
+          "options": {
+            "packed": false
+          }
+        }
+      }
+    },
+    "NotifyTeamCreated": {
+      "fields": {
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "teamName": {
+          "rule": "required",
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "NotifyTeamRemoved": {
+      "fields": {
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "NotifyJoinRequestCreated": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 2
+        },
+        "fromName": {
+          "rule": "required",
+          "type": "string",
+          "id": 3
+        }
+      }
+    },
+    "NotifyJoinRequestRemoved": {
+      "fields": {
+        "id": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        }
+      }
+    },
+    "NotifyMemberJoin": {
+      "fields": {
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "memberId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 2
+        },
+        "memberName": {
+          "rule": "required",
+          "type": "string",
+          "id": 3
+        }
+      }
+    },
+    "NotifyMemberLeave": {
+      "fields": {
+        "teamId": {
+          "rule": "required",
+          "type": "uint32",
+          "id": 1
+        },
+        "memberId": {
+          "rule": "required",
+          "type": "uint32",
           "id": 2
         }
       }
