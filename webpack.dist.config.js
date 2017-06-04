@@ -9,7 +9,7 @@ module.exports = {
         path.join(__dirname, 'src/app.ts')
     ],
     output: {
-        path: path.join(__dirname, '../glorio-rust/public/'),
+        path: path.join(__dirname, '../glorio/public/'),
         filename: 'game.min.js'
     },
     resolve: {
