@@ -88,8 +88,6 @@ class JoinRequestList {
     }
 
     public addJoinRequest(joinRequest: JoinRequest) {
-        console.log('add');
-        console.log(joinRequest);
         this.requests[joinRequest.id] = joinRequest;
         if (!this.currentElement) {
             this.show(joinRequest.id);
@@ -107,7 +105,6 @@ class JoinRequestList {
     }
 
     private show(id) {
-        console.log("Show id: " + id);
         if (this.requests[id]) {
             this.currentElement = new JoinRequestElement(id, this.requests[id].memberName);
             this.currentElement.on('approve', function (id: number) {
@@ -322,8 +319,6 @@ export default class TeamManager extends Service {
             this.joinRequestList.addJoinRequest(joinRequest);
         }
         // Setup auto approve
-        // console.log("Auto approve request: " + joinRequest.id);
-        // this.requestApprove(joinRequest.id);
     }
 
     private onJoinRequestRemoved(message: Message) {
@@ -336,7 +331,6 @@ export default class TeamManager extends Service {
     }
 
     private onTeamListResponse(message: Message) {
-        // console.log("Team list response");
         let teamIds = message.content['teamId'];
         let teamNames = message.content['teamName'];
         let memberCounts = message.content['memberCount'];
@@ -456,7 +450,6 @@ export default class TeamManager extends Service {
     }
 
     public requestApprove(joinId: number) {
-        console.log("Request approve: " + joinId);
         this.world.socket.sendMessage(MessageType.PlayerApproveRequest, {requestId: joinId});
     }
 
