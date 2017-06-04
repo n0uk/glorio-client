@@ -109,9 +109,11 @@ class JoinRequestList {
             this.currentElement = new JoinRequestElement(id, this.requests[id].memberName);
             this.currentElement.on('approve', function (id: number) {
                 (this.world.services.getService(TeamManager) as TeamManager).requestApprove(id);
+                this.removeJoinRequest(id);
             }.bind(this));
             this.currentElement.on('decline', function (id: number) {
                 (this.world.services.getService(TeamManager) as TeamManager).requestDecline(id);
+                this.removeJoinRequest(id);
             }.bind(this));
 
             this.container.appendChild(this.currentElement.element);
