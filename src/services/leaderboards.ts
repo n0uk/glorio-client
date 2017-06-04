@@ -8,6 +8,7 @@ export default class LeaderboardService extends Service {
     private container: HTMLElement;
 
     private latestLeaderboardMessage: any;
+    public topId: number = -1;
 
     private currentRank: number;
     private currentScore: number;
@@ -33,6 +34,10 @@ export default class LeaderboardService extends Service {
         let score_data: Array<number> = message.content['scoreData'];
         let name_data: Array<string> = message.content['nameData'];
         let id_data: Array<number> = message.content['idData'];
+
+        if (id_data.length > 0) {
+            this.topId = id_data[0];
+        }
 
         for (let i = 0; i < score_data.length; i++) {
             innerHTML.push(this.format(i + 1, name_data[i], score_data[i], id_data[i] === this.world.id));

@@ -8,6 +8,7 @@ import * as Assets from '../assets';
 import LevelComponent from "../factory/components/level";
 import TransformComponent from "../factory/components/transform";
 import Rectangle = Phaser.Rectangle;
+import LeaderboardService from "./leaderboards";
 
 export default class MinimapService extends Service {
     private bitmapData: Phaser.BitmapData;
@@ -16,9 +17,11 @@ export default class MinimapService extends Service {
     private childService: ChildService;
     private x_ratio: number = 150.0 / (400.0 * 64.0);
     private y_ratio: number = 150.0 / (400.0 * 64.0);
+    private minimapWinnerImage: Phaser.Image;
 
     constructor(world: Game) {
         super(world);
+        this.minimapWinnerImage = this.world.game.make.image(0, 0, Assets.Images.ImagesMinimapwinner.getName());
         this.bitmapData = this.world.game.add.bitmapData(150, 150);
         this.image = this.bitmapData.addToWorld();
         this.image.fixedToCamera = true;
@@ -56,6 +59,8 @@ export default class MinimapService extends Service {
     }
 
     public onMapMessage(msg: Message) {
+        let topId = (this.world.services.getService(LeaderboardService) as LeaderboardService).topId;
+
         this.bitmapData.clear(0, 0, this.bitmapData.width, this.bitmapData.height);
         this.bitmapData.ctx.beginPath();
         this.bitmapData.ctx.rect(0, 0, 150, 150);
@@ -90,7 +95,7 @@ export default class MinimapService extends Service {
             let level: number = data[i + 3];
             let teamId: number = team_data[i / 4];
             this.bitmapData.ctx.beginPath();
-            if (this.world.id === id) {
+            if (this.world.id === id && id !== topId) {
                 this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
                 this.bitmapData.ctx.fillStyle = '#00ff00';
             } else if (this.world.teamId === teamId && teamId > -1) {
@@ -100,7 +105,12 @@ export default class MinimapService extends Service {
                 this.bitmapData.ctx.rect(x - 1, y - 1, 4, 4);
                 this.bitmapData.ctx.fillStyle = '#ff0000';
             }
+
             this.bitmapData.ctx.fill();
+
+            if (topId === id) {
+                this.bitmapData.draw(this.minimapWinnerImage, x - 5 , y - 5, 10, 10);
+            }
         }
     }
 

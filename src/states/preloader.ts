@@ -43,6 +43,8 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesBuild.getName(), Assets.Images.ImagesBuild.getPNG());
         this.game.load.image(Assets.Images.ImagesSoccerball.getName(), Assets.Images.ImagesSoccerball.getPNG());
         this.game.load.image(Assets.Images.ImagesTeam.getName(), Assets.Images.ImagesTeam.getPNG());
+        this.game.load.image(Assets.Images.ImagesMinimapwinner.getName(), Assets.Images.ImagesMinimapwinner.getPNG());
+        this.game.load.image(Assets.Images.ImagesCrown.getName(), Assets.Images.ImagesCrown.getPNG());
 
 
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesChicken.getName(), Assets.Atlases.AtlasesChicken.getPNG(), Assets.Atlases.AtlasesChicken.getJSONHash());

@@ -13,6 +13,9 @@ export default class TeamLabelComponent extends Component {
     protected cachedSprite: SpriteComponent;
     protected offset: number;
     protected teamName: string;
+    protected crownImage: Phaser.Image;
+
+    private isAdmin: boolean = false;
 
     constructor(offset: number) {
         super();
@@ -34,6 +37,10 @@ export default class TeamLabelComponent extends Component {
         this.label.strokeThickness = 3;
         this.label.fill = this.labelColor;
 
+        this.crownImage = this.world.make.image(this.cachedTransform.position.x,
+            this.cachedTransform.position.y + this.offset - this.cachedSprite.sprite.height / 2,
+            Assets.Images.ImagesCrown.getName());
+        this.crownImage.anchor.set(0.5, 0.5);
     }
 
     public setTeamName(teamName: string) {
@@ -50,6 +57,7 @@ export default class TeamLabelComponent extends Component {
         let x = this.cachedTransform.position.x;
         let y = this.cachedTransform.position.y + this.offset - this.cachedSprite.sprite.height / 2;
         this.label.position.set(x, y);
+        this.crownImage.position.set(x, y - 40);
     }
 
     private onNetworkSync(message: Message) {
@@ -59,11 +67,26 @@ export default class TeamLabelComponent extends Component {
             updated = true;
         }
 
+        if (message.hasOwnProperty('isTeamAdmin')) {
+            this.isAdmin = message['isTeamAdmin'];
+            updated = true;
+        }
+
         if (updated) {
             if (this.teamName) {
                 this.label.setText('[' + this.teamName + ']');
             } else {
                 this.label.setText('');
+            }
+
+            if (this.isAdmin) {
+                if (!this.crownImage.inWorld) {
+                    this.world.LAYER_UI.add(this.crownImage);
+                }
+            } else {
+                if (this.crownImage.inWorld) {
+                    this.crownImage.parent.removeChild(this.crownImage);
+                }
             }
         }
     }
