@@ -9,6 +9,7 @@ import LevelComponent from "../factory/components/level";
 import TransformComponent from "../factory/components/transform";
 import Rectangle = Phaser.Rectangle;
 import LeaderboardService from "./leaderboards";
+import DayTimeService from "./daytime";
 
 export default class MinimapService extends Service {
     private bitmapData: Phaser.BitmapData;
@@ -60,6 +61,7 @@ export default class MinimapService extends Service {
 
     public onMapMessage(msg: Message) {
         let topId = (this.world.services.getService(LeaderboardService) as LeaderboardService).topId;
+        let isNight = (this.world.services.getService(DayTimeService) as DayTimeService).isNight();
 
         this.bitmapData.clear(0, 0, this.bitmapData.width, this.bitmapData.height);
         this.bitmapData.ctx.beginPath();
@@ -101,7 +103,7 @@ export default class MinimapService extends Service {
             } else if (this.world.teamId === teamId && teamId > -1) {
                 this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
                 this.bitmapData.ctx.fillStyle = '#00ff00';
-            } else if (level > 0) {
+            } else if (level > 0 && !isNight) {
                 this.bitmapData.ctx.rect(x - 1, y - 1, 4, 4);
                 this.bitmapData.ctx.fillStyle = '#ff0000';
             }

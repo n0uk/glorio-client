@@ -31,6 +31,7 @@ import {ActionService} from "../services/actionservice";
 import ServerManager from "../servermanager";
 import ServerSelectionService from "../services/serverselection";
 import TeamManager from "../services/teammanager";
+import DayTimeService from "../services/daytime";
 
 enum eGameState {
     LOBBY,
@@ -337,6 +338,7 @@ export default class Game extends Phaser.State {
         this.services.registerService(new CraftMenuService(this));
         this.services.registerService(new ActionService(this));
         this.services.registerService(new TeamManager(this));
+        this.services.registerService(new DayTimeService(this));
         $.ajax('http://status.glor.io').done(function (data) {
             this.services.registerService(new ServerSelectionService(this, data));
         }.bind(this));

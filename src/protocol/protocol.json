@@ -321,6 +321,15 @@
         }
       }
     },
+    "DayTimeMessage": {
+      "fields": {
+        "hour": {
+          "rule": "required",
+          "type": "float",
+          "id": 1
+        }
+      }
+    },
     "PlayerInput": {
       "fields": {
         "x": {

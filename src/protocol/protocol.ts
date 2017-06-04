@@ -152,6 +152,7 @@ export namespace Protocol {
         NotifyJoinRequestRemoved = 40,
         NotifyMemberJoin = 41,
         NotifyMemberLeave = 42,
+        DayTimeMessage = 43,
     }
 
     /**
