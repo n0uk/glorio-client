@@ -49,7 +49,7 @@ export class ActionService extends Service {
         this.actionMenu = new ActionContainer();
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesBuild.getPNG(), 'shop-show', 'B', 'B'));
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesUnmount.getPNG(), 'unmount', 'U', 'U'));
-        this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesUnmount.getPNG(), 'team', 'T', 'T'));
+        this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesTeam.getPNG(), 'team', 'T', 'T'));
     }
 
     public requestWork(id: string) {

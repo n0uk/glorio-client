@@ -136,6 +136,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/stonewall.png'); };
     }
+    export class ImagesTeam {
+        static getName(): string { return 'images_team'; };
+
+        static getPNG(): string { return require('assets/images/team.png'); };
+    }
     export class ImagesTower {
         static getName(): string { return 'images_tower'; };
 
