@@ -102,7 +102,7 @@ export default class MinimapService extends Service {
                 this.bitmapData.ctx.fillStyle = '#00ff00';
             } else if (this.world.teamId === teamId && teamId > -1) {
                 this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
-                this.bitmapData.ctx.fillStyle = '#00ff00';
+                this.bitmapData.ctx.fillStyle = '#00bb00';
             } else if (level > 0 && !isNight) {
                 this.bitmapData.ctx.rect(x - 1, y - 1, 4, 4);
                 this.bitmapData.ctx.fillStyle = '#ff0000';

@@ -1326,6 +1326,7 @@
     }
 
     .ui-team-list-header {
+        position: relative;
         background-color: #4CAF50; /* Green background */
         font-family: 'Slabo 27px', serif;
         font-size: 18px;
@@ -1336,6 +1337,15 @@
         height: 20px;
         user-select: none;
         cursor: default;
+    }
+
+    .ui-team-list-close {
+        position: absolute;
+        display: inline-block;
+        line-height: 30px;
+        right: 18px;
+        top: 0;
+        cursor: pointer;
     }
 
     .ui-team-list-content {
