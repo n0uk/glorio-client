@@ -49,6 +49,8 @@ export namespace Protocol {
         WinterStoneGenerator = 35,
         WhiteBearSpawner = 36,
         SoccerBall = 37,
+        FireballBullet = 38,
+        NightmareBoss = 39,
     }
 
     /**

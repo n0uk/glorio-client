@@ -269,6 +269,22 @@
           "options": {
             "packed": false
           }
+        },
+        "teamData": {
+          "rule": "repeated",
+          "type": "int32",
+          "id": 4,
+          "options": {
+            "packed": false
+          }
+        },
+        "teamNameData": {
+          "rule": "repeated",
+          "type": "string",
+          "id": 5,
+          "options": {
+            "packed": false
+          }
         }
       }
     },

@@ -34,6 +34,8 @@ export default class LeaderboardService extends Service {
         let score_data: Array<number> = message.content['scoreData'];
         let name_data: Array<string> = message.content['nameData'];
         let id_data: Array<number> = message.content['idData'];
+        // message.content['teamData'] - team ids (-1 for non-teamed);
+        // message.content['teamNameData'] - team names ("" for non-teamed);
 
         if (id_data.length > 0) {
             this.topId = id_data[0];
