@@ -82,6 +82,10 @@ export class EntityFactory {
             return new WinterWoodGenerator(world, id, parentId);
         } else if (type === EntityType.SoccerBall) {
             return new SoccerBall(world, id, parentId);
+        } else if (type === EntityType.FireballBullet) {
+            return new SoccerBall(world, id, parentId); // FIXME
+        } else if (type === EntityType.NightmareBoss) {
+            return new GardenBot(world, id, parentId); // FIXME
         }
 
         return new Entity(world, id, parentId);
