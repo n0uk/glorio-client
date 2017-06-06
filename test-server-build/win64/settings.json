@@ -26,6 +26,34 @@
         "reward_for_building": 3,
         "reward_for_killing": 10
     },
+    "bosses": {
+        "nightmare": {
+            "attack_distance": 500,
+            "search_radius": 1500,
+            "health": 1000,
+            "radius": 70,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "FollowerBot",
+                "Mannequin"
+            ],
+            "chase_distance": 1000,
+            "speed": 200.0,
+            "drop": {
+                "food": 300
+            },
+            "drop_entity_type": "BearMeatPickup"
+        }
+    },
+    "bullets": {
+        "fireball": {
+            "radius": 30,
+            "lifetime": 5,
+            "speed": 500.0
+        }
+    },
     "pickups": {
         "egg": {
             "lifetime": 120,
