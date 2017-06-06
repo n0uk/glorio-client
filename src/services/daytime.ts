@@ -49,6 +49,7 @@ export default class DayTimeService extends Service {
         let darknessValue: number = this.getDarknessValue(this.hour);
         darknessValue = Phaser.Math.linear(this.latestDarkness, darknessValue, dt);
         this.latestDarkness = darknessValue;
+        this.latestDarkness = Phaser.Math.clamp(this.latestDarkness, 0, 1);
         let brightness = {x: Phaser.Math.linear(1, 0.5, darknessValue),
             y: Phaser.Math.linear(1, 0.5, darknessValue),
             z: Phaser.Math.linear(1, 0.7, darknessValue)};
@@ -57,6 +58,5 @@ export default class DayTimeService extends Service {
 
     private onDayTimeMessage(message: Message) {
         this.hour = message.content['hour'];
-        console.log(this.hour);
     }
 }
