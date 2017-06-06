@@ -97,5 +97,6 @@ export default class TeamLabelComponent extends Component {
 
     public destroy() {
         this.label.destroy();
+        this.crownImage.destroy();
     }
 }
