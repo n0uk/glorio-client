@@ -96,20 +96,25 @@ export default class MinimapService extends Service {
             let y: number = data[i + 2] * this.y_ratio;
             let level: number = data[i + 3];
             let teamId: number = team_data[i / 4];
-            this.bitmapData.ctx.beginPath();
-            if (this.world.id === id && id !== topId) {
-                this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
-                this.bitmapData.ctx.fillStyle = '#00ff00';
-            } else if (this.world.teamId === teamId && teamId > -1) {
-                this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
-                this.bitmapData.ctx.fillStyle = '#00bb00';
-            } else if (level > 0 && !isNight) {
-                this.bitmapData.ctx.rect(x - 1, y - 1, 4, 4);
-                this.bitmapData.ctx.fillStyle = '#ff0000';
+            if (id !== topId) {
+                this.bitmapData.ctx.beginPath();
+                if (teamId === -2) {
+                    // White Walker
+                    this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
+                    this.bitmapData.ctx.fillStyle = '#ffffff';
+                } else if (this.world.id === id) {
+                    this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
+                    this.bitmapData.ctx.fillStyle = '#00ff00';
+                } else if (this.world.teamId === teamId && teamId > -1) {
+                    this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
+                    this.bitmapData.ctx.fillStyle = '#00bb00';
+                } else if (level > 0 && !isNight) {
+                    this.bitmapData.ctx.rect(x - 1, y - 1, 4, 4);
+                    this.bitmapData.ctx.fillStyle = '#ff0000';
+                }
+
+                this.bitmapData.ctx.fill();
             }
-
-            this.bitmapData.ctx.fill();
-
             if (topId === id) {
                 this.bitmapData.draw(this.minimapWinnerImage, x - 5 , y - 5, 10, 10);
             }

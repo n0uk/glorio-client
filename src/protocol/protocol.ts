@@ -51,6 +51,8 @@ export namespace Protocol {
         SoccerBall = 37,
         FireballBullet = 38,
         NightmareBoss = 39,
+        WhiteWalker = 40,
+        WhiteWalkerSpawner = 41,
     }
 
     /**

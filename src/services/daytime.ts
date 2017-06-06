@@ -5,6 +5,7 @@ import ResourceType = Protocol.ResourceType;
 import * as Assets from '../assets';
 import MessageType = Protocol.MessageType;
 import Message = Protocol.Message;
+import NotifyService from "./notifyservice";
 
 export default class DayTimeService extends Service {
     private filter: Phaser.Filter;
@@ -32,14 +33,14 @@ export default class DayTimeService extends Service {
     }
 
     public isNight() {
-        return (this.hour >= 22 || this.hour <= 4);
+        return (this.hour >= 23 || this.hour <= 4);
     }
 
     private getDarknessValue(hour: number) {
         let darknessValue: number = 0;
-        if ((hour > 20 && hour < 22) || (hour > 4 && hour < 6)) {
+        if ((hour > 22 && hour < 23) || (hour > 4 && hour < 5)) {
             darknessValue = 0.5;
-        } else if (hour >= 22 || hour <= 4) {
+        } else if (hour >= 23 || hour <= 4) {
             darknessValue = 1;
         }
         return darknessValue;
@@ -57,6 +58,11 @@ export default class DayTimeService extends Service {
     }
 
     private onDayTimeMessage(message: Message) {
+        let previousHour = this.hour;
         this.hour = message.content['hour'];
+        if (previousHour === 21 && this.hour === 22) {
+            // Show message about night
+            (this.world.services.getService(NotifyService) as NotifyService).enqueue(45, "Night is coming..");
+        }
     }
 }

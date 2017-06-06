@@ -86,6 +86,8 @@ export class EntityFactory {
             return new SoccerBall(world, id, parentId); // FIXME
         } else if (type === EntityType.NightmareBoss) {
             return new GardenBot(world, id, parentId); // FIXME
+        } else if (type === EntityType.WhiteWalker) {
+            return new GuardBot(world, id, parentId);
         }
 
         return new Entity(world, id, parentId);
