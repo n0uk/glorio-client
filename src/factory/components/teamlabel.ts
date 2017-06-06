@@ -80,11 +80,11 @@ export default class TeamLabelComponent extends Component {
             }
 
             if (this.isAdmin) {
-                if (!this.crownImage.inWorld) {
+                if (this.crownImage.parent !== this.world.LAYER_UI) {
                     this.world.LAYER_UI.add(this.crownImage);
                 }
             } else {
-                if (this.crownImage.inWorld) {
+                if (this.crownImage.parent === this.world.LAYER_UI) {
                     this.crownImage.parent.removeChild(this.crownImage);
                 }
             }

@@ -303,6 +303,12 @@ export default class TeamManager extends Service {
         document.getElementById('ui-leave-team-button').onclick = function () {
             this.requestLeave();
         }.bind(this);
+        let closeButtons = document.getElementsByClassName('ui-team-list-close');
+        for (let i = 0; i < closeButtons.length; i++) {
+            (closeButtons.item(i) as HTMLElement).onclick = function () {
+                this.toggle();
+            }.bind(this);
+        }
     }
 
     private onKeyDown(e) {
