@@ -51,9 +51,9 @@ export default class DayTimeService extends Service {
         darknessValue = Phaser.Math.linear(this.latestDarkness, darknessValue, dt);
         this.latestDarkness = darknessValue;
         this.latestDarkness = Phaser.Math.clamp(this.latestDarkness, 0, 1);
-        let brightness = {x: Phaser.Math.linear(1, 0.5, darknessValue),
-            y: Phaser.Math.linear(1, 0.5, darknessValue),
-            z: Phaser.Math.linear(1, 0.7, darknessValue)};
+        let brightness = {x: Phaser.Math.linear(1, 0.6, darknessValue),
+            y: Phaser.Math.linear(1, 0.6, darknessValue),
+            z: Phaser.Math.linear(1, 0.8, darknessValue)};
         this.filter.uniforms.tint.value = {x: brightness.x, y: brightness.y, z: brightness.z};
     }
 
