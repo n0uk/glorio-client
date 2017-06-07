@@ -15,9 +15,11 @@
         "build_radius": 300
     },
     "player": {
-        "speed": 250.0,
+        "speed": 700.0,
+        "sspeed": 250.0,
         "health": 100,
-        "damage": 30,
+        "damage": 3000,
+        "ddamage": 30,
         "attack_distance": 60,
         "punch_timeout": 0.5,
         "punch_move_lock": 0.3,
@@ -27,6 +29,27 @@
         "reward_for_killing": 10
     },
     "bosses": {
+        "whitewalker": {
+            "damage": 80,
+            "attack_distance": 80,
+            "search_radius": 800,
+            "health": 1000,
+            "radius": 45,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "FollowerBot",
+                "Heartstone"
+            ],
+            "building_damage_multiplier": 10,
+            "chase_distance": 800,
+            "speed": 230.0,
+            "drop": {
+                "food": 300
+            },
+            "drop_entity_type": "BearMeatPickup"
+        },
         "nightmare": {
             "attack_distance": 500,
             "search_radius": 1500,
@@ -51,7 +74,8 @@
         "fireball": {
             "radius": 30,
             "lifetime": 5,
-            "speed": 500.0
+            "speed": 500.0,
+            "damage": 5000
         }
     },
     "pickups": {
@@ -187,8 +211,11 @@
             "drop": {
                 "food": 300
             },
+            "death_spawn": {
+                "WhiteBearHat": 0.5
+            },
             "drop_entity_type": "BearMeatPickup"
-        },        
+        },
         "rideable_pig": {
             "radius": 30,
             "walk_radius": 650,
@@ -199,6 +226,25 @@
             "run_speed": 270.0,
             "driver_speed": 300.0
         }
+    },
+    "hatpickups": {
+        "whitebearhat": {
+            "radius": 24,
+            "lifetime": 60
+        }
+    },
+    "worldbuildings": {
+        "winterwall": {
+            "width": 64,
+            "height": 64
+        },
+        "winterfloor": {
+            "width": 64,
+            "height": 64
+        },
+        "wintertower": {
+            "radius": 64
+        }        
     },
     "buildings": {
         "woodgenerator": {
@@ -287,7 +333,7 @@
             "limit": 2,
             "description": "Gather carrots from gardens.",
             "health": 80
-        },        
+        },
         "garden": {
             "price": {
                 "food": 20
@@ -327,7 +373,8 @@
                 "Wolf",
                 "Bear",
                 "WhiteBear",
-                "Mannequin"
+                "Mannequin",
+                "WhiteWalker"
             ]
         },
         "followerbot": {
@@ -352,7 +399,8 @@
                 "Wolf",
                 "Bear",
                 "WhiteBear",
-                "Mannequin"
+                "Mannequin",
+                "WhiteWalker"
             ]
         },
         "mannequin": {
@@ -449,7 +497,7 @@
             "price": {
                 "food": 1000,
                 "gold": 10000
-            },            
+            },
             "radius": 32,
             "walk_radius": 650,
             "idle_timeout_min": 3,
@@ -459,7 +507,6 @@
             "run_speed": 270.0,
             "driver_speed": 320.0,
             "driver_regeneration_speed": 0.5,
-            
             "name": "Black Wolf",
             "description": "You can ride on it and regenerate faster!",
             "limit": 1
@@ -467,12 +514,11 @@
         "soccerball": {
             "price": {
                 "gold": 500
-            },            
+            },
             "radius": 28,
-
             "name": "Ball",
             "description": "For football fans",
             "limit": 1
-        }                
+        }
     }
 }
