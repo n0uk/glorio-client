@@ -55,6 +55,15 @@ export namespace Protocol {
         WhiteWalkerSpawner = 41,
         WinterWall = 42,
         WinterFloor = 43,
+        WinterTower = 44,
+        WhiteBearHat = 45,
+    }
+
+    /**
+     * Server-copy of HatType enumerator
+     */
+    export enum HatType {
+        WhiteBearHat = 0,
     }
 
     /**

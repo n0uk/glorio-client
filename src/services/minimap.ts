@@ -100,8 +100,10 @@ export default class MinimapService extends Service {
                 this.bitmapData.ctx.beginPath();
                 if (teamId === -2) {
                     // White Walker
-                    this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
-                    this.bitmapData.ctx.fillStyle = '#ffffff';
+                    if (isNight) {
+                        this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
+                        this.bitmapData.ctx.fillStyle = '#ffffff';
+                    }
                 } else if (this.world.id === id) {
                     this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
                     this.bitmapData.ctx.fillStyle = '#00ff00';

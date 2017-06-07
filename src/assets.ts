@@ -161,6 +161,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/unmount.png'); };
     }
+    export class ImagesWhitebearhat {
+        static getName(): string { return 'images_whitebearhat'; };
+
+        static getPNG(): string { return require('assets/images/whitebearhat.png'); };
+    }
     export class ImagesWinterfloor {
         static getName(): string { return 'images_winterfloor'; };
 
@@ -170,6 +175,11 @@ export namespace Images {
         static getName(): string { return 'images_winterstonegenerator'; };
 
         static getPNG(): string { return require('assets/images/winterstonegenerator.png'); };
+    }
+    export class ImagesWintertower {
+        static getName(): string { return 'images_wintertower'; };
+
+        static getPNG(): string { return require('assets/images/wintertower.png'); };
     }
     export class ImagesWinterwall {
         static getName(): string { return 'images_winterwall'; };
@@ -525,6 +535,41 @@ export namespace Atlases {
         static getPNG(): string { return require('assets/atlases/whitebear.png'); };
 
         static Frames = AtlasesWhitebearFrames;
+    }
+    enum AtlasesWhitewalkerFrames {
+        Hit1 = <any>'hit1.png',
+        Hit2 = <any>'hit2.png',
+        Hit3 = <any>'hit3.png',
+        Hit4 = <any>'hit4.png',
+        Hit5 = <any>'hit5.png',
+        Hit6 = <any>'hit6.png',
+        Hit7 = <any>'hit7.png',
+        Hit8 = <any>'hit8.png',
+        Walk1 = <any>'walk1.png',
+        Walk2 = <any>'walk2.png',
+        Walk3 = <any>'walk3.png',
+        Walk4 = <any>'walk4.png',
+        Walk5 = <any>'walk5.png',
+        Walk6 = <any>'walk6.png',
+        Walk7 = <any>'walk7.png',
+        Walk8 = <any>'walk8.png',
+        Walk9 = <any>'walk9.png',
+        Walk10 = <any>'walk10.png',
+        Walk11 = <any>'walk11.png',
+        Walk12 = <any>'walk12.png',
+        Walk13 = <any>'walk13.png',
+        Walk14 = <any>'walk14.png',
+        Walk15 = <any>'walk15.png',
+        Walk16 = <any>'walk16.png',
+    }
+    export class AtlasesWhitewalker {
+        static getName(): string { return 'atlases_whitewalker'; };
+
+        static getJSONHash(): string { return require('assets/atlases/whitewalker.json'); };
+
+        static getPNG(): string { return require('assets/atlases/whitewalker.png'); };
+
+        static Frames = AtlasesWhitewalkerFrames;
     }
     enum AtlasesWolfFrames {
         Hit1 = <any>'hit1.png',

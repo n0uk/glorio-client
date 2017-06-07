@@ -91,27 +91,13 @@ window.onload = () => {
         }
     }
 
-    let youtubers = ["UCynggaQxhRliGnYXRqvJxqw",
-        "UCKgwIPqrLyOi5_rRFo9C2oQ",
-        "UC_sA2Oh7kNq_5-eoZBrz3jQ",
+    let youtubers = ["UCxwNOfyNeepb-ltHx4zPAdA",
         "UC64R30QVnhyM1DNaXdzrHxQ",
-        "UC_LZVeV2AuKNkxUsUgCkWug",
-        "UCbP4GcAv4OgDVOsJvYtCIaQ",
-        "UCws3_f3KXPZOuPY9QVqI_kQ",
-        "UCOcQthRanYcwYY0XVyVeK0g",
         "UCMf65CSde0GZulPmD7nU4bg",
-        "UCoc1q69gw_MjJxTqA6quQKw",
         "UC-wxm3EEFILAjkLLcckvIIA",
-        "UCRAEYDB5NbKHSml3UdkybLg",
         "UCmSUz2Xqyw2Xfb5rSIOgNwQ",
-        "UC0YWApsiHAuRzTUi7fqf6bg",
-        "UCcNh6Rp8h6gkvEiigzgbHug",
-        "UCJxwkgpHpQMq4IKy-aPo4IA",
-        "UCcC79U0RYm93Qo146kWQaZQ",
-        "UC6_ISMxsb6PZAzuzdDAM3vw",
-        "UC5r_RQgg-bjry3HLoZz1aBg",
-        "UCfYQJa2qGuCy6z87UBHhA8A",
-        "UCRxYbLgZoLmuNeDC3rCtOtw"];
+        "UCVLo9brXBWrCttMaGzvm0-Q"
+    ];
 
     let motdlist = [
         "If you are a Youtuber, simply follow \"For Youtubers\" link at the bottom of the page!",

@@ -8,6 +8,19 @@ import FriendlyAnimalAnimatorComponent from "./components/friendlyanimalanimator
 import HealthComponent from "./components/health";
 import AngryAnimalAnimatorComponent from "./components/angryanimalanimator";
 import RedOnHitComponent from "./components/redonhit";
+import PlayerAnimatorComponent from "./components/playeranimator";
+
+export class WhiteWalker extends Entity {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, parentId);
+        this.addComponent(new TransformComponent());
+        this.addComponent(new NetworkTransformComponent());
+        this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_1, Assets.Atlases.AtlasesWhitewalker.getName(), new Phaser.Point(0.5, 0.55)));
+        this.addComponent(new PlayerAnimatorComponent());
+        this.addComponent(new HealthComponent(100));
+        this.addComponent(new RedOnHitComponent());
+    }
+}
 
 export class Pig extends Entity {
     constructor(world: Game, id: number, parentId: number) {

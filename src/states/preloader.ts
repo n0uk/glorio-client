@@ -47,6 +47,9 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesCrown.getName(), Assets.Images.ImagesCrown.getPNG());
         this.game.load.image(Assets.Images.ImagesWinterwall.getName(), Assets.Images.ImagesWinterwall.getPNG());
         this.game.load.image(Assets.Images.ImagesWinterfloor.getName(), Assets.Images.ImagesWinterfloor.getPNG());
+        this.game.load.image(Assets.Images.ImagesWintertower.getName(), Assets.Images.ImagesWintertower.getPNG());
+
+        this.game.load.image(Assets.Images.ImagesWhitebearhat.getName(), Assets.Images.ImagesWhitebearhat.getPNG());
 
 
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesChicken.getName(), Assets.Atlases.AtlasesChicken.getPNG(), Assets.Atlases.AtlasesChicken.getJSONHash());
@@ -62,6 +65,7 @@ export default class Preloader extends Phaser.State {
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesDoor.getName(), Assets.Atlases.AtlasesDoor.getPNG(), Assets.Atlases.AtlasesDoor.getJSONHash());
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesCarwolf.getName(), Assets.Atlases.AtlasesCarwolf.getPNG(), Assets.Atlases.AtlasesCarwolf.getJSONHash());
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesPickupbot.getName(), Assets.Atlases.AtlasesPickupbot.getPNG(), Assets.Atlases.AtlasesPickupbot.getJSONHash());
+        this.game.load.atlasJSONHash(Assets.Atlases.AtlasesWhitewalker.getName(), Assets.Atlases.AtlasesWhitewalker.getPNG(), Assets.Atlases.AtlasesWhitewalker.getJSONHash());
 
         this.loadLeaderboards();
     }

@@ -22,3 +22,12 @@ export class WinterFloor extends Entity {
         this.addComponent(new SpriteComponent(world.LAYER_BACKGROUND_0, Assets.Images.ImagesWinterfloor.getName(), new Phaser.Point(0.5, 0.5)));
     }
 }
+
+export class WinterTower extends Entity {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, parentId);
+        this.addComponent(new TransformComponent());
+        this.addComponent(new NetworkTransformComponent());
+        this.addComponent(new SpriteComponent(world.LAYER_FOREGROUND_0, Assets.Images.ImagesWintertower.getName(), new Phaser.Point(0.5, 0.5)));
+    }
+}

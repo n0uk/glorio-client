@@ -79,6 +79,10 @@
         "isTeamAdmin": {
           "type": "bool",
           "id": 17
+        },
+        "hatId": {
+          "type": "int32",
+          "id": 18
         }
       }
     },
@@ -457,6 +461,33 @@
           "rule": "required",
           "type": "int32",
           "id": 2
+        }
+      }
+    },
+    "PlayerTeamPingRequest": {
+      "fields": {}
+    },
+    "PlayerTeamPingResponse": {
+      "fields": {
+        "playerId": {
+          "rule": "required",
+          "type": "int32",
+          "id": 1
+        },
+        "playerName": {
+          "rule": "required",
+          "type": "string",
+          "id": 2
+        },
+        "x": {
+          "rule": "required",
+          "type": "float",
+          "id": 3
+        },
+        "y": {
+          "rule": "required",
+          "type": "float",
+          "id": 4
         }
       }
     },

@@ -2,7 +2,7 @@ import {Entity} from './entity';
 import Game from '../states/game';
 import Spectator from './spectator';
 import LocalPlayer from "./player";
-import {Pig, Chicken, Wolf, Bear, RideablePig, RideableWolf, WhiteBear} from "./animals";
+import {Pig, Chicken, Wolf, Bear, RideablePig, RideableWolf, WhiteBear, WhiteWalker} from "./animals";
 import {Protocol} from "../protocol/protocol";
 import EntityType = Protocol.EntityType;
 import {BearMeatPickup, BoxPickup, CarrotPickup, EggPickup, PigMeatPickup} from "./pickups";
@@ -12,7 +12,7 @@ import {
     Mannequin, SoccerBall
 } from "./buildings";
 import {FollowerBot, FarmerBot, GuardBot, GardenBot} from "./bots";
-import {WinterFloor, WinterWall} from "./worldbuildings";
+import {WinterFloor, WinterTower, WinterWall} from "./worldbuildings";
 
 export class EntityFactory {
     public static create(type: EntityType, world: Game, id: number, parentId: number = -1): Entity {
@@ -88,13 +88,16 @@ export class EntityFactory {
         } else if (type === EntityType.NightmareBoss) {
             return new GardenBot(world, id, parentId); // FIXME
         } else if (type === EntityType.WhiteWalker) {
-            return new GuardBot(world, id, parentId);
+            return new WhiteWalker(world, id, parentId);
         } else if (type === EntityType.WinterWall) {
             return new WinterWall(world, id, parentId);
         } else if (type === EntityType.WinterFloor) {
             return new WinterFloor(world, id, parentId);
+        } else if (type === EntityType.WinterTower) {
+            return new WinterTower(world, id, parentId);
+        } else if (type === EntityType.WhiteBearHat) {
+            return new WinterTower(world, id, parentId);
         }
-
         return new Entity(world, id, parentId);
     }
 }

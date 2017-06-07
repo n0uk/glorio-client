@@ -15,6 +15,7 @@ import RedOnHitComponent from "./components/redonhit";
 import TeamComponent from "./components/teamcomponent";
 import LocalRotationInputComponent from "./components/localrotationinput";
 import TeamLabelComponent from "./components/teamlabel";
+import HatComponent from "./components/hat";
 
 export default class Player extends Entity {
     constructor(world: Game, id: number, parentId: number) {
@@ -36,5 +37,6 @@ export default class Player extends Entity {
             this.addComponent(new ChatInputComponent(50));
         }
         this.addComponent(new TeamComponent());
+        this.addComponent(new HatComponent(world.LAYER_FOREGROUND_0));
     }
 }
