@@ -12,6 +12,7 @@ import {
     Mannequin, SoccerBall
 } from "./buildings";
 import {FollowerBot, FarmerBot, GuardBot, GardenBot} from "./bots";
+import {WinterFloor, WinterWall} from "./worldbuildings";
 
 export class EntityFactory {
     public static create(type: EntityType, world: Game, id: number, parentId: number = -1): Entity {
@@ -88,6 +89,10 @@ export class EntityFactory {
             return new GardenBot(world, id, parentId); // FIXME
         } else if (type === EntityType.WhiteWalker) {
             return new GuardBot(world, id, parentId);
+        } else if (type === EntityType.WinterWall) {
+            return new WinterWall(world, id, parentId);
+        } else if (type === EntityType.WinterFloor) {
+            return new WinterFloor(world, id, parentId);
         }
 
         return new Entity(world, id, parentId);

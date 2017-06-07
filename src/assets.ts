@@ -161,10 +161,20 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/unmount.png'); };
     }
+    export class ImagesWinterfloor {
+        static getName(): string { return 'images_winterfloor'; };
+
+        static getPNG(): string { return require('assets/images/winterfloor.png'); };
+    }
     export class ImagesWinterstonegenerator {
         static getName(): string { return 'images_winterstonegenerator'; };
 
         static getPNG(): string { return require('assets/images/winterstonegenerator.png'); };
+    }
+    export class ImagesWinterwall {
+        static getName(): string { return 'images_winterwall'; };
+
+        static getPNG(): string { return require('assets/images/winterwall.png'); };
     }
     export class ImagesWinterwoodgenerator {
         static getName(): string { return 'images_winterwoodgenerator'; };

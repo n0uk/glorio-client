@@ -57,7 +57,7 @@ export default class TeamLabelComponent extends Component {
         let x = this.cachedTransform.position.x;
         let y = this.cachedTransform.position.y + this.offset - this.cachedSprite.sprite.height / 2;
         this.label.position.set(x, y);
-        this.crownImage.position.set(x, y - 40);
+        this.crownImage.position.set(x, y - 45);
     }
 
     private onNetworkSync(message: Message) {

@@ -53,6 +53,8 @@ export namespace Protocol {
         NightmareBoss = 39,
         WhiteWalker = 40,
         WhiteWalkerSpawner = 41,
+        WinterWall = 42,
+        WinterFloor = 43,
     }
 
     /**
