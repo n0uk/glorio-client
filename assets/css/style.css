@@ -1028,6 +1028,14 @@
         color: rgba(216, 191, 73, 1);
     }
 
+    .ui-leaderboard .ui-leaderboard-player.is-ally {
+        color: rgba(101, 202, 101, 1);
+    }
+
+    .ui-leaderboard .ui-leaderboard-player.is-ally .player-score {
+        color: rgba(101, 202, 101, 1);
+    }
+
     .ui-leaderboard .ui-leaderboard-header {
         position: relative;
         display: block;
