@@ -57,6 +57,11 @@ export namespace Protocol {
         WinterFloor = 43,
         WinterTower = 44,
         WhiteBearHat = 45,
+        BrownBearHat = 46,
+        ChessHat = 47,
+        CowboyHat = 48,
+        HiddenHat = 49,
+        CatHat = 50
     }
 
     /**
@@ -64,6 +69,11 @@ export namespace Protocol {
      */
     export enum HatType {
         WhiteBearHat = 0,
+        BrownBearHat = 1,
+        ChessHat = 2,
+        CowboyHat = 3,
+        HiddenHat = 4,
+        CatHat = 5,
     }
 
     /**

@@ -59,7 +59,7 @@ export default class DayTimeService extends Service {
 
     private onDayTimeMessage(message: Message) {
         let previousHour = this.hour;
-        this.hour = message.content['hour'];
+        this.hour = Math.round(message.content['hour']);
         if (previousHour === 21 && this.hour === 22) {
             // Show message about night
             (this.world.services.getService(NotifyService) as NotifyService).enqueue(45, "Night is coming..");

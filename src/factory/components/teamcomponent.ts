@@ -3,6 +3,7 @@ import {Message} from "protobufjs";
 import SpriteComponent from "./sprite";
 import PlayerLabelComponent from "./playerlabel";
 import TeamLabelComponent from "./teamlabel";
+import HatComponent from "./hat";
 
 export default class TeamComponent extends Component {
 
@@ -16,6 +17,7 @@ export default class TeamComponent extends Component {
     private cachedSpriteComponent: SpriteComponent;
     private cachedLabelComponent: PlayerLabelComponent;
     private cachedLabelTeamComponent: TeamLabelComponent;
+    private cachedHatComponent: HatComponent;
 
     constructor() {
         super();
@@ -25,6 +27,8 @@ export default class TeamComponent extends Component {
         this.cachedSpriteComponent = this.entity.components.sprite as SpriteComponent;
         this.cachedLabelComponent = this.entity.components.label as PlayerLabelComponent;
         this.cachedLabelTeamComponent = this.entity.components.teamlabel as TeamLabelComponent;
+        this.cachedHatComponent = this.entity.components.hat as HatComponent;
+
         this.entity.on('networksync', this.onNetworkSync.bind(this));
         this.entity.on('hostspawn', this.updateTeamBehavior.bind(this));
         this.entity.on('hostteamchanged', this.updateTeamBehavior.bind(this));
@@ -70,6 +74,9 @@ export default class TeamComponent extends Component {
         }
         if (this.cachedLabelTeamComponent) {
             this.cachedLabelTeamComponent.setColor(isFriend ? '#ffffff' : '#ff9999');
+        }
+        if (this.cachedHatComponent) {
+            this.cachedHatComponent.setColor(isFriend ? 0xffffff : 0xffeeee);
         }
     }
 }

@@ -3,6 +3,7 @@ import {Protocol} from "../../protocol/protocol";
 import {Message} from "protobufjs";
 import SpriteComponent from "./sprite";
 import LevelService from "../../services/levelservice";
+import HatComponent from "./hat";
 
 export default class LevelComponent extends Component {
     public id: string = 'level';
@@ -38,5 +39,9 @@ export default class LevelComponent extends Component {
         this.currentLevel = level;
         let scale = Phaser.Math.clamp(0.6 + level / 50, 0.6, 1.2);
         (this.entity.components.sprite as SpriteComponent).sprite.scale.set(scale, scale);
+        let hatComponent = (this.entity.components.hat as HatComponent);
+        if (hatComponent) {
+            hatComponent.setScale(scale);
+        }
     }
 }

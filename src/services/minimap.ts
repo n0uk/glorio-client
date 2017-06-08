@@ -106,7 +106,12 @@ export default class MinimapService extends Service {
                     }
                 } else if (this.world.id === id) {
                     this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
-                    this.bitmapData.ctx.fillStyle = '#00ff00';
+                    if (level < 0) {
+                        // Hat effect
+                        this.bitmapData.ctx.fillStyle = '#00aa00';
+                    } else {
+                        this.bitmapData.ctx.fillStyle = '#00ff00';
+                    }
                 } else if (this.world.teamId === teamId && teamId > -1) {
                     this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
                     this.bitmapData.ctx.fillStyle = '#00bb00';

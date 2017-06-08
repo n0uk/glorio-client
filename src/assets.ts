@@ -36,6 +36,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/box.png'); };
     }
+    export class ImagesBrownbearhat {
+        static getName(): string { return 'images_brownbearhat'; };
+
+        static getPNG(): string { return require('assets/images/brownbearhat.png'); };
+    }
     export class ImagesBuild {
         static getName(): string { return 'images_build'; };
 
@@ -50,6 +55,16 @@ export namespace Images {
         static getName(): string { return 'images_carwolf'; };
 
         static getPNG(): string { return require('assets/images/carwolf.png'); };
+    }
+    export class ImagesChesshat {
+        static getName(): string { return 'images_chesshat'; };
+
+        static getPNG(): string { return require('assets/images/chesshat.png'); };
+    }
+    export class ImagesCowboyhat {
+        static getName(): string { return 'images_cowboyhat'; };
+
+        static getPNG(): string { return require('assets/images/cowboyhat.png'); };
     }
     export class ImagesCrown {
         static getName(): string { return 'images_crown'; };

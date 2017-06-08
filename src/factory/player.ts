@@ -36,7 +36,7 @@ export default class Player extends Entity {
             this.addComponent(new NetworkInputComponent());
             this.addComponent(new ChatInputComponent(50));
         }
-        this.addComponent(new TeamComponent());
         this.addComponent(new HatComponent(world.LAYER_FOREGROUND_0));
+        this.addComponent(new TeamComponent());
     }
 }
