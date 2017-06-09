@@ -15,11 +15,9 @@
         "build_radius": 300
     },
     "player": {
-        "speed": 700.0,
-        "sspeed": 250.0,
+        "speed": 250.0,
         "health": 100,
-        "damage": 3000,
-        "ddamage": 30,
+        "damage": 30,
         "attack_distance": 60,
         "punch_timeout": 0.5,
         "punch_move_lock": 0.3,
@@ -31,7 +29,7 @@
     "bosses": {
         "whitewalker": {
             "damage": 80,
-            "attack_distance": 80,
+            "attack_distance": 60,
             "search_radius": 800,
             "health": 1000,
             "radius": 45,
@@ -45,10 +43,13 @@
             "building_damage_multiplier": 10,
             "chase_distance": 800,
             "speed": 230.0,
-            "drop": {
-                "food": 300
+            "death_spawn": {
+                "CowboyHat": 0.05
             },
-            "drop_entity_type": "BearMeatPickup"
+            "drop": {
+                "gold": 500
+            },
+            "drop_entity_type": "CoinPickup"
         },
         "nightmare": {
             "attack_distance": 500,
@@ -93,7 +94,10 @@
         },
         "carrot": {
             "radius": 15
-        }
+        },
+        "coin": {
+            "radius": 15
+        }        
     },
     "animals": {
         "pig": {
@@ -106,6 +110,9 @@
             "walk_timeout": 7,
             "walk_speed": 150.0,
             "run_speed": 270.0,
+            "death_spawn": {
+                "ChessHat": 0.05
+            },            
             "drop": {
                 "food": 5
             },
@@ -121,6 +128,9 @@
             "idle_timeout_max": 6,
             "scare_timeout": 5,
             "walk_timeout": 7,
+            "death_spawn": {
+                "ChickenHat": 0.05
+            },            
             "drop": {
                 "food": 3
             },
@@ -151,6 +161,9 @@
             "idle_timeout_max": 6,
             "scare_timeout": 5,
             "walk_timeout": 7,
+            "death_spawn": {
+                "CowboyHat": 0.01
+            },            
             "drop": {
                 "food": 7
             },
@@ -180,6 +193,9 @@
             "idle_timeout_max": 7,
             "scare_timeout": 5,
             "walk_timeout": 7,
+            "death_spawn": {
+                "BrownBearHat": 0.05
+            },
             "drop": {
                 "food": 150
             },
@@ -212,7 +228,7 @@
                 "food": 300
             },
             "death_spawn": {
-                "WhiteBearHat": 0.5
+                "WhiteBearHat": 0.05
             },
             "drop_entity_type": "BearMeatPickup"
         },
@@ -231,7 +247,31 @@
         "whitebearhat": {
             "radius": 24,
             "lifetime": 60
-        }
+        },
+        "brownbearhat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+        "chesshat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+        "cowboyhat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+        "hiddenhat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+        "cathat": {
+            "radius": 24,
+            "lifetime": 60
+        },    
+        "chickenhat": {
+            "radius": 24,
+            "lifetime": 60
+        }        
     },
     "worldbuildings": {
         "winterwall": {
