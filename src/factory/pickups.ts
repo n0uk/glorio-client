@@ -34,7 +34,7 @@ export class EggPickup extends Pickup {
 
 export class CarrotPickup extends Pickup {
     constructor(world: Game, id: number, parentId: number) {
-        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesCarrot.getName(), new Phaser.Point(0.5, 0.5));
+        super(world, id, world.LAYER_BACKGROUND_1, Assets.Images.ImagesCarrot.getName(), new Phaser.Point(0.5, 0.5));
     }
 }
 
@@ -47,5 +47,36 @@ export class BoxPickup extends Pickup {
 export class CoinPickup extends Pickup {
     constructor(world: Game, id: number, parentId: number) {
         super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesCoin.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+
+export class WhiteBearHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesWhitebearhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+
+export class BrownBearHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesBrownbearhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+
+
+export class ChessHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesChesshat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+
+export class CowboyHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesCowboyhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+
+export class ChickenHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesChickenhat.getName(), new Phaser.Point(0.5, 0.5));
     }
 }

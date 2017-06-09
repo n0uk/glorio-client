@@ -5,7 +5,11 @@ import LocalPlayer from "./player";
 import {Pig, Chicken, Wolf, Bear, RideablePig, RideableWolf, WhiteBear, WhiteWalker} from "./animals";
 import {Protocol} from "../protocol/protocol";
 import EntityType = Protocol.EntityType;
-import {BearMeatPickup, BoxPickup, CarrotPickup, CoinPickup, EggPickup, PigMeatPickup} from "./pickups";
+import {
+    BearMeatPickup, BoxPickup, BrownBearHat, CarrotPickup, ChessHat, ChickenHat, CoinPickup, CowboyHat, EggPickup,
+    PigMeatPickup,
+    WhiteBearHat
+} from "./pickups";
 import {StoneGenerator, WinterStoneGenerator, WinterWoodGenerator, WoodGenerator} from "./generators";
 import {
     WoodBlock, StoneBlock, Door, Garden, Tower, Heartstone, FoodCrate, WoodCrate, StoneCrate,
@@ -96,7 +100,15 @@ export class EntityFactory {
         } else if (type === EntityType.WinterTower) {
             return new WinterTower(world, id, parentId);
         } else if (type === EntityType.WhiteBearHat) {
-            return new WinterTower(world, id, parentId);
+            return new WhiteBearHat(world, id, parentId);
+        } else if (type === EntityType.BrownBearHat) {
+            return new BrownBearHat(world, id, parentId);
+        } else if (type === EntityType.CowboyHat) {
+            return new CowboyHat(world, id, parentId);
+        } else if (type === EntityType.ChessHat) {
+            return new ChessHat(world, id, parentId);
+        } else if (type === EntityType.ChickenHat) {
+            return new ChickenHat(world, id, parentId);
         } else if (type === EntityType.CoinPickup) {
             return new CoinPickup(world, id, parentId);
         }

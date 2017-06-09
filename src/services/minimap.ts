@@ -98,7 +98,7 @@ export default class MinimapService extends Service {
             let y: number = data[i + 2] * this.y_ratio;
             let level: number = data[i + 3];
             let teamId: number = team_data[i / 4];
-            if (id !== topId && teamId > -1) {
+            if (id !== topId && teamId >= -1) {
                 this.bitmapData.ctx.beginPath();
                 if (this.world.id === id) {
                     this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
@@ -122,8 +122,13 @@ export default class MinimapService extends Service {
             if (teamId === -2 && isNight) {
                 this.bitmapData.draw(this.minimapWalkerImage, x - 5 , y - 5, 10, 10);
             }
-            if (topId === id) {
-                this.bitmapData.draw(this.minimapWinnerImage, x - 5 , y - 5, 10, 10);
+            if (topId === id ) {
+                if (!isNight && level > 0) {
+                    this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
+                } else if (topId === this.world.id) {
+                    this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
+                }
+
             }
         }
     }
