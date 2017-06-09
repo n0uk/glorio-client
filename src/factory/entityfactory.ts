@@ -5,7 +5,7 @@ import LocalPlayer from "./player";
 import {Pig, Chicken, Wolf, Bear, RideablePig, RideableWolf, WhiteBear, WhiteWalker} from "./animals";
 import {Protocol} from "../protocol/protocol";
 import EntityType = Protocol.EntityType;
-import {BearMeatPickup, BoxPickup, CarrotPickup, EggPickup, PigMeatPickup} from "./pickups";
+import {BearMeatPickup, BoxPickup, CarrotPickup, CoinPickup, EggPickup, PigMeatPickup} from "./pickups";
 import {StoneGenerator, WinterStoneGenerator, WinterWoodGenerator, WoodGenerator} from "./generators";
 import {
     WoodBlock, StoneBlock, Door, Garden, Tower, Heartstone, FoodCrate, WoodCrate, StoneCrate,
@@ -97,6 +97,8 @@ export class EntityFactory {
             return new WinterTower(world, id, parentId);
         } else if (type === EntityType.WhiteBearHat) {
             return new WinterTower(world, id, parentId);
+        } else if (type === EntityType.CoinPickup) {
+            return new CoinPickup(world, id, parentId);
         }
         return new Entity(world, id, parentId);
     }

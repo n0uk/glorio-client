@@ -61,7 +61,9 @@ export namespace Protocol {
         ChessHat = 47,
         CowboyHat = 48,
         HiddenHat = 49,
-        CatHat = 50
+        CatHat = 50,
+        CoinPickup = 51,
+        ChickenHat = 52,
     }
 
     /**
@@ -74,6 +76,7 @@ export namespace Protocol {
         CowboyHat = 3,
         HiddenHat = 4,
         CatHat = 5,
+        ChickenHat = 6,
     }
 
     /**

@@ -29,6 +29,16 @@ export default class HatComponent extends Component {
         if (this.hatSprite) {
             this.hatSprite.position.copyFrom(this.cachedTransform.position);
             this.hatSprite.rotation = this.cachedTransform.rotation;
+            if (this.hatId === HatType.ChessHat) {
+                let child = this.hatSprite.getChildAt(0);
+                if (child) {
+                    child.rotation = (child.rotation + 0.1);
+                    if (child.rotation > 100) {
+                        child.rotation = child.rotation % Math.PI;
+                    }
+                }
+
+            }
         }
     }
 
@@ -41,6 +51,7 @@ export default class HatComponent extends Component {
     }
 
     private setHat(hatId: number) {
+        this.hatId = hatId;
         if (this.hatSprite) {
             this.hatSprite.destroy();
             this.hatSprite = null;
@@ -48,6 +59,12 @@ export default class HatComponent extends Component {
         if (hatId > -1) {
             this.hatSprite = this.layer.create(this.cachedTransform.position.x, this.cachedTransform.position.y, this.getHatSprite(hatId));
             this.hatSprite.anchor.set(0.5, 0.5);
+            if (hatId === HatType.ChessHat) {
+                let rotationImage = this.world.game.make.image(0, 0, Images.ImagesChesshatrot.getName());
+                rotationImage.anchor.set(0.5, 0.5);
+                this.hatSprite.addChild(rotationImage);
+                rotationImage.position.set(0, 0);
+            }
             this.setScale(this.currentScale);
             this.setColor(this.currentTintColor);
         }
@@ -62,6 +79,8 @@ export default class HatComponent extends Component {
             return Images.ImagesChesshat.getName();
         } else if (type === HatType.CowboyHat) {
             return Images.ImagesCowboyhat.getName();
+        } else if (type === HatType.ChickenHat) {
+            return Images.ImagesChickenhat.getName();
         }
 
         // Default

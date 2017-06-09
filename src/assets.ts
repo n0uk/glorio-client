@@ -61,6 +61,21 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/chesshat.png'); };
     }
+    export class ImagesChesshatrot {
+        static getName(): string { return 'images_chesshatrot'; };
+
+        static getPNG(): string { return require('assets/images/chesshatrot.png'); };
+    }
+    export class ImagesChickenhat {
+        static getName(): string { return 'images_chickenhat'; };
+
+        static getPNG(): string { return require('assets/images/chickenhat.png'); };
+    }
+    export class ImagesCoin {
+        static getName(): string { return 'images_coin'; };
+
+        static getPNG(): string { return require('assets/images/coin.png'); };
+    }
     export class ImagesCowboyhat {
         static getName(): string { return 'images_cowboyhat'; };
 
@@ -130,6 +145,11 @@ export namespace Images {
         static getName(): string { return 'images_meat'; };
 
         static getPNG(): string { return require('assets/images/meat.png'); };
+    }
+    export class ImagesMinimapwalker {
+        static getName(): string { return 'images_minimapwalker'; };
+
+        static getPNG(): string { return require('assets/images/minimapwalker.png'); };
     }
     export class ImagesMinimapwinner {
         static getName(): string { return 'images_minimapwinner'; };

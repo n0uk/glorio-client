@@ -48,11 +48,15 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesWinterwall.getName(), Assets.Images.ImagesWinterwall.getPNG());
         this.game.load.image(Assets.Images.ImagesWinterfloor.getName(), Assets.Images.ImagesWinterfloor.getPNG());
         this.game.load.image(Assets.Images.ImagesWintertower.getName(), Assets.Images.ImagesWintertower.getPNG());
+        this.game.load.image(Assets.Images.ImagesCoin.getName(), Assets.Images.ImagesCoin.getPNG());
+        this.game.load.image(Assets.Images.ImagesMinimapwalker.getName(), Assets.Images.ImagesMinimapwalker.getPNG());
 
         this.game.load.image(Assets.Images.ImagesWhitebearhat.getName(), Assets.Images.ImagesWhitebearhat.getPNG());
         this.game.load.image(Assets.Images.ImagesBrownbearhat.getName(), Assets.Images.ImagesBrownbearhat.getPNG());
         this.game.load.image(Assets.Images.ImagesChesshat.getName(), Assets.Images.ImagesChesshat.getPNG());
+        this.game.load.image(Assets.Images.ImagesChesshatrot.getName(), Assets.Images.ImagesChesshatrot.getPNG());
         this.game.load.image(Assets.Images.ImagesCowboyhat.getName(), Assets.Images.ImagesCowboyhat.getPNG());
+        this.game.load.image(Assets.Images.ImagesChickenhat.getName(), Assets.Images.ImagesChickenhat.getPNG());
 
 
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesChicken.getName(), Assets.Atlases.AtlasesChicken.getPNG(), Assets.Atlases.AtlasesChicken.getJSONHash());

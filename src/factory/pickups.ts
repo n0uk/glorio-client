@@ -43,3 +43,9 @@ export class BoxPickup extends Pickup {
         super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesBox.getName(), new Phaser.Point(0.5, 0.5));
     }
 }
+
+export class CoinPickup extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesCoin.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
