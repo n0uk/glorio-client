@@ -61,16 +61,70 @@ export default class MinimapService extends Service {
         }
     }
 
+    private drawMinimapObject(id: number, networkId: number, teamId: number, level: number, x: number, y: number, topId: number, isNight: boolean) {
+        this.bitmapData.ctx.beginPath();
+        if (teamId >= -1) {
+            // This is player, or bot, not white walker
+
+            // Draw player,
+            // Check for leaderboard icon and hat effect
+            if (this.world.id === id) {
+                if (id === topId) {
+                    this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
+                } else {
+                    this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
+                    this.bitmapData.ctx.fillStyle = level < 0 ? '#00aa00' : '#00ff00';
+                }
+            } else if (this.world.networkId === networkId) {
+                // Draw bots
+                this.bitmapData.ctx.rect(x - 2, y - 2, 5, 5);
+                this.bitmapData.ctx.fillStyle = '#00bb00';
+            } else if (this.world.teamId === teamId && teamId > -1) {
+                // Draw team-mates
+                if (id === topId) {
+                    this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
+                } else {
+                    this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
+                    this.bitmapData.ctx.fillStyle = '#00bb00';
+                }
+            } else {
+                // Draw enemies
+                if (level > 0 && !isNight) {
+                    if (id === topId) {
+                        this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
+                    } else {
+                        this.bitmapData.ctx.rect(x - 1, y - 1, 4, 4);
+                        this.bitmapData.ctx.fillStyle = '#ff0000';
+                    }
+                }
+            }
+        } else if (teamId === -2 && isNight) {
+            // This is white walker
+            this.drawWhiteWalker(x, y);
+        }
+        this.bitmapData.ctx.fill();
+    }
+
+    private drawWhiteWalker(x: number, y: number) {
+        this.bitmapData.draw(this.minimapWalkerImage, x - 5 , y - 5, 10, 10);
+    }
+
+
     public onMapMessage(msg: Message) {
+        // Get topID from leaderboard
         let topId = (this.world.services.getService(LeaderboardService) as LeaderboardService).topId;
+        // Check is night now
         let isNight = (this.world.services.getService(DayTimeService) as DayTimeService).isNight();
 
+        // Fill background, and draw prerendered data
         this.bitmapData.clear(0, 0, this.bitmapData.width, this.bitmapData.height);
         this.bitmapData.ctx.beginPath();
         this.bitmapData.ctx.rect(0, 0, 150, 150);
         this.bitmapData.ctx.fillStyle = '#222222';
         this.bitmapData.ctx.fill();
         this.bitmapData.copyRect(this.preRenderBitmapData, new Rectangle(0, 0, this.bitmapData.width, this.bitmapData.height), 0, 0, 0.2);
+
+        // Draw childs
         for (let i = 0; i < this.childService.childs.length; i++) {
             let child = this.childService.childs[i];
             let x = child.position.x * this.x_ratio;
@@ -89,56 +143,23 @@ export default class MinimapService extends Service {
             }
         }
 
+        // Parse map message and draw objects
         let data = msg.content['data'];
         let team_data = msg.content['teamIdData'];
 
-        for (let i = 0; i < data.length; i += 4) {
-            let id: number = data[i];
+        for (let i = 0; i < data.length; i += 5) {
+            let id: number = data[i]; // Id is unique entity id, if it same as world.id - this is current player
             let x: number = data[i + 1] * this.x_ratio;
             let y: number = data[i + 2] * this.y_ratio;
-            let level: number = data[i + 3];
-            let teamId: number = team_data[i / 4];
-            if (id !== topId && teamId >= -1) {
-                this.bitmapData.ctx.beginPath();
-                if (this.world.id === id) {
-                    this.bitmapData.ctx.rect(x - 4, y - 4, 10, 10);
-                    if (level < 0) {
-                        // Hat effect
-                        this.bitmapData.ctx.fillStyle = '#00aa00';
-                    } else {
-                        this.bitmapData.ctx.fillStyle = '#00ff00';
-                    }
-                } else if (this.world.teamId === teamId && teamId > -1) {
-                    this.bitmapData.ctx.rect(x - 2, y - 2, 6, 6);
-                    this.bitmapData.ctx.fillStyle = '#00bb00';
-                }
-                else if (level > 0 && !isNight) {
-                    this.bitmapData.ctx.rect(x - 1, y - 1, 4, 4);
-                    this.bitmapData.ctx.fillStyle = '#ff0000';
-                }
+            let level: number = data[i + 3]; // Level can be -1 for hidden players
+            let networkId: number = data[i + 4]; // Network id - same for player and bots
+            let teamId: number = team_data[i / 5]; // Team id can be -1, if there is no team, and -2 if it's whitewalker
 
-                this.bitmapData.ctx.fill();
-            }
-            if (teamId === -2 && isNight) {
-                this.bitmapData.draw(this.minimapWalkerImage, x - 5 , y - 5, 10, 10);
-            }
-            if (topId === id ) {
-                if (!isNight && level > 0) {
-                    this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
-                } else if (topId === this.world.id) {
-                    this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
-                }
-
-            }
+            this.drawMinimapObject(id, networkId, teamId, level, x, y, topId, isNight);
         }
     }
 
     public update(dt: number) {
-        for (let child of this.childService.childs) {
-            if (child.objectType === EntityType.WoodBlock || child.objectType === EntityType.Tower || child.objectType === EntityType.StoneBlock) {
-
-            }
-        }
         this.image.cameraOffset.setTo(20, this.world.game.height - 170);
     }
 

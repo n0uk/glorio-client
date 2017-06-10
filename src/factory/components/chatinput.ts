@@ -29,6 +29,7 @@ class ChatInput {
         this.input.addEventListener('keydown', function(e) {
             if (e.keyCode === 13) {
                 self.send();
+                e.stopImmediatePropagation();
             }
         });
         this.input.addEventListener('keydown', function(e) {
@@ -89,9 +90,11 @@ export default class ChatInputComponent extends Component {
     }
 
     public onReturnKey() {
-        this.chatInput = new ChatInput(this.onChatRequest.bind(this), this.onChatCancel.bind(this));
-        this.align();
-        this.world.game.input.keyboard.enabled = false;
+        if (!this.chatInput) {
+            this.chatInput = new ChatInput(this.onChatRequest.bind(this), this.onChatCancel.bind(this));
+            this.align();
+            this.world.game.input.keyboard.enabled = false;
+        }
     }
 
     public onChatRequest(message: string) {
@@ -110,6 +113,7 @@ export default class ChatInputComponent extends Component {
     protected stopInput() {
         if (this.chatInput) {
             this.chatInput.destroy();
+            this.world.game.input.keyboard.reset(false);
             this.world.game.input.keyboard.enabled = true;
             this.chatInput = null;
         }
