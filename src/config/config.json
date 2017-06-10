@@ -3,7 +3,8 @@
     "ws_port": 8080,
     "port": 80,
     "host": "127.0.0.1",
-    "connections_limit": 100
+    "connections_limit": 100,
+    "daytime_speed": 0.01666667
   },
   "bounds": {
     "x": 256,
@@ -26,6 +27,59 @@
     "reward_for_building": 3,
     "reward_for_killing": 10
   },
+  "bosses": {
+    "whitewalker": {
+      "damage": 70,
+      "attack_distance": 60,
+      "search_radius": 800,
+      "health": 700,
+      "radius": 45,
+      "target_types": [
+        "Player",
+        "FarmerBot",
+        "GuardBot",
+        "FollowerBot",
+        "Heartstone"
+      ],
+      "building_damage_multiplier": 10,
+      "chase_distance": 800,
+      "speed": 230.0,
+      "death_spawn": {
+        "CowboyHat": 0.05
+      },
+      "drop": {
+        "gold": 500
+      },
+      "drop_entity_type": "CoinPickup"
+    },
+    "nightmare": {
+      "attack_distance": 500,
+      "search_radius": 1500,
+      "health": 1000,
+      "radius": 70,
+      "target_types": [
+        "Player",
+        "FarmerBot",
+        "GuardBot",
+        "FollowerBot",
+        "Mannequin"
+      ],
+      "chase_distance": 1000,
+      "speed": 200.0,
+      "drop": {
+        "food": 300
+      },
+      "drop_entity_type": "BearMeatPickup"
+    }
+  },
+  "bullets": {
+    "fireball": {
+      "radius": 30,
+      "lifetime": 5,
+      "speed": 500.0,
+      "damage": 5000
+    }
+  },
   "pickups": {
     "egg": {
       "lifetime": 120,
@@ -41,6 +95,9 @@
     },
     "carrot": {
       "radius": 15
+    },
+    "coin": {
+      "radius": 15
     }
   },
   "animals": {
@@ -54,6 +111,9 @@
       "walk_timeout": 7,
       "walk_speed": 150.0,
       "run_speed": 270.0,
+      "death_spawn": {
+        "ChessHat": 0.05
+      },
       "drop": {
         "food": 5
       },
@@ -69,6 +129,9 @@
       "idle_timeout_max": 6,
       "scare_timeout": 5,
       "walk_timeout": 7,
+      "death_spawn": {
+        "ChickenHat": 0.05
+      },
       "drop": {
         "food": 3
       },
@@ -99,6 +162,9 @@
       "idle_timeout_max": 6,
       "scare_timeout": 5,
       "walk_timeout": 7,
+      "death_spawn": {
+        "CowboyHat": 0.01
+      },
       "drop": {
         "food": 7
       },
@@ -128,6 +194,9 @@
       "idle_timeout_max": 7,
       "scare_timeout": 5,
       "walk_timeout": 7,
+      "death_spawn": {
+        "BrownBearHat": 0.05
+      },
       "drop": {
         "food": 150
       },
@@ -159,6 +228,9 @@
       "drop": {
         "food": 300
       },
+      "death_spawn": {
+        "WhiteBearHat": 0.05
+      },
       "drop_entity_type": "BearMeatPickup"
     },
     "rideable_pig": {
@@ -170,6 +242,49 @@
       "walk_speed": 150.0,
       "run_speed": 270.0,
       "driver_speed": 300.0
+    }
+  },
+  "hatpickups": {
+    "whitebearhat": {
+      "radius": 24,
+      "lifetime": 60
+    },
+    "brownbearhat": {
+      "radius": 24,
+      "lifetime": 60
+    },
+    "chesshat": {
+      "radius": 24,
+      "lifetime": 60
+    },
+    "cowboyhat": {
+      "radius": 24,
+      "lifetime": 60
+    },
+    "hiddenhat": {
+      "radius": 24,
+      "lifetime": 60
+    },
+    "cathat": {
+      "radius": 24,
+      "lifetime": 60
+    },
+    "chickenhat": {
+      "radius": 24,
+      "lifetime": 60
+    }
+  },
+  "worldbuildings": {
+    "winterwall": {
+      "width": 64,
+      "height": 64
+    },
+    "winterfloor": {
+      "width": 64,
+      "height": 64
+    },
+    "wintertower": {
+      "radius": 64
     }
   },
   "buildings": {
@@ -188,7 +303,7 @@
       "health": 1000,
       "width": 64,
       "height": 64,
-      "limit": 50,
+      "limit": 60,
       "drop": {
         "wood": 10
       }
@@ -202,7 +317,7 @@
       "health": 2000,
       "width": 64,
       "height": 64,
-      "limit": 50,
+      "limit": 60,
       "drop": {
         "stone": 10
       }
@@ -213,7 +328,7 @@
         "stone": 50
       },
       "name": "Door",
-      "limit": 6,
+      "limit": 10,
       "description": "Opens only for you and your clan.",
       "health": 2000,
       "width": 64,
@@ -299,7 +414,8 @@
         "Wolf",
         "Bear",
         "WhiteBear",
-        "Mannequin"
+        "Mannequin",
+        "WhiteWalker"
       ]
     },
     "followerbot": {
@@ -324,7 +440,8 @@
         "Wolf",
         "Bear",
         "WhiteBear",
-        "Mannequin"
+        "Mannequin",
+        "WhiteWalker"
       ]
     },
     "mannequin": {
@@ -431,7 +548,6 @@
       "run_speed": 270.0,
       "driver_speed": 320.0,
       "driver_regeneration_speed": 0.5,
-
       "name": "Black Wolf",
       "description": "You can ride on it and regenerate faster!",
       "limit": 1
@@ -441,7 +557,6 @@
         "gold": 500
       },
       "radius": 28,
-
       "name": "Ball",
       "description": "For football fans",
       "limit": 1

@@ -96,7 +96,8 @@ window.onload = () => {
         "UCMf65CSde0GZulPmD7nU4bg",
         "UC-wxm3EEFILAjkLLcckvIIA",
         "UCmSUz2Xqyw2Xfb5rSIOgNwQ",
-        "UCVLo9brXBWrCttMaGzvm0-Q"
+        "UCVLo9brXBWrCttMaGzvm0-Q",
+        "UCH0-0_0XNqkg8dTLYtFaWRg"
     ];
 
     let motdlist = [

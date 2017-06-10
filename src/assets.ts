@@ -31,6 +31,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/background_template.png'); };
     }
+    export class ImagesBannertopleft {
+        static getName(): string { return 'images_bannertopleft'; };
+
+        static getPNG(): string { return require('assets/images/bannertopleft.png'); };
+    }
     export class ImagesBox {
         static getName(): string { return 'images_box'; };
 
