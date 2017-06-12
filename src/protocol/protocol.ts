@@ -181,6 +181,9 @@ export namespace Protocol {
         NotifyMemberJoin = 41,
         NotifyMemberLeave = 42,
         DayTimeMessage = 43,
+        PlayerTeamPingRequest = 44,
+        PlayerTeamPingResponse = 45,
+        PlayerRequestDaytime = 46
     }
 
     /**

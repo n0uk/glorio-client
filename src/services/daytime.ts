@@ -30,6 +30,7 @@ export default class DayTimeService extends Service {
         `);
         this.filter.uniforms.tint = {type: '3f', value: {x: 0.5, y: 0.5, z: 0.7}};
         this.world.game.world.filters = [this.filter];
+        this.world.socket.sendMessage(MessageType.PlayerRequestDaytime, {});
     }
 
     public isNight() {

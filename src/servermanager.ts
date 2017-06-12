@@ -7,7 +7,7 @@ import Ajax from "./utils/ajax";
 export default class ServerManager {
 
     private static IP: string = '127.0.0.1';
-    private static PORT: string = '8080';
+    private static PORT: string = '5000';
 
     public static init(callback: Function) {
         // Here we need to ping every region server
@@ -23,18 +23,18 @@ export default class ServerManager {
         /*
         ServerManager.getNearestServer().then(val => {
             ServerManager.IP = val as string;
-            ServerManager.PORT = '8080';
+            ServerManager.PORT = '5000';
             callback();
         }).catch(() => {
             ServerManager.IP = '45.77.57.202';
-            ServerManager.PORT = '8080';
+            ServerManager.PORT = '5000';
             callback();
         });*/
     }
 
     public static getHostAddress(): string {
         if (DEBUG) {
-            return 'ws://localhost:8080/';
+            return 'ws://localhost:5000/';
         } else {
             let party_url: string = UrlParse.getUrlParameterByName('ip');
             if (party_url) {
@@ -47,7 +47,7 @@ export default class ServerManager {
 
     public static getHostAddressRaw(): string {
         if (DEBUG) {
-            return 'localhost:8080';
+            return 'localhost:5000';
         } else {
             let party_url: string = UrlParse.getUrlParameterByName('ip');
             if (party_url) {

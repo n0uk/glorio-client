@@ -491,6 +491,9 @@
         }
       }
     },
+    "PlayerRequestDaytime": {
+      "fields": {}
+    },
     "PlayerCreateTeam": {
       "fields": {
         "name": {

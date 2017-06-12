@@ -35,7 +35,7 @@ export default class ServerSelectionService extends Service {
         this.container.innerHTML = innerHTML.join('');
         this.container.addEventListener('change', function () {
             try {
-                window.location.href = '/?ip=' + this.container.options[this.container.selectedIndex].value + ':8080';
+                window.location.href = '/?ip=' + this.container.options[this.container.selectedIndex].value + ':5000';
             } catch (e) {
 
             }
