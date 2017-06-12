@@ -95,8 +95,11 @@ class BottomMenu extends MenuContainer {
 
 
 class LeftMenu extends MenuContainer {
-    constructor(id: string) {
+    private world: Game;
+
+    constructor(id: string, world: Game) {
         super();
+        this.world = world;
         this.element = document.getElementById("left-panel") as HTMLDivElement;
     }
 
@@ -111,6 +114,8 @@ class LeftMenu extends MenuContainer {
     }
 
     public pushRecently(item: ShopMenuItem) {
+        let childService = this.world.services.getService(ChildService) as ChildService;
+
         for (let i = 0; i < this.items.length; i++) {
             if (this.items[i].name === item.name) {
                 return;
@@ -133,6 +138,9 @@ class LeftMenu extends MenuContainer {
                 ((Phaser.GAMES[0].state.getCurrentState() as Game).services.getService(CraftMenuService) as CraftMenuService).getTooltipFor(it.name),
                 ((Phaser.GAMES[0].state.getCurrentState() as Game).services.getService(CraftMenuService) as CraftMenuService).getMaxLimit(it.name)
             );
+
+            // Update limit
+            (this.items[i] as LeftMenuItem).updateLimit(childService.getCountForType(BuildingTypeToEntityType(it.name)));
         }
     }
 }
@@ -486,7 +494,7 @@ export class CraftMenuService extends Service {
             },
         ]);
 
-        this.recentlyMenu = new LeftMenu('left-panel');
+        this.recentlyMenu = new LeftMenu('left-panel', this.world);
         let leftMenuItems = this.recentlyMenu.appendMany(this.world, [
             {
                 img: Assets.Images.ImagesFoodcrate.getPNG(),
