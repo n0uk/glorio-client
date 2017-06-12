@@ -94,6 +94,16 @@ export let BuildingDefinitions: any = {
         spriteName: Assets.Images.ImagesSoccerball.getName(),
         scale: 1
     },
+    'WoodSpikes': {
+        icon: Assets.Images.ImagesWoodspikes.getPNG(),
+        spriteName: Assets.Images.ImagesWoodspikes.getName(),
+        scale: 1
+    },
+    'Portal': {
+        icon: Assets.Images.ImagesPortal.getPNG(),
+        spriteName: Assets.Images.ImagesPortal.getName(),
+        scale: 1
+    },
 };
 
 export default class BuildingService extends Service {

@@ -13,7 +13,7 @@ import {
 import {StoneGenerator, WinterStoneGenerator, WinterWoodGenerator, WoodGenerator} from "./generators";
 import {
     WoodBlock, StoneBlock, Door, Garden, Tower, Heartstone, FoodCrate, WoodCrate, StoneCrate,
-    Mannequin, SoccerBall
+    Mannequin, SoccerBall, WoodSpikes, Portal
 } from "./buildings";
 import {FollowerBot, FarmerBot, GuardBot, GardenBot} from "./bots";
 import {WinterFloor, WinterTower, WinterWall} from "./worldbuildings";
@@ -111,6 +111,10 @@ export class EntityFactory {
             return new ChickenHat(world, id, parentId);
         } else if (type === EntityType.CoinPickup) {
             return new CoinPickup(world, id, parentId);
+        } else if (type === EntityType.WoodSpikes) {
+            return new WoodSpikes(world, id, parentId);
+        } else if (type === EntityType.Portal) {
+            return new Portal(world, id, parentId);
         }
         return new Entity(world, id, parentId);
     }

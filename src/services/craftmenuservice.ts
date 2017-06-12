@@ -543,6 +543,18 @@ export class CraftMenuService extends Service {
                 maxLimit: Config.buildings[BuildingType[BuildingType.StoneCrate].toLowerCase()].limit
             },
             {
+                img: Assets.Images.ImagesWoodspikes.getPNG(),
+                name: BuildingType.WoodSpikes,
+                tooltip: this.getTooltipFor(BuildingType.WoodSpikes),
+                maxLimit: Config.buildings[BuildingType[BuildingType.WoodSpikes].toLowerCase()].limit
+            },
+            {
+                img: Assets.Images.ImagesPortal.getPNG(),
+                name: BuildingType.Portal,
+                tooltip: this.getTooltipFor(BuildingType.Portal),
+                maxLimit: Config.buildings[BuildingType[BuildingType.Portal].toLowerCase()].limit
+            },
+            {
                 img: Assets.Images.ImagesCarwolf.getPNG(),
                 name: BuildingType.RideableWolf,
                 tooltip: this.getTooltipFor(BuildingType.RideableWolf),

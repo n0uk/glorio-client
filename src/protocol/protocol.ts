@@ -64,6 +64,8 @@ export namespace Protocol {
         CatHat = 50,
         CoinPickup = 51,
         ChickenHat = 52,
+        WoodSpikes = 53,
+        Portal = 54,
     }
 
     /**
@@ -99,6 +101,8 @@ export namespace Protocol {
         RideableWolf = 13,
         GardenBot = 14,
         SoccerBall = 15,
+        WoodSpikes = 16,
+        Portal = 17,
     }
 
     export function BuildingTypeToEntityType(buildingType: BuildingType): EntityType {

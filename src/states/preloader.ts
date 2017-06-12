@@ -51,6 +51,8 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesCoin.getName(), Assets.Images.ImagesCoin.getPNG());
         this.game.load.image(Assets.Images.ImagesMinimapwalker.getName(), Assets.Images.ImagesMinimapwalker.getPNG());
         this.game.load.image(Assets.Images.ImagesBannertopleft.getName(), Assets.Images.ImagesBannertopleft.getPNG());
+        this.game.load.image(Assets.Images.ImagesWoodspikes.getName(), Assets.Images.ImagesWoodspikes.getPNG());
+        this.game.load.image(Assets.Images.ImagesPortal.getName(), Assets.Images.ImagesPortal.getPNG());
 
         this.game.load.image(Assets.Images.ImagesWhitebearhat.getName(), Assets.Images.ImagesWhitebearhat.getPNG());
         this.game.load.image(Assets.Images.ImagesBrownbearhat.getName(), Assets.Images.ImagesBrownbearhat.getPNG());

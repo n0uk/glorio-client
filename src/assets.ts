@@ -166,6 +166,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/pickupbot.png'); };
     }
+    export class ImagesPortal {
+        static getName(): string { return 'images_portal'; };
+
+        static getPNG(): string { return require('assets/images/portal.png'); };
+    }
     export class ImagesSoccerball {
         static getName(): string { return 'images_soccerball'; };
 
@@ -240,6 +245,11 @@ export namespace Images {
         static getName(): string { return 'images_woodgenerator'; };
 
         static getPNG(): string { return require('assets/images/woodgenerator.png'); };
+    }
+    export class ImagesWoodspikes {
+        static getName(): string { return 'images_woodspikes'; };
+
+        static getPNG(): string { return require('assets/images/woodspikes.png'); };
     }
     export class ImagesWoodwall {
         static getName(): string { return 'images_woodwall'; };

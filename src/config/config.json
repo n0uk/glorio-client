@@ -184,7 +184,8 @@
         "GuardBot",
         "FollowerBot",
         "Pig",
-        "Mannequin"
+        "Mannequin",
+        "WoodSpikes"
       ],
       "chase_distance": 600,
       "walk_speed": 150,
@@ -215,7 +216,8 @@
         "FarmerBot",
         "GuardBot",
         "FollowerBot",
-        "Mannequin"
+        "Mannequin",
+        "WoodSpikes"
       ],
       "chase_distance": 600,
       "walk_speed": 150,
@@ -374,6 +376,35 @@
       "limit": 2,
       "description": "Gather carrots from gardens.",
       "health": 80
+    },
+    "woodspikes": {
+      "price": {
+        "wood": 100,
+        "gold": 50
+      },
+      "health": 300,
+      "name": "Wood Spikes",
+      "limit": 30,
+      "width": 64,
+      "height": 64,
+      "damage": 5,
+      "description": "Spikes damage your enemies!"
+    },
+    "portal": {
+      "price": {
+        "stone": 300,
+        "gold": 500
+      },
+      "health": 500,
+      "name": "Portal",
+      "limit": 2,
+      "width": 64,
+      "height": 64,
+      "description": "Teleport you!",
+      "drop": {
+        "stone": 100,
+        "gold": 100
+      }
     },
     "garden": {
       "price": {
