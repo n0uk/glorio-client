@@ -10,10 +10,16 @@
     <link rel="stylesheet" type="text/css" href="<%= require('../src/assets').Misc.CssStyle.getCSS() %>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/scripts/ads.js"></script>
 </head>
 <body>
 <div id="preroll"></div>
 <script type="text/javascript">
+	
+	if (window.AddblockDetector === undefined) {
+		console.log("Here we have the detecion :)");
+	}
+	
     function initAipPreroll() {
         if (typeof aipPlayer != "undefined") {
             window.adplayer = new aipPlayer({
