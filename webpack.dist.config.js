@@ -31,10 +31,10 @@ module.exports = {
             'GIT_REVISION': JSON.stringify('latest'), // JSON.stringify(new GitRevisionPlugin().commithash()),
 
             // Do not modify these manually, you may break things...
-            'DEFAULT_GAME_WIDTH': /*[[DEFAULT_GAME_WIDTH*/1024/*DEFAULT_GAME_WIDTH]]*/,
-            'DEFAULT_GAME_HEIGHT': /*[[DEFAULT_GAME_HEIGHT*/768/*DEFAULT_GAME_HEIGHT]]*/,
-            'MAX_GAME_WIDTH': /*[[MAX_GAME_WIDTH*/1024/*MAX_GAME_WIDTH]]*/,
-            'MAX_GAME_HEIGHT': /*[[MAX_GAME_HEIGHT*/768/*MAX_GAME_HEIGHT]]*/,
+            'DEFAULT_GAME_WIDTH': /*[[DEFAULT_GAME_WIDTH*/1920/*DEFAULT_GAME_WIDTH]]*/,
+            'DEFAULT_GAME_HEIGHT': /*[[DEFAULT_GAME_HEIGHT*/1080/*DEFAULT_GAME_HEIGHT]]*/,
+            'MAX_GAME_WIDTH': /*[[MAX_GAME_WIDTH*/1920/*MAX_GAME_WIDTH]]*/,
+            'MAX_GAME_HEIGHT': /*[[MAX_GAME_HEIGHT*/1080/*MAX_GAME_HEIGHT]]*/,
             'SOCKETIO_URL': JSON.stringify(''),
             // The items below most likely the ones you should be modifying
             'GOOGLE_WEB_FONTS': JSON.stringify([ // Add or remove entries in this array to change which fonts are loaded

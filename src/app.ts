@@ -47,7 +47,8 @@ function startApp(): void {
         height: gameHeight,
         renderer: Phaser.AUTO,
         antialias: true,
-        resolution: 1
+        resolution: 1,
+        parent: "gamecanvas",
     };
 
     let app = new App(gameConfig);

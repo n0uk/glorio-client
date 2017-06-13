@@ -160,7 +160,12 @@ export default class MinimapService extends Service {
     }
 
     public update(dt: number) {
-        this.image.cameraOffset.setTo(20, this.world.game.height - 170);
+        if (this.world.game.scale.scaleMode === Phaser.ScaleManager.USER_SCALE) {
+            this.image.cameraOffset.setTo(20 + this.world.game['screenOffsetWidth'] * this.world.game.scale.scaleFactor.x,
+                this.world.game.height - 170 - this.world.game['screenOffsetHeight'] * this.world.scale.scaleFactor.y);
+        } else if (this.world.game.scale.scaleMode === Phaser.ScaleManager.RESIZE) {
+            this.image.cameraOffset.setTo(20, this.world.game.height - 170);
+        }
     }
 
     public destroy() {
