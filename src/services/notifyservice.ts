@@ -41,7 +41,13 @@ export default class NotifyService extends Service {
 
     public update(dt: number) {
         if (this.currentMessage) {
-            this.label.cameraOffset.setTo(20, this.world.game.height - 180);
+            if (this.world.game.scale.scaleMode === Phaser.ScaleManager.USER_SCALE) {
+                this.label.cameraOffset.setTo(20 + this.world.game['screenOffsetWidth'] * this.world.game.scale.scaleFactor.x,
+                    this.world.game.height - 180 - this.world.game['screenOffsetHeight'] * this.world.scale.scaleFactor.y);
+            } else if (this.world.game.scale.scaleMode === Phaser.ScaleManager.RESIZE) {
+                this.label.cameraOffset.setTo(20, this.world.game.height - 180);
+            }
+
             if (this.currentMessage.timeout > 1 && this.label.alpha < 1) {
                 this.label.alpha += dt;
             } else if (this.currentMessage.timeout < 1) {
