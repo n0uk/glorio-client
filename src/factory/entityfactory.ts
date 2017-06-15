@@ -6,9 +6,10 @@ import {Pig, Chicken, Wolf, Bear, RideablePig, RideableWolf, WhiteBear, WhiteWal
 import {Protocol} from "../protocol/protocol";
 import EntityType = Protocol.EntityType;
 import {
-    BearMeatPickup, BoxPickup, BrownBearHat, CarrotPickup, ChessHat, ChickenHat, CoinPickup, CowboyHat, EggPickup,
+    BearMeatPickup, BoxPickup, BrownBearHat, BuilderHat, CarrotPickup, ChessHat, ChickenHat, CoinPickup, CowboyHat,
+    EggPickup,
     PigMeatPickup,
-    WhiteBearHat
+    WhiteBearHat, FoxHat, VikingHat, HockeyHat
 } from "./pickups";
 import {StoneGenerator, WinterStoneGenerator, WinterWoodGenerator, WoodGenerator} from "./generators";
 import {
@@ -115,6 +116,14 @@ export class EntityFactory {
             return new WoodSpikes(world, id, parentId);
         } else if (type === EntityType.Portal) {
             return new Portal(world, id, parentId);
+        } else if (type === EntityType.BuilderHat) {
+            return new BuilderHat(world, id, parentId);
+        } else if (type === EntityType.FoxHat) {
+            return new FoxHat(world, id, parentId);
+        } else if (type === EntityType.VikingHat) {
+            return new VikingHat(world, id, parentId);
+        } else if (type === EntityType.HockeyHat) {
+            return new HockeyHat(world, id, parentId);
         }
         return new Entity(world, id, parentId);
     }

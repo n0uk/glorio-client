@@ -1514,3 +1514,10 @@
         margin-left: -12px;
         margin-right: 8px;
     }
+
+    #cross-promo {
+        position: absolute;
+        bottom: 80px;
+        right: 20px;
+        user-select: none;
+    }

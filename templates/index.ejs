@@ -2,6 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta property="og:title" content="Glor.io: play online!">
+    <meta property="og:description" content="Survive and build your base, defending it from rivals. Fight for glory!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://glor.io">
+    <meta property="og:image" content="<%= require('../src/assets').Images.ImagesSociallogo.getPNG() %>">
     <link rel="shortcut icon" href="<%= require('../src/assets').Images.FrontendFavicon.getICO() %>"/>
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="description" content="Survive and build your base, defending it from rivals. Fight for glory!">
@@ -209,6 +214,17 @@
             <span class="player-name">Name</span>
             <span class="player-score">Score</span>
         </div>
+    </div>
+    <div id="cross-promo">
+        <iframe id="IOG_CP" scrolling="no" frameborder="0" width="200"
+                height="145" src="https://viral.iogames.space/cp/glor-io"
+                style="border-radius:10px;-webkit-box-shadow:0 3px 6px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.4);
+-moz-box-shadow:0 3px 6px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.4);
+box-shadow:0 3px 6px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.4);">
+        </iframe>
+    </div>
+    <div id="top-left-banner">
+        <a href="http://glor.io" target="_blank"><img src="<%= require('../src/assets').Images.ImagesBannertopleft.getPNG() %>" /></a>
     </div>
     <div class="motd" id="motd">
         <div class="motdtitle">Message Of The Day</div>

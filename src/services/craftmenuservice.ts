@@ -548,12 +548,14 @@ export class CraftMenuService extends Service {
                 tooltip: this.getTooltipFor(BuildingType.WoodSpikes),
                 maxLimit: Config.buildings[BuildingType[BuildingType.WoodSpikes].toLowerCase()].limit
             },
+            /*
             {
                 img: Assets.Images.ImagesPortal.getPNG(),
                 name: BuildingType.Portal,
                 tooltip: this.getTooltipFor(BuildingType.Portal),
                 maxLimit: Config.buildings[BuildingType[BuildingType.Portal].toLowerCase()].limit
             },
+            */
             {
                 img: Assets.Images.ImagesCarwolf.getPNG(),
                 name: BuildingType.RideableWolf,

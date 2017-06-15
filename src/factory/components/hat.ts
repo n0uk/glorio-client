@@ -81,6 +81,14 @@ export default class HatComponent extends Component {
             return Images.ImagesCowboyhat.getName();
         } else if (type === HatType.ChickenHat) {
             return Images.ImagesChickenhat.getName();
+        } else if (type === HatType.FoxHat) {
+            return Images.ImagesFoxhat.getName();
+        } else if (type === HatType.VikingHat) {
+            return Images.ImagesVikinghat.getName();
+        } else if (type === HatType.BuilderHat) {
+            return Images.ImagesBuilderhat.getName();
+        } else if (type === HatType.HockeyHat) {
+            return Images.ImagesHockeyhat.getName();
         }
 
         // Default
@@ -99,6 +107,10 @@ export default class HatComponent extends Component {
         if (this.hatSprite) {
             this.hatSprite.tint = color;
         }
+    }
+
+    public getHatId(): number {
+        return this.hatId;
     }
 
     public destroy() {

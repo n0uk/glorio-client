@@ -80,3 +80,24 @@ export class ChickenHat extends Pickup {
         super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesChickenhat.getName(), new Phaser.Point(0.5, 0.5));
     }
 }
+
+export class VikingHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesVikinghat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+export class FoxHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesFoxhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+export class BuilderHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesBuilderhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+export class HockeyHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesHockeyhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}

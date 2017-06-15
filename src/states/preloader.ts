@@ -1,6 +1,6 @@
 import * as Assets from '../assets';
 import {escapeHtml} from "../utils/escape";
-
+import * as AssetUtils from '../utils/assetUtils';
 /**
  * Preload all game resources here
  */
@@ -60,6 +60,10 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesChesshatrot.getName(), Assets.Images.ImagesChesshatrot.getPNG());
         this.game.load.image(Assets.Images.ImagesCowboyhat.getName(), Assets.Images.ImagesCowboyhat.getPNG());
         this.game.load.image(Assets.Images.ImagesChickenhat.getName(), Assets.Images.ImagesChickenhat.getPNG());
+        this.game.load.image(Assets.Images.ImagesVikinghat.getName(), Assets.Images.ImagesVikinghat.getPNG());
+        this.game.load.image(Assets.Images.ImagesBuilderhat.getName(), Assets.Images.ImagesBuilderhat.getPNG());
+        this.game.load.image(Assets.Images.ImagesFoxhat.getName(), Assets.Images.ImagesFoxhat.getPNG());
+        this.game.load.image(Assets.Images.ImagesHockeyhat.getName(), Assets.Images.ImagesHockeyhat.getPNG());
 
 
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesChicken.getName(), Assets.Atlases.AtlasesChicken.getPNG(), Assets.Atlases.AtlasesChicken.getJSONHash());
@@ -77,16 +81,16 @@ export default class Preloader extends Phaser.State {
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesPickupbot.getName(), Assets.Atlases.AtlasesPickupbot.getPNG(), Assets.Atlases.AtlasesPickupbot.getJSONHash());
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesWhitewalker.getName(), Assets.Atlases.AtlasesWhitewalker.getPNG(), Assets.Atlases.AtlasesWhitewalker.getJSONHash());
 
+        // Load sfx
+        this.game.load.audio(Assets.Audio.SfxWhoosh1.getName(), Assets.Audio.SfxWhoosh1.getWAV(), true);
+
         this.loadLeaderboards();
     }
 
-    private waitForSoundDecoding(): void {
-        // There is no sound decoding for now
-        // AssetUtils.Loader.waitForSoundDecoding(this.startGame, this);
-    }
-    
     public create() {
-        this.game.state.start(this.nextState);
+        AssetUtils.Loader.waitForSoundDecoding(function () {
+            this.game.state.start(this.nextState);
+        }, this);
     }
 
     private loadLeaderboards() {

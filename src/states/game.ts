@@ -33,6 +33,7 @@ import ServerSelectionService from "../services/serverselection";
 import TeamManager from "../services/teammanager";
 import DayTimeService from "../services/daytime";
 import NotifyService from "../services/notifyservice";
+import SFXService from "../services/sfxservice";
 
 enum eGameState {
     LOBBY,
@@ -325,6 +326,7 @@ export default class Game extends Phaser.State {
 
     public create(): void {
         this.createLayers();
+        this.services.registerService(new SFXService(this));
         this.services.registerService(new NetworkSendService(this));
         this.services.registerService(new NetworkViewportService(this));
         this.services.registerService(new MapService(this));

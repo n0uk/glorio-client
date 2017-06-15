@@ -51,6 +51,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/build.png'); };
     }
+    export class ImagesBuilderhat {
+        static getName(): string { return 'images_builderhat'; };
+
+        static getPNG(): string { return require('assets/images/builderhat.png'); };
+    }
     export class ImagesCarrot {
         static getName(): string { return 'images_carrot'; };
 
@@ -116,6 +121,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/foodgenerator.png'); };
     }
+    export class ImagesFoxhat {
+        static getName(): string { return 'images_foxhat'; };
+
+        static getPNG(): string { return require('assets/images/foxhat.png'); };
+    }
     export class ImagesGarden {
         static getName(): string { return 'images_garden'; };
 
@@ -135,6 +145,11 @@ export namespace Images {
         static getName(): string { return 'images_heartstone'; };
 
         static getPNG(): string { return require('assets/images/heartstone.png'); };
+    }
+    export class ImagesHockeyhat {
+        static getName(): string { return 'images_hockeyhat'; };
+
+        static getPNG(): string { return require('assets/images/hockeyhat.png'); };
     }
     export class ImagesKnight {
         static getName(): string { return 'images_knight'; };
@@ -176,6 +191,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/soccerball.png'); };
     }
+    export class ImagesSociallogo {
+        static getName(): string { return 'images_sociallogo'; };
+
+        static getPNG(): string { return require('assets/images/sociallogo.png'); };
+    }
     export class ImagesStonecrate {
         static getName(): string { return 'images_stonecrate'; };
 
@@ -205,6 +225,11 @@ export namespace Images {
         static getName(): string { return 'images_unmount'; };
 
         static getPNG(): string { return require('assets/images/unmount.png'); };
+    }
+    export class ImagesVikinghat {
+        static getName(): string { return 'images_vikinghat'; };
+
+        static getPNG(): string { return require('assets/images/vikinghat.png'); };
     }
     export class ImagesWhitebearhat {
         static getName(): string { return 'images_whitebearhat'; };
@@ -662,7 +687,11 @@ export namespace Atlases {
 }
 
 export namespace Audio {
-    class IExistSoTypeScriptWillNotComplainAboutAnEmptyNamespace {}
+    export class SfxWhoosh1 {
+        static getName(): string { return 'whoosh_1'; };
+
+        static getWAV(): string { return require('assets/sfx/whoosh_1.wav'); };
+    }
 }
 
 export namespace Audiosprites {

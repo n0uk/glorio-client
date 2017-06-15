@@ -10,6 +10,8 @@ import TransformComponent from "../factory/components/transform";
 import Rectangle = Phaser.Rectangle;
 import LeaderboardService from "./leaderboards";
 import DayTimeService from "./daytime";
+import HatComponent from "../factory/components/hat";
+import HatType = Protocol.HatType;
 
 export default class MinimapService extends Service {
     private bitmapData: Phaser.BitmapData;
@@ -61,7 +63,7 @@ export default class MinimapService extends Service {
         }
     }
 
-    private drawMinimapObject(id: number, networkId: number, teamId: number, level: number, x: number, y: number, topId: number, isNight: boolean) {
+    private drawMinimapObject(id: number, networkId: number, teamId: number, level: number, x: number, y: number, topId: number, isNight: boolean, forceShowEnemies: boolean) {
         this.bitmapData.ctx.beginPath();
         if (teamId >= -1) {
             // This is player, or bot, not white walker
@@ -89,7 +91,7 @@ export default class MinimapService extends Service {
                 }
             } else {
                 // Draw enemies
-                if (level > 0 && !isNight) {
+                if (level > 0 && (!isNight || forceShowEnemies)) {
                     if (id === topId) {
                         this.bitmapData.draw(this.minimapWinnerImage, x - 5, y - 5, 10, 10);
                     } else {
@@ -111,6 +113,18 @@ export default class MinimapService extends Service {
 
 
     public onMapMessage(msg: Message) {
+        let currentHat = -1;
+        let currentPosition = new Phaser.Point(0, 0);
+        if (this.world.assignedObject) {
+            if (this.world.assignedObject.components.hat) {
+                let hatComponent = this.world.assignedObject.components.hat as HatComponent;
+                currentHat = hatComponent.getHatId();
+            }
+            if (this.world.assignedObject.components.transform) {
+                currentPosition = (this.world.assignedObject.components.transform as TransformComponent).position;
+            }
+        }
+
         // Get topID from leaderboard
         let topId = (this.world.services.getService(LeaderboardService) as LeaderboardService).topId;
         // Check is night now
@@ -155,7 +169,11 @@ export default class MinimapService extends Service {
             let networkId: number = data[i + 4]; // Network id - same for player and bots
             let teamId: number = team_data[i / 5]; // Team id can be -1, if there is no team, and -2 if it's whitewalker
 
-            this.drawMinimapObject(id, networkId, teamId, level, x, y, topId, isNight);
+            if (currentHat === HatType.FoxHat && Phaser.Math.distance(data[i + 1], data[i + 2], currentPosition.x, currentPosition.y) < 5000) {
+                this.drawMinimapObject(id, networkId, teamId, level, x, y, topId, isNight, true);
+            } else {
+                this.drawMinimapObject(id, networkId, teamId, level, x, y, topId, isNight, false);
+            }
         }
     }
 

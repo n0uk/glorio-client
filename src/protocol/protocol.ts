@@ -66,6 +66,10 @@ export namespace Protocol {
         ChickenHat = 52,
         WoodSpikes = 53,
         Portal = 54,
+        BuilderHat = 55,
+        FoxHat = 56,
+        VikingHat = 57,
+        HockeyHat = 58,
     }
 
     /**
@@ -79,6 +83,10 @@ export namespace Protocol {
         HiddenHat = 4,
         CatHat = 5,
         ChickenHat = 6,
+        BuilderHat = 7,
+        FoxHat = 8,
+        HockeyHat = 9,
+        VikingHat = 10,
     }
 
     /**
