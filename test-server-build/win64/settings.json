@@ -45,7 +45,13 @@
             "chase_distance": 800,
             "speed": 230.0,
             "death_spawn": {
-                "CowboyHat": 0.05
+                "day": {
+                    "CowboyHat": 0.05,
+                    "HockeyHat": 0.01
+                },
+                "night": {
+                    "VikingHat": 0.05
+                }
             },
             "drop": {
                 "gold": 500
@@ -112,7 +118,13 @@
             "walk_speed": 150.0,
             "run_speed": 270.0,
             "death_spawn": {
-                "ChessHat": 0.05
+                "day": {
+                    "ChessHat": 0.05,
+                    "BuilderHat": 0.01
+                },
+                "night": {
+                    "BuilderHat": 0.05
+                }
             },            
             "drop": {
                 "food": 5
@@ -130,7 +142,13 @@
             "scare_timeout": 5,
             "walk_timeout": 7,
             "death_spawn": {
-                "ChickenHat": 0.05
+                "day": {
+                    "ChickenHat": 0.5,
+                    "BuilderHat": 0.5
+                },
+                "night": {
+                    "FoxHat": 0.5
+                }
             },            
             "drop": {
                 "food": 3
@@ -163,7 +181,12 @@
             "scare_timeout": 5,
             "walk_timeout": 7,
             "death_spawn": {
-                "CowboyHat": 0.01
+                "day": {
+                    "CowboyHat": 0.01
+                },
+                "night": {
+                    "VikingHat": 0.02
+                }
             },            
             "drop": {
                 "food": 7
@@ -178,13 +201,15 @@
             "damage": 49,
             "health": 500,
             "radius": 70,
+            "building_damage_multiplier": 10,
             "target_types": [
                 "Player",
                 "FarmerBot",
                 "GuardBot",
                 "FollowerBot",
                 "Pig",
-                "Mannequin"
+                "Mannequin",
+                "WoodSpikes"
             ],
             "chase_distance": 600,
             "walk_speed": 150,
@@ -195,7 +220,13 @@
             "scare_timeout": 5,
             "walk_timeout": 7,
             "death_spawn": {
-                "BrownBearHat": 0.05
+                "day": {
+                    "BrownBearHat": 0.05,
+                    "HockeyHat": 0.01
+                },
+                "night": {
+                    "HockeyHat": 0.02
+                }
             },
             "drop": {
                 "food": 150
@@ -210,12 +241,14 @@
             "damage": 80,
             "health": 1000,
             "radius": 70,
+            "building_damage_multiplier": 10,
             "target_types": [
                 "Player",
                 "FarmerBot",
                 "GuardBot",
                 "FollowerBot",
-                "Mannequin"
+                "Mannequin",
+                "WoodSpikes"
             ],
             "chase_distance": 600,
             "walk_speed": 150,
@@ -229,7 +262,13 @@
                 "food": 300
             },
             "death_spawn": {
-                "WhiteBearHat": 0.05
+                "day": {
+                    "WhiteBearHat": 0.05,
+                    "HockeyHat": 0.01
+                },
+                "night": {
+                    "HockeyHat": 0.02
+                }
             },
             "drop_entity_type": "BearMeatPickup"
         },
@@ -272,7 +311,23 @@
         "chickenhat": {
             "radius": 24,
             "lifetime": 60
-        }        
+        },
+        "foxhat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+        "builderhat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+        "vikinghat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+        "hockeyhat": {
+            "radius": 24,
+            "lifetime": 60
+        }                                        
     },
     "worldbuildings": {
         "winterwall": {
@@ -374,6 +429,35 @@
             "limit": 2,
             "description": "Gather carrots from gardens.",
             "health": 80
+        },
+        "woodspikes": {
+            "price": {
+                "wood": 100,
+                "gold": 50
+            },
+            "health": 300,
+            "name": "Wood Spikes",
+            "limit": 30,
+            "width": 64,
+            "height": 64,
+            "damage": 5,
+            "description": "Spikes damage your enemies!"
+        },
+        "portal": {
+            "price": {
+                "stone": 300,
+                "gold": 500
+            },
+            "health": 500,
+            "name": "Portal",
+            "limit": 2,
+            "width": 64,
+            "height": 64,
+            "description": "Teleport you!",
+            "drop": {
+                "stone": 100,
+                "gold": 100
+            }            
         },
         "garden": {
             "price": {
