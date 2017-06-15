@@ -19,6 +19,7 @@ class ChatInput {
         this.container = document.createElement('div');
         this.container.style.left = '0px';
         this.container.style.top = '0px';
+        this.container.style.position = 'absolute';
         this.container.className = 'speechbubble';
 
         this.input = <HTMLInputElement>document.createElement('input');
@@ -126,7 +127,17 @@ export default class ChatInputComponent extends Component {
             if (this.cachedSprite) {
                 y -= this.cachedSprite.sprite.height / 2;
             }
-            this.chatInput.setposition(this.cachedTransform.position.x - this.world.game.camera.x, y - this.world.game.camera.y);
+            if (this.world.game.scale.scaleMode === Phaser.ScaleManager.USER_SCALE) {
+                let x = this.cachedTransform.position.x - this.world.game.camera.x;
+                x = x / this.world.game.scale.scaleFactor.x  - this.world.game['screenOffsetWidth'];
+
+                y = y - this.world.game.camera.y;
+                y = y / this.world.game.scale.scaleFactor.y - this.world.game['screenOffsetHeight'];
+
+                this.chatInput.setposition(x, y);
+            } else {
+                this.chatInput.setposition(this.cachedTransform.position.x - this.world.game.camera.x, y - this.world.game.camera.y);
+            }
         }
     }
 

@@ -81,7 +81,18 @@ export default class ChatBubbleComponent extends Component {
             if (this.cachedSprite) {
                 y -= this.cachedSprite.sprite.height / 2;
             }
-            this.chatBubble.setPosition(this.cachedTransform.position.x - this.world.game.camera.x, y - this.world.game.camera.y);
+
+            if (this.world.game.scale.scaleMode === Phaser.ScaleManager.USER_SCALE) {
+                let x = this.cachedTransform.position.x - this.world.game.camera.x;
+                x = x / this.world.game.scale.scaleFactor.x  - this.world.game['screenOffsetWidth'];
+
+                y = y - this.world.game.camera.y;
+                y = y / this.world.game.scale.scaleFactor.y - this.world.game['screenOffsetHeight'];
+
+                this.chatBubble.setPosition(x, y);
+            } else {
+                this.chatBubble.setPosition(this.cachedTransform.position.x - this.world.game.camera.x, y - this.world.game.camera.y);
+            }
         }
     }
 
