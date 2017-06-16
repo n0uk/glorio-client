@@ -16,7 +16,7 @@ export default class Boot extends Phaser.State {
 
         // Setup scale mode and page align
 
-        this.game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
+        this.game.scale.scaleMode = Phaser.ScaleManager.RESIZE;
         this.game.scale.pageAlignHorizontally = true;
         this.game.scale.pageAlignVertically = true;
 
