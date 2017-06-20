@@ -185,6 +185,23 @@
         }
       }
     },
+    "SyncHats": {
+      "fields": {
+        "hatTypes": {
+          "rule": "repeated",
+          "type": "int32",
+          "id": 1,
+          "options": {
+            "packed": false
+          }
+        },
+        "currentHat": {
+          "rule": "required",
+          "type": "int32",
+          "id": 2
+        }
+      }
+    },
     "Ping": {
       "fields": {
         "time": {
@@ -493,6 +510,15 @@
     },
     "PlayerRequestDaytime": {
       "fields": {}
+    },
+    "PlayerSelectHat": {
+      "fields": {
+        "hatType": {
+          "rule": "required",
+          "type": "int32",
+          "id": 1
+        }
+      }
     },
     "PlayerCreateTeam": {
       "fields": {
