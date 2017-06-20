@@ -143,11 +143,12 @@
             "walk_timeout": 7,
             "death_spawn": {
                 "day": {
-                    "ChickenHat": 0.5,
-                    "BuilderHat": 0.5
+                    "ChickenHat": 0.05,
+                    "BuilderHat": 0.01
                 },
                 "night": {
-                    "FoxHat": 0.5
+                    "ChickenHat": 0.01,
+                    "FoxHat": 0.05
                 }
             },            
             "drop": {
@@ -435,8 +436,8 @@
                 "wood": 100,
                 "gold": 50
             },
-            "health": 300,
-            "name": "Wood Spikes",
+            "health": 500,
+            "name": "Wooden Spikes",
             "limit": 30,
             "width": 64,
             "height": 64,
@@ -554,7 +555,8 @@
             "height": 64,
             "drop": {
                 "food": 100
-            }
+            },
+            "disable_builder_hat": true
         },
         "woodcrate": {
             "allow_reward": false,
@@ -569,7 +571,8 @@
             "height": 64,
             "drop": {
                 "wood": 100
-            }
+            },
+            "disable_builder_hat": true
         },
         "stonecrate": {
             "allow_reward": false,
@@ -584,7 +587,8 @@
             "height": 64,
             "drop": {
                 "stone": 100
-            }
+            },
+            "disable_builder_hat": true
         },
         "heartstone": {
             "price": {
