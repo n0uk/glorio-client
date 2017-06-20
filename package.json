@@ -1,8 +1,8 @@
 {
-  "name": "phaser-npm-webpack-typescript-starter-project",
-  "productName": "phaser-npm-webpack-typescript-starter-project",
-  "version": "1.7.4",
-  "main": "electron-main.js",
+  "name": "glorio-client",
+  "productName": "glor.io",
+  "version": "0.4.10",
+  "main": "",
   "scripts": {
     "webpack:dev": "webpack --config webpack.dev.config.js --progress --colors",
     "webpack:dist": "webpack --config webpack.dist.config.js --progress --colors",
@@ -14,21 +14,14 @@
     "assets:dev": "node ./scripts/generateAssetsClass.js --dev",
     "assets": "node ./scripts/generateAssetsClass.js",
     "postinstall": "npm run setupGameSize",
-    "electron:dev": "npm run build:dev && electron .",
-    "electron:dist": "npm run build:dist && electron .",
-    "electron:pack:dev": "npm run build:dev && node ./scripts/packageElectronApp.js",
-    "electron:pack:dist": "npm run build:dist && node ./scripts/packageElectronApp.js",
     "checkDepsVersions": "npm-check --skip-unused -u"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project.git"
+    "url": "git+https://github.com/n0uk/glorio-client.git"
   },
-  "author": "Richard Roylance <https://github.com/rroylance>",
-  "bugs": {
-    "url": "https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/issues"
-  },
-  "homepage": "https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project#readme",
+  "author": "Maksim Ustichenko <https://github.com/n0uk>",
+  "homepage": "http://glor.io",
   "devDependencies": {
     "@types/core-js": "^0.9.41",
     "@types/jquery": "^2.0.45",
