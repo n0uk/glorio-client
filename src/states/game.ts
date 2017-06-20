@@ -34,6 +34,7 @@ import TeamManager from "../services/teammanager";
 import DayTimeService from "../services/daytime";
 import NotifyService from "../services/notifyservice";
 import SFXService from "../services/sfxservice";
+import LevelComponent from "../factory/components/level";
 
 enum eGameState {
     LOBBY,
@@ -87,6 +88,24 @@ export default class Game extends Phaser.State {
         this.initializeLoginButton();
         this.initializeGameState(eGameState.LOBBY);
         this.initializePartyLink();
+
+        window.onbeforeunload = function (e) {
+            if (this.isNeedToPreventClose()) {
+                let dialogText: string = 'Are you really want to quit?';
+                e.returnValue = dialogText;
+                return dialogText;
+            } else {
+                return;
+            }
+        }.bind(this);
+    }
+
+    private isNeedToPreventClose() {
+        if (this.assignedObject && this.assignedObject.components.level) {
+            return (this.assignedObject.components.level as LevelComponent).currentLevel > 1;
+        } else {
+            return false;
+        }
     }
 
     private initializeLoginButton() {
