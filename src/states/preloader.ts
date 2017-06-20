@@ -101,11 +101,12 @@ export default class Preloader extends Phaser.State {
             for (let i = 0; i < weekly.length; i += 2) {
                 let name = weekly[i];
                 let score = weekly[i + 1];
+                let scoreString = score > 10000 ? (Math.floor(score / 1000.0)).toString() + 'k' : score.toString();
                 innerHTML.push(`  
                     <div class="ui-leaderboard-player">
                         <span class="player-rank">#${Math.floor(i / 2) + 1}</span>
                         <span class="player-name">${escapeHtml(name)}</span>
-                        <span class="player-score">${(score / 1000.0).toPrecision(3)}k</span>
+                        <span class="player-score">${scoreString}</span>
                     </div>`);
             }
 
