@@ -5,6 +5,7 @@ import {Protocol} from "../protocol/protocol";
 import MessageType = Protocol.MessageType;
 import * as Assets from '../assets';
 import TeamManager from "./teammanager";
+import HatManager from "./hatservice";
 
 class ActionContainer extends MenuContainer {
     constructor() {
@@ -50,6 +51,7 @@ export class ActionService extends Service {
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesBuild.getPNG(), 'shop-show', 'B', 'B'));
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesUnmount.getPNG(), 'unmount', 'U', 'U'));
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesTeam.getPNG(), 'team', 'T', 'T'));
+        this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesTeam.getPNG(), 'hat', 'H', 'H'));
     }
 
     public requestWork(id: string) {
@@ -59,6 +61,8 @@ export class ActionService extends Service {
             this.world.socket.sendMessage(MessageType.PlayerUnmountRequest, {});
         } else if (id === 'team') {
             (this.world.services.getService(TeamManager) as TeamManager).toggle();
+        } else if (id === 'hat') {
+            (this.world.services.getService(HatManager) as HatManager).toggle();
         }
     }
 }

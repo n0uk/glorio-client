@@ -575,6 +575,30 @@ export class CraftMenuService extends Service {
                 maxLimit: Config.buildings[BuildingType[BuildingType.Mannequin].toLowerCase()].limit
             },
             {
+                img: Assets.Images.ImagesRideablebear.getPNG(),
+                name: BuildingType.RideableBear,
+                tooltip: this.getTooltipFor(BuildingType.RideableBear),
+                maxLimit: Config.buildings[BuildingType[BuildingType.RideableBear].toLowerCase()].limit
+            },
+            {
+                img: Assets.Images.ImagesDarkguard.getPNG(),
+                name: BuildingType.DarkGuardBot,
+                tooltip: this.getTooltipFor(BuildingType.DarkGuardBot),
+                maxLimit: Config.buildings[BuildingType[BuildingType.DarkGuardBot].toLowerCase()].limit
+            },
+            {
+                img: Assets.Images.ImagesDarkstonewall.getPNG(),
+                name: BuildingType.DarkStoneBlock,
+                tooltip: this.getTooltipFor(BuildingType.DarkStoneBlock),
+                maxLimit: Config.buildings[BuildingType[BuildingType.DarkStoneBlock].toLowerCase()].limit
+            },
+            {
+                img: Assets.Images.ImagesDarkdoor.getPNG(),
+                name: BuildingType.DarkDoor,
+                tooltip: this.getTooltipFor(BuildingType.DarkDoor),
+                maxLimit: Config.buildings[BuildingType[BuildingType.DarkDoor].toLowerCase()].limit
+            },
+            {
                 img: Assets.Images.ImagesSoccerball.getPNG(),
                 name: BuildingType.SoccerBall,
                 tooltip: this.getTooltipFor(BuildingType.SoccerBall),

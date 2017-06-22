@@ -1157,6 +1157,10 @@
         content: 'GOLD';
     }
 
+    .ui-stats-resources .ui-stats-soul::before {
+        content: 'SOUL';
+    }
+
     /** Tooltips **/
     .ui-tooltip {
         position: relative;
@@ -1520,4 +1524,117 @@
         bottom: 80px;
         right: 20px;
         user-select: none;
+    }
+
+    /* Hats management */
+    #ui-hat-list-container {
+        z-index: 3;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        width: 200px;
+        height: 400px;
+        margin-left: -100px;
+        margin-top: -200px;
+        background-color: rgba(0, 0, 0, .3);
+        user-select: none;
+        display: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        user-select: none;
+        pointer-events: all;
+    }
+
+    .ui-hat-list-item {
+        user-select: none;
+        width: 100%;
+        display: block;
+        height: 44px;
+        vertical-align: middle;
+        color: white;
+        font-size: 18px;
+        font-family:  'Slabo 27px', serif;
+        background-color: rgba(0, 0, 0, .8);
+        margin: 2px;
+        user-select: none;
+        cursor: default;
+    }
+
+    .ui-hat-list-bottom {
+        height: 30px;
+        width: 100%;
+    }
+
+
+    .ui-hat-list-content {
+        height: 340px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .ui-hat-wear-button {
+        background-color: #ec7777;
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 12px 24px; /* Some padding */
+        font-size: 16px; /* Set a font-size */
+        pointer-events: all;
+        cursor: pointer;
+        float: right;
+        user-select: none;
+    }
+
+    .ui-hat-wear-button:hover {
+        background-color: #fc7777;
+    }
+
+    .ui-hat-close-button {
+        background-color: #ec7777;
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        font-size: 16px; /* Set a font-size */
+        vertical-align: middle;
+        pointer-events: all;
+        cursor: pointer;
+        user-select: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .ui-hat-close-button:hover {
+        background-color: #fc7777;
+    }
+
+
+    .ui-hat-list-header {
+        position: relative;
+        background-color: #4CAF50; /* Green background */
+        font-family: 'Slabo 27px', serif;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+        height: 20px;
+        user-select: none;
+        cursor: default;
+    }
+
+    .ui-hat-list-close {
+        position: absolute;
+        display: inline-block;
+        line-height: 30px;
+        right: 18px;
+        top: 0;
+        cursor: pointer;
+    }
+
+    .ui-hat-image > img {
+        max-width:44px;
+        max-height:44px;
+        width:auto;
+        height:auto;
     }

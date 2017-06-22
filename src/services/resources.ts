@@ -18,7 +18,7 @@ export default class ResourceService extends Service {
 
         for (let resource in ResourceType) {
             // isNaN(parseInt()) - Really? Yep.
-            if (isNaN(parseInt(resource))) {
+            if (isNaN(parseInt(resource)) && resource.toLowerCase() !== 'soul') {
                 let resourceElement: HTMLDivElement = document.createElement('div') as HTMLDivElement;
                 resourceElement.innerText = `0`;
                 resourceElement.className = `ui-stats-${resource.toLowerCase()}`;

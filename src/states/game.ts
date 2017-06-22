@@ -35,6 +35,7 @@ import DayTimeService from "../services/daytime";
 import NotifyService from "../services/notifyservice";
 import SFXService from "../services/sfxservice";
 import LevelComponent from "../factory/components/level";
+import HatManager from "../services/hatservice";
 
 enum eGameState {
     LOBBY,
@@ -363,6 +364,7 @@ export default class Game extends Phaser.State {
         this.services.registerService(new TeamManager(this));
         this.services.registerService(new DayTimeService(this));
         this.services.registerService(new NotifyService(this));
+        this.services.registerService(new HatManager(this));
         $.ajax('http://status.glor.io').done(function (data) {
             this.services.registerService(new ServerSelectionService(this, data));
         }.bind(this));

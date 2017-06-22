@@ -53,6 +53,11 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesBannertopleft.getName(), Assets.Images.ImagesBannertopleft.getPNG());
         this.game.load.image(Assets.Images.ImagesWoodspikes.getName(), Assets.Images.ImagesWoodspikes.getPNG());
         this.game.load.image(Assets.Images.ImagesPortal.getName(), Assets.Images.ImagesPortal.getPNG());
+        this.game.load.image(Assets.Images.ImagesSoul.getName(), Assets.Images.ImagesSoul.getPNG());
+        this.game.load.image(Assets.Images.ImagesDarkdoor.getName(), Assets.Images.ImagesDarkdoor.getPNG());
+        this.game.load.image(Assets.Images.ImagesDarkguard.getName(), Assets.Images.ImagesDarkguard.getPNG());
+        this.game.load.image(Assets.Images.ImagesRideablebear.getName(), Assets.Images.ImagesRideablebear.getPNG());
+        this.game.load.image(Assets.Images.ImagesDarkstonewall.getName(), Assets.Images.ImagesDarkstonewall.getPNG());
 
         this.game.load.image(Assets.Images.ImagesWhitebearhat.getName(), Assets.Images.ImagesWhitebearhat.getPNG());
         this.game.load.image(Assets.Images.ImagesBrownbearhat.getName(), Assets.Images.ImagesBrownbearhat.getPNG());
@@ -65,6 +70,15 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesFoxhat.getName(), Assets.Images.ImagesFoxhat.getPNG());
         this.game.load.image(Assets.Images.ImagesHockeyhat.getName(), Assets.Images.ImagesHockeyhat.getPNG());
 
+        this.game.load.image(Assets.Images.ImagesWhitebearhaticon.getName(), Assets.Images.ImagesWhitebearhaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesBrownbearhaticon.getName(), Assets.Images.ImagesBrownbearhaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesChesshaticon.getName(), Assets.Images.ImagesChesshaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesCowboyhaticon.getName(), Assets.Images.ImagesCowboyhaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesChickenhaticon.getName(), Assets.Images.ImagesChickenhaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesVikinghaticon.getName(), Assets.Images.ImagesVikinghaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesBuilderhaticon.getName(), Assets.Images.ImagesBuilderhaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesFoxhaticon.getName(), Assets.Images.ImagesFoxhaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesHockeyhaticon.getName(), Assets.Images.ImagesHockeyhaticon.getPNG());
 
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesChicken.getName(), Assets.Atlases.AtlasesChicken.getPNG(), Assets.Atlases.AtlasesChicken.getJSONHash());
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesKnight.getName(), Assets.Atlases.AtlasesKnight.getPNG(), Assets.Atlases.AtlasesKnight.getJSONHash());
@@ -80,6 +94,9 @@ export default class Preloader extends Phaser.State {
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesCarwolf.getName(), Assets.Atlases.AtlasesCarwolf.getPNG(), Assets.Atlases.AtlasesCarwolf.getJSONHash());
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesPickupbot.getName(), Assets.Atlases.AtlasesPickupbot.getPNG(), Assets.Atlases.AtlasesPickupbot.getJSONHash());
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesWhitewalker.getName(), Assets.Atlases.AtlasesWhitewalker.getPNG(), Assets.Atlases.AtlasesWhitewalker.getJSONHash());
+        this.game.load.atlasJSONHash(Assets.Atlases.AtlasesRideablebear.getName(), Assets.Atlases.AtlasesRideablebear.getPNG(), Assets.Atlases.AtlasesRideablebear.getJSONHash());
+        this.game.load.atlasJSONHash(Assets.Atlases.AtlasesDarkdoor.getName(), Assets.Atlases.AtlasesDarkdoor.getPNG(), Assets.Atlases.AtlasesDarkdoor.getJSONHash());
+        this.game.load.atlasJSONHash(Assets.Atlases.AtlasesDarkguard.getName(), Assets.Atlases.AtlasesDarkguard.getPNG(), Assets.Atlases.AtlasesDarkguard.getJSONHash());
 
         // Load sfx
         this.game.load.audio(Assets.Audio.SfxWhoosh1.getName(), Assets.Audio.SfxWhoosh1.getWAV(), true);
