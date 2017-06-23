@@ -38,30 +38,24 @@ class HatListElement extends EventEmitter {
         }
     }
 
-    public constructor(hatType: number) {
+    public constructor(hatType: number, active: boolean) {
         super();
         this.hatType = hatType;
         this.element = document.createElement('div');
-        this.element.className = 'ui-hat-list-item';
+        if (!active) {
+            this.element.className = 'ui-hat-list-item is-aviable';
+        } else {
+            this.element.className = 'ui-hat-list-item is-active';
+        }
         this.element.innerHTML = `
-            <div class="ui-hat-wear-button">
-                WEAR
-            </div>
             <div class="ui-hat-image">
                 <img src="${HatListElement.getHatSprite(hatType)}" />
             </div>
         `;
-        this.wearButton = $('.ui-hat-wear-button', this.element).get(0);
-        this.wearButton.onclick = function () {
-            this.emit('wear');
-        }.bind(this);
-    }
-
-    public setWearStatus(flag: boolean) {
-        if (flag) {
-            this.wearButton.style.visibility = "hidden";
-        } else {
-            this.wearButton.style.visibility = "visible";
+        if (!active) {
+            this.element.onclick = function () {
+                this.emit('wear');
+            }.bind(this);
         }
     }
 }
@@ -85,20 +79,20 @@ class HatList {
         this.cleanup();
         for (let i = 0; i < hatTypes.length; i++) {
             let hatType = hatTypes[i];
-            let element = new HatListElement(hatType);
+            let element = new HatListElement(hatType, hatType === currentHat);
             element.on('wear', function () {
                 this.world.socket.sendMessage(MessageType.PlayerSelectHat, {hatType: hatType});
+                (this.world.services.getService(HatManager) as HatManager).toggle();
             }.bind(this));
-            element.setWearStatus(hatType === currentHat);
             this.listContainer.appendChild(element.element);
         }
 
         let hatType = -1;
-        let element = new HatListElement(hatType);
+        let element = new HatListElement(hatType, hatType === currentHat);
         element.on('wear', function () {
             this.world.socket.sendMessage(MessageType.PlayerSelectHat, {hatType: hatType});
+            (this.world.services.getService(HatManager) as HatManager).toggle();
         }.bind(this));
-        element.setWearStatus(currentHat === hatType);
         this.listContainer.appendChild(element.element);
     }
 }

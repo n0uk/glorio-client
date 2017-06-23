@@ -1532,9 +1532,9 @@
         position:absolute;
         left: 50%;
         top: 50%;
-        width: 200px;
+        width: 270px;
         height: 400px;
-        margin-left: -100px;
+        margin-left: -135px;
         margin-top: -200px;
         background-color: rgba(0, 0, 0, .3);
         user-select: none;
@@ -1547,18 +1547,30 @@
 
     .ui-hat-list-item {
         user-select: none;
-        width: 100%;
+        width: 50px;
+        height: 50px;
+        float: left;
         display: block;
-        height: 44px;
         vertical-align: middle;
         color: white;
         font-size: 18px;
         font-family:  'Slabo 27px', serif;
-        background-color: rgba(0, 0, 0, .8);
         margin: 2px;
         user-select: none;
-        cursor: default;
+        cursor: pointer;
+        pointer-events: all;
+        background-color: rgba(0, 30, 0, 0.5);
     }
+
+    .ui-hat-list-item.is-aviable:hover {
+        background-color: #4CAF50;
+    }
+
+    .ui-hat-list-item.is-active {
+        cursor: not-allowed;
+        background-color: rgba(0, 0, 0, .8);
+    }
+
 
     .ui-hat-list-bottom {
         height: 30px;
@@ -1571,22 +1583,6 @@
         overflow-x: hidden;
         overflow-y: auto;
         width: 100%;
-    }
-
-    .ui-hat-wear-button {
-        background-color: #ec7777;
-        border: none; /* Remove borders */
-        color: white; /* White text */
-        padding: 12px 24px; /* Some padding */
-        font-size: 16px; /* Set a font-size */
-        pointer-events: all;
-        cursor: pointer;
-        float: right;
-        user-select: none;
-    }
-
-    .ui-hat-wear-button:hover {
-        background-color: #fc7777;
     }
 
     .ui-hat-close-button {
@@ -1633,8 +1629,9 @@
     }
 
     .ui-hat-image > img {
-        max-width:44px;
-        max-height:44px;
+        max-width:50px;
+        max-height:50px;
         width:auto;
         height:auto;
+        pointer-events: none;
     }

@@ -38,6 +38,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Heartstone"
       ],
@@ -67,6 +68,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Mannequin"
       ],
@@ -172,6 +174,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Pig",
         "Mannequin"
@@ -210,6 +213,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Pig",
         "Mannequin",
@@ -250,6 +254,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Mannequin",
         "WoodSpikes"
@@ -433,7 +438,7 @@
     },
     "farmerbot": {
       "attack_distance": 60,
-      "punch_timeout": 2.5,
+      "punch_timeout": 2,
       "radius": 30,
       "search_radius": 600,
       "target_types": [
@@ -444,7 +449,7 @@
       ],
       "speed": 200.0,
       "price": {
-        "food": 50
+        "food": 12
       },
       "name": "Peasant",
       "limit": 2,
@@ -460,8 +465,8 @@
       ],
       "speed": 200.0,
       "price": {
-        "food": 200,
-        "gold": 300
+        "food": 50,
+        "gold": 250
       },
       "name": "Gardener",
       "limit": 2,
@@ -473,7 +478,7 @@
         "wood": 100,
         "gold": 50
       },
-      "health": 600,
+      "health": 500,
       "name": "Wooden Spikes",
       "limit": 30,
       "width": 64,
@@ -513,7 +518,7 @@
         "food": 5
       },
       "drop_entity_type": "CarrotPickup",
-      "drop_timeout": 30
+      "drop_timeout": 20
     },
     "guardbot": {
       "punch_timeout": 1,
@@ -521,8 +526,7 @@
       "search_radius": 600,
       "speed": 200.0,
       "price": {
-        "food": 100,
-        "gold": 50
+        "food": 40
       },
       "damage": 30,
       "name": "Guard",
@@ -534,6 +538,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Wolf",
         "Bear",
@@ -561,6 +566,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Wolf",
         "Bear",
@@ -575,8 +581,7 @@
       "search_radius": 400,
       "speed": 200.0,
       "price": {
-        "food": 70,
-        "gold": 30
+        "food": 15
       },
       "damage": 30,
       "name": "Mercenary",
@@ -588,6 +593,7 @@
         "Player",
         "FarmerBot",
         "GuardBot",
+        "DarkGuardBot",
         "FollowerBot",
         "Wolf",
         "Bear",
@@ -691,8 +697,8 @@
     },
     "tower": {
       "price": {
-        "wood": 100,
-        "stone": 100
+        "wood": 40,
+        "stone": 40
       },
       "name": "Tower",
       "limit": 5,
