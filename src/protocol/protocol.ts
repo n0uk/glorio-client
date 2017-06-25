@@ -211,7 +211,8 @@ export namespace Protocol {
         PlayerTeamPingResponse = 45,
         PlayerRequestDaytime = 46,
         SyncHats = 47,
-        PlayerSelectHat = 48
+        PlayerSelectHat = 48,
+        ServerVersion = 49
     }
 
     /**

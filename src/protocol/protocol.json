@@ -367,6 +367,15 @@
         }
       }
     },
+    "ServerVersion": {
+      "fields": {
+        "version": {
+          "rule": "required",
+          "type": "int32",
+          "id": 1
+        }
+      }
+    },
     "PlayerInput": {
       "fields": {
         "x": {
