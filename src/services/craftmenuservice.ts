@@ -574,6 +574,7 @@ export class CraftMenuService extends Service {
                 tooltip: this.getTooltipFor(BuildingType.Mannequin),
                 maxLimit: Config.buildings[BuildingType[BuildingType.Mannequin].toLowerCase()].limit
             },
+            /*
             {
                 img: Assets.Images.ImagesRideablebear.getPNG(),
                 name: BuildingType.RideableBear,
@@ -597,7 +598,7 @@ export class CraftMenuService extends Service {
                 name: BuildingType.DarkDoor,
                 tooltip: this.getTooltipFor(BuildingType.DarkDoor),
                 maxLimit: Config.buildings[BuildingType[BuildingType.DarkDoor].toLowerCase()].limit
-            },
+            },*/
             {
                 img: Assets.Images.ImagesSoccerball.getPNG(),
                 name: BuildingType.SoccerBall,
