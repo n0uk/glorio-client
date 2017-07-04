@@ -51,7 +51,7 @@ export class ActionService extends Service {
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesBuild.getPNG(), 'shop-show', 'B', 'B'));
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesUnmount.getPNG(), 'unmount', 'U', 'U'));
         this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesTeam.getPNG(), 'team', 'T', 'T'));
-        this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesTeam.getPNG(), 'hat', 'H', 'H'));
+        this.actionMenu.appendChild(new ActionMenuItem(this.world, Assets.Images.ImagesCowboyhaticon.getPNG(), 'hat', 'H', 'H'));
     }
 
     public requestWork(id: string) {
