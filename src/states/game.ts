@@ -142,7 +142,7 @@ export default class Game extends Phaser.State {
             document.getElementById("lobby-layout").style.display = 'none';
             document.getElementById("game-layout").style.display = 'none';
             document.getElementById("respawn-layout").style.display = 'block';
-            this.game.input.keyboard.reset(true);
+            this.game.input.keyboard.reset(false);
             this.game.input.keyboard.enabled = false;
             this.respawnWindow.show();
         }
