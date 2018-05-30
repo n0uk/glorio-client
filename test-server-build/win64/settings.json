@@ -38,6 +38,7 @@
                 "Player",
                 "FarmerBot",
                 "GuardBot",
+                "DarkGuardBot",
                 "FollowerBot",
                 "Heartstone"
             ],
@@ -67,6 +68,7 @@
                 "Player",
                 "FarmerBot",
                 "GuardBot",
+                "DarkGuardBot",
                 "FollowerBot",
                 "Mannequin"
             ],
@@ -104,7 +106,10 @@
         },
         "coin": {
             "radius": 15
-        }        
+        },
+        "soul": {
+            "radius": 15
+        } 
     },
     "animals": {
         "pig": {
@@ -169,6 +174,7 @@
                 "Player",
                 "FarmerBot",
                 "GuardBot",
+                "DarkGuardBot",
                 "FollowerBot",
                 "Pig",
                 "Mannequin"
@@ -207,6 +213,7 @@
                 "Player",
                 "FarmerBot",
                 "GuardBot",
+                "DarkGuardBot",
                 "FollowerBot",
                 "Pig",
                 "Mannequin",
@@ -247,6 +254,7 @@
                 "Player",
                 "FarmerBot",
                 "GuardBot",
+                "DarkGuardBot",
                 "FollowerBot",
                 "Mannequin",
                 "WoodSpikes"
@@ -378,6 +386,22 @@
                 "stone": 10
             }
         },
+        "darkstoneblock": {
+            "price": {
+                "stone": 150,
+                "gold": 150
+            },
+            "name": "Dark Wall",
+            "description": "Very strong dark wall.",
+            "health": 4000,
+            "width": 64,
+            "height": 64,
+            "limit": 60,
+            "drop": {
+                "stone": 75,
+                "gold": 75
+            }
+        },        
         "door": {
             "price": {
                 "wood": 25,
@@ -393,6 +417,24 @@
                 "wood": 10,
                 "stone": 20
             }
+        },
+        "darkdoor": {
+            "price": {
+                "wood": 150,
+                "stone": 150,
+                "gold": 300
+            },
+            "name": "Dark Door",
+            "limit": 10,
+            "description": "Opens only for you and your clan.",
+            "health": 4000,
+            "width": 64,
+            "height": 64,
+            "drop": {
+                "wood": 75,
+                "stone": 75,
+                "gold": 75
+            }            
         },
         "farmerbot": {
             "attack_distance": 60,
@@ -442,6 +484,7 @@
             "width": 64,
             "height": 64,
             "damage": 5,
+            "mirror_value": 0.3,
             "description": "Spikes damage your enemies!"
         },
         "portal": {
@@ -489,12 +532,16 @@
             "name": "Guard",
             "limit": 3,
             "description": "Defends the area you place him on.",
-            "reward_for_punch": 3,
+            "reward_for_punch": 0,
+			"reward_for_killing": 0,
+			"reward_for_time_interval": 1,
+			"time_interval": 3,
             "health": 200,
             "target_types": [
                 "Player",
                 "FarmerBot",
                 "GuardBot",
+                "DarkGuardBot",
                 "FollowerBot",
                 "Wolf",
                 "Bear",
@@ -503,6 +550,37 @@
                 "WhiteWalker"
             ]
         },
+        "darkguardbot": {
+            "punch_timeout": 1,
+            "radius": 30,
+            "search_radius": 600,
+            "speed": 210.0,
+            "price": {
+                "food": 300,
+                "gold": 600
+            },
+            "damage": 50,
+            "name": "Dark Guard",
+            "limit": 3,
+            "description": "Defends the area you place him on.",
+            "reward_for_punch": 0,
+			"reward_for_killing": 0,
+			"reward_for_time_interval": 1,
+			"time_interval": 3,
+            "health": 500,
+            "target_types": [
+                "Player",
+                "FarmerBot",
+                "GuardBot",
+                "DarkGuardBot",
+                "FollowerBot",
+                "Wolf",
+                "Bear",
+                "WhiteBear",
+                "Mannequin",
+                "WhiteWalker"
+            ]
+        },        
         "followerbot": {
             "punch_timeout": 1.5,
             "radius": 30,
@@ -521,6 +599,7 @@
                 "Player",
                 "FarmerBot",
                 "GuardBot",
+                "DarkGuardBot",
                 "FollowerBot",
                 "Wolf",
                 "Bear",
@@ -549,7 +628,7 @@
             },
             "name": "Food Container",
             "description": "Food container",
-            "limit": 5,
+            "limit": 10,
             "health": 10,
             "width": 64,
             "height": 64,
@@ -565,7 +644,7 @@
             },
             "name": "Wood Container",
             "description": "Wood container",
-            "limit": 5,
+            "limit": 10,
             "health": 10,
             "width": 64,
             "height": 64,
@@ -581,12 +660,28 @@
             },
             "name": "Stone Container",
             "description": "Stone container",
-            "limit": 5,
+            "limit": 10,
             "health": 10,
             "width": 64,
             "height": 64,
             "drop": {
                 "stone": 100
+            },
+            "disable_builder_hat": true
+        },
+        "soulcrate": {
+            "allow_reward": false,
+            "price": {
+                "soul": 100
+            },
+            "name": "Souls Container",
+            "description": "Souls container",
+            "limit": 5,
+            "health": 10,
+            "width": 64,
+            "height": 64,
+            "drop": {
+                "soul": 100
             },
             "disable_builder_hat": true
         },
@@ -639,6 +734,26 @@
             "name": "Black Wolf",
             "description": "You can ride on it and regenerate faster!",
             "limit": 1
+        },
+        "rideablebear": {
+            "price": {
+                "food": 5000,
+                "gold": 10000
+            },
+            "radius": 32,
+            "walk_radius": 650,
+            "idle_timeout_min": 3,
+            "idle_timeout_max": 6,
+            "walk_timeout": 7,
+            "walk_speed": 150.0,
+            "run_speed": 260.0,
+            "driver_speed": 320.0,
+            "driver_regeneration_speed": 0.5,
+            "driver_buildings_damage_multiplier": 3,
+            "driver_damage_multiplier": 1.1,
+            "name": "Black Bear",
+            "description": "You can ride on it and be more powerful!",
+            "limit": 1            
         },
         "soccerball": {
             "price": {
