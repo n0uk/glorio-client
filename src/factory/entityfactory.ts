@@ -2,26 +2,25 @@ import {Entity} from './entity';
 import Game from '../states/game';
 import Spectator from './spectator';
 import LocalPlayer from "./player";
-import {Pig, Chicken, Wolf, Bear, RideablePig, RideableWolf, WhiteBear, WhiteWalker} from "./animals";
+import {Pig, Chicken, Wolf, Bear, RideablePig, RideableWolf, WhiteBear, WhiteWalker, RideableBear} from "./animals";
 import {Protocol} from "../protocol/protocol";
 import EntityType = Protocol.EntityType;
 import {
     BearMeatPickup, BoxPickup, BrownBearHat, BuilderHat, CarrotPickup, ChessHat, ChickenHat, CoinPickup, CowboyHat,
     EggPickup,
     PigMeatPickup,
-    WhiteBearHat, FoxHat, VikingHat, HockeyHat
+    WhiteBearHat, FoxHat, VikingHat, HockeyHat, SoulPickup
 } from "./pickups";
 import {StoneGenerator, WinterStoneGenerator, WinterWoodGenerator, WoodGenerator} from "./generators";
 import {
     WoodBlock, StoneBlock, Door, Garden, Tower, Heartstone, FoodCrate, WoodCrate, StoneCrate,
-    Mannequin, SoccerBall, WoodSpikes, Portal
+    Mannequin, SoccerBall, WoodSpikes, Portal, DarkDoor, DarkStoneBlock
 } from "./buildings";
-import {FollowerBot, FarmerBot, GuardBot, GardenBot} from "./bots";
+import {FollowerBot, FarmerBot, GuardBot, GardenBot, DarkGuardBot} from "./bots";
 import {WinterFloor, WinterTower, WinterWall} from "./worldbuildings";
 
 export class EntityFactory {
     public static create(type: EntityType, world: Game, id: number, parentId: number = -1): Entity {
-        // console.log("Create type: " + EntityType[type]);
         if (type === EntityType.Spectator) {
             return new Spectator(world, id, parentId);
         } else if (type === EntityType.Player) {
@@ -124,6 +123,16 @@ export class EntityFactory {
             return new VikingHat(world, id, parentId);
         } else if (type === EntityType.HockeyHat) {
             return new HockeyHat(world, id, parentId);
+        } else if (type === EntityType.SoulPickup) {
+            return new SoulPickup(world, id, parentId);
+        } else if (type === EntityType.RideableBear) {
+            return new RideableBear(world, id, parentId);
+        } else if (type === EntityType.DarkDoor) {
+            return new DarkDoor(world, id, parentId);
+        } else if (type === EntityType.DarkGuardBot) {
+            return new DarkGuardBot(world, id, parentId);
+        } else if (type === EntityType.DarkStoneBlock) {
+            return new DarkStoneBlock(world, id, parentId);
         }
         return new Entity(world, id, parentId);
     }

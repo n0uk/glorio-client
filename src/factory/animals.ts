@@ -100,3 +100,13 @@ export class RideableWolf extends Entity {
         this.addComponent(new FriendlyAnimalAnimatorComponent());
     }
 }
+
+export class RideableBear extends Entity {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, parentId);
+        this.addComponent(new TransformComponent());
+        this.addComponent(new NetworkTransformComponent());
+        this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Atlases.AtlasesRideablebear.getName(), new Phaser.Point(0.5, 0.5)));
+        this.addComponent(new FriendlyAnimalAnimatorComponent());
+    }
+}

@@ -70,6 +70,12 @@ export namespace Protocol {
         FoxHat = 56,
         VikingHat = 57,
         HockeyHat = 58,
+        SoulPickup = 59,
+        SoulCrate = 60,
+        DarkStoneBlock = 61,
+        DarkDoor = 62,
+        RideableBear = 63,
+        DarkGuardBot = 64
     }
 
     /**
@@ -111,6 +117,11 @@ export namespace Protocol {
         SoccerBall = 15,
         WoodSpikes = 16,
         Portal = 17,
+        SoulCrate = 18,
+        DarkStoneBlock = 19,
+        DarkDoor = 20,
+        RideableBear = 21,
+        DarkGuardBot = 22
     }
 
     export function BuildingTypeToEntityType(buildingType: BuildingType): EntityType {
@@ -129,6 +140,7 @@ export namespace Protocol {
         Wood = 1,
         Stone = 2,
         Gold = 3,
+        Soul = 4,
     }
 
     export function ParseResourceType(s: string): ResourceType {
@@ -141,6 +153,8 @@ export namespace Protocol {
             return ResourceType.Stone;
         } else if (l === "gold") {
             return ResourceType.Gold;
+        } else if (l === "soul") {
+            return ResourceType.Soul;
         }
         return ResourceType.Food;
     }
@@ -195,7 +209,10 @@ export namespace Protocol {
         DayTimeMessage = 43,
         PlayerTeamPingRequest = 44,
         PlayerTeamPingResponse = 45,
-        PlayerRequestDaytime = 46
+        PlayerRequestDaytime = 46,
+        SyncHats = 47,
+        PlayerSelectHat = 48,
+        ServerVersion = 49
     }
 
     /**

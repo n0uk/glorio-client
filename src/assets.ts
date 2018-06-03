@@ -46,6 +46,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/brownbearhat.png'); };
     }
+    export class ImagesBrownbearhaticon {
+        static getName(): string { return 'images_brownbearhaticon'; };
+
+        static getPNG(): string { return require('assets/images/brownbearhaticon.png'); };
+    }
     export class ImagesBuild {
         static getName(): string { return 'images_build'; };
 
@@ -55,6 +60,11 @@ export namespace Images {
         static getName(): string { return 'images_builderhat'; };
 
         static getPNG(): string { return require('assets/images/builderhat.png'); };
+    }
+    export class ImagesBuilderhaticon {
+        static getName(): string { return 'images_builderhaticon'; };
+
+        static getPNG(): string { return require('assets/images/builderhaticon.png'); };
     }
     export class ImagesCarrot {
         static getName(): string { return 'images_carrot'; };
@@ -71,6 +81,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/chesshat.png'); };
     }
+    export class ImagesChesshaticon {
+        static getName(): string { return 'images_chesshaticon'; };
+
+        static getPNG(): string { return require('assets/images/chesshaticon.png'); };
+    }
     export class ImagesChesshatrot {
         static getName(): string { return 'images_chesshatrot'; };
 
@@ -80,6 +95,11 @@ export namespace Images {
         static getName(): string { return 'images_chickenhat'; };
 
         static getPNG(): string { return require('assets/images/chickenhat.png'); };
+    }
+    export class ImagesChickenhaticon {
+        static getName(): string { return 'images_chickenhaticon'; };
+
+        static getPNG(): string { return require('assets/images/chickenhaticon.png'); };
     }
     export class ImagesCoin {
         static getName(): string { return 'images_coin'; };
@@ -91,10 +111,30 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/cowboyhat.png'); };
     }
+    export class ImagesCowboyhaticon {
+        static getName(): string { return 'images_cowboyhaticon'; };
+
+        static getPNG(): string { return require('assets/images/cowboyhaticon.png'); };
+    }
     export class ImagesCrown {
         static getName(): string { return 'images_crown'; };
 
         static getPNG(): string { return require('assets/images/crown.png'); };
+    }
+    export class ImagesDarkdoor {
+        static getName(): string { return 'images_darkdoor'; };
+
+        static getPNG(): string { return require('assets/images/darkdoor.png'); };
+    }
+    export class ImagesDarkguard {
+        static getName(): string { return 'images_darkguard'; };
+
+        static getPNG(): string { return require('assets/images/darkguard.png'); };
+    }
+    export class ImagesDarkstonewall {
+        static getName(): string { return 'images_darkstonewall'; };
+
+        static getPNG(): string { return require('assets/images/darkstonewall.png'); };
     }
     export class ImagesDoor {
         static getName(): string { return 'images_door'; };
@@ -126,6 +166,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/foxhat.png'); };
     }
+    export class ImagesFoxhaticon {
+        static getName(): string { return 'images_foxhaticon'; };
+
+        static getPNG(): string { return require('assets/images/foxhaticon.png'); };
+    }
     export class ImagesGarden {
         static getName(): string { return 'images_garden'; };
 
@@ -150,6 +195,11 @@ export namespace Images {
         static getName(): string { return 'images_hockeyhat'; };
 
         static getPNG(): string { return require('assets/images/hockeyhat.png'); };
+    }
+    export class ImagesHockeyhaticon {
+        static getName(): string { return 'images_hockeyhaticon'; };
+
+        static getPNG(): string { return require('assets/images/hockeyhaticon.png'); };
     }
     export class ImagesKnight {
         static getName(): string { return 'images_knight'; };
@@ -186,6 +236,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/portal.png'); };
     }
+    export class ImagesRideablebear {
+        static getName(): string { return 'images_rideablebear'; };
+
+        static getPNG(): string { return require('assets/images/rideablebear.png'); };
+    }
     export class ImagesSoccerball {
         static getName(): string { return 'images_soccerball'; };
 
@@ -195,6 +250,11 @@ export namespace Images {
         static getName(): string { return 'images_sociallogo'; };
 
         static getPNG(): string { return require('assets/images/sociallogo.png'); };
+    }
+    export class ImagesSoul {
+        static getName(): string { return 'images_soul'; };
+
+        static getPNG(): string { return require('assets/images/soul.png'); };
     }
     export class ImagesStonecrate {
         static getName(): string { return 'images_stonecrate'; };
@@ -231,10 +291,20 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/vikinghat.png'); };
     }
+    export class ImagesVikinghaticon {
+        static getName(): string { return 'images_vikinghaticon'; };
+
+        static getPNG(): string { return require('assets/images/vikinghaticon.png'); };
+    }
     export class ImagesWhitebearhat {
         static getName(): string { return 'images_whitebearhat'; };
 
         static getPNG(): string { return require('assets/images/whitebearhat.png'); };
+    }
+    export class ImagesWhitebearhaticon {
+        static getName(): string { return 'images_whitebearhaticon'; };
+
+        static getPNG(): string { return require('assets/images/whitebearhaticon.png'); };
     }
     export class ImagesWinterfloor {
         static getName(): string { return 'images_winterfloor'; };
@@ -367,6 +437,56 @@ export namespace Atlases {
         static getPNG(): string { return require('assets/atlases/chicken.png'); };
 
         static Frames = AtlasesChickenFrames;
+    }
+    enum AtlasesDarkdoorFrames {
+        DoorClose = <any>'door_close.png',
+        DoorOpen = <any>'door_open.png',
+    }
+    export class AtlasesDarkdoor {
+        static getName(): string { return 'atlases_darkdoor'; };
+
+        static getJSONHash(): string { return require('assets/atlases/darkdoor.json'); };
+
+        static getPNG(): string { return require('assets/atlases/darkdoor.png'); };
+
+        static Frames = AtlasesDarkdoorFrames;
+    }
+    enum AtlasesDarkguardFrames {
+        Hit1 = <any>'hit1.png',
+        Hit2 = <any>'hit2.png',
+        Hit3 = <any>'hit3.png',
+        Hit4 = <any>'hit4.png',
+        Hit5 = <any>'hit5.png',
+        Hit6 = <any>'hit6.png',
+        Hit7 = <any>'hit7.png',
+        Hit8 = <any>'hit8.png',
+        Hit9 = <any>'hit9.png',
+        Hit10 = <any>'hit10.png',
+        Walk1 = <any>'walk1.png',
+        Walk2 = <any>'walk2.png',
+        Walk3 = <any>'walk3.png',
+        Walk4 = <any>'walk4.png',
+        Walk5 = <any>'walk5.png',
+        Walk6 = <any>'walk6.png',
+        Walk7 = <any>'walk7.png',
+        Walk8 = <any>'walk8.png',
+        Walk9 = <any>'walk9.png',
+        Walk10 = <any>'walk10.png',
+        Walk11 = <any>'walk11.png',
+        Walk12 = <any>'walk12.png',
+        Walk13 = <any>'walk13.png',
+        Walk14 = <any>'walk14.png',
+        Walk15 = <any>'walk15.png',
+        Walk16 = <any>'walk16.png',
+    }
+    export class AtlasesDarkguard {
+        static getName(): string { return 'atlases_darkguard'; };
+
+        static getJSONHash(): string { return require('assets/atlases/darkguard.json'); };
+
+        static getPNG(): string { return require('assets/atlases/darkguard.png'); };
+
+        static Frames = AtlasesDarkguardFrames;
     }
     enum AtlasesDoorFrames {
         DoorClose = <any>'door_close.png',
@@ -583,6 +703,33 @@ export namespace Atlases {
         static getPNG(): string { return require('assets/atlases/pig.png'); };
 
         static Frames = AtlasesPigFrames;
+    }
+    enum AtlasesRideablebearFrames {
+        Hit1 = <any>'hit1.png',
+        Hit2 = <any>'hit2.png',
+        Hit3 = <any>'hit3.png',
+        Hit4 = <any>'hit4.png',
+        Hit5 = <any>'hit5.png',
+        Hit6 = <any>'hit6.png',
+        Hit7 = <any>'hit7.png',
+        Hit8 = <any>'hit8.png',
+        Walk1 = <any>'walk1.png',
+        Walk2 = <any>'walk2.png',
+        Walk3 = <any>'walk3.png',
+        Walk4 = <any>'walk4.png',
+        Walk5 = <any>'walk5.png',
+        Walk6 = <any>'walk6.png',
+        Walk7 = <any>'walk7.png',
+        Walk8 = <any>'walk8.png',
+    }
+    export class AtlasesRideablebear {
+        static getName(): string { return 'atlases_rideablebear'; };
+
+        static getJSONHash(): string { return require('assets/atlases/rideablebear.json'); };
+
+        static getPNG(): string { return require('assets/atlases/rideablebear.png'); };
+
+        static Frames = AtlasesRideablebearFrames;
     }
     enum AtlasesWhitebearFrames {
         Hit1 = <any>'hit1.png',

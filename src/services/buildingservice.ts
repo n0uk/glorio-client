@@ -24,6 +24,11 @@ export let BuildingDefinitions: any = {
         spriteName: Assets.Images.ImagesStonewall.getName(),
         scale: 1
     },
+    'DarkStoneBlock': {
+        icon: Assets.Images.ImagesDarkstonewall.getPNG(),
+        spriteName: Assets.Images.ImagesDarkstonewall.getName(),
+        scale: 1
+    },
     'Garden': {
         icon: Assets.Images.ImagesGarden.getPNG(),
         spriteName: Assets.Images.ImagesGarden.getName(),
@@ -42,6 +47,11 @@ export let BuildingDefinitions: any = {
     'GuardBot': {
         icon: Assets.Images.ImagesGuard.getPNG(),
         spriteName: Assets.Images.ImagesGuard.getName(),
+        scale: 0.7
+    },
+    'DarkGuardBot': {
+        icon: Assets.Images.ImagesDarkguard.getPNG(),
+        spriteName: Assets.Images.ImagesDarkguard.getName(),
         scale: 0.7
     },
     'FollowerBot': {
@@ -64,6 +74,11 @@ export let BuildingDefinitions: any = {
         spriteName: Assets.Images.ImagesDoor.getName(),
         scale: 1
     },
+    'DarkDoor': {
+        icon: Assets.Images.ImagesDarkdoor.getPNG(),
+        spriteName: Assets.Images.ImagesDarkdoor.getName(),
+        scale: 1
+    },
     'FoodCrate': {
         icon: Assets.Images.ImagesFoodcrate.getPNG(),
         spriteName: Assets.Images.ImagesFoodcrate.getName(),
@@ -82,6 +97,11 @@ export let BuildingDefinitions: any = {
     'RideableWolf': {
         icon: Assets.Images.ImagesCarwolf.getPNG(),
         spriteName: Assets.Images.ImagesCarwolf.getName(),
+        scale: 1
+    },
+    'RideableBear': {
+        icon: Assets.Images.ImagesRideablebear.getPNG(),
+        spriteName: Assets.Images.ImagesRideablebear.getName(),
         scale: 1
     },
     'Mannequin': {

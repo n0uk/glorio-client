@@ -4,6 +4,7 @@ import {Protocol} from "../protocol/protocol";
 import MessageType = Protocol.MessageType;
 import Message = Protocol.Message;
 import {EventEmitter} from "events";
+import HatManager from "./hatservice";
 
 class Team {
     public teamId: number;
@@ -473,8 +474,17 @@ export default class TeamManager extends Service {
         this.world.socket.sendMessage(MessageType.PlayerTeamMembersRequest, {teamId: teamId});
     }
 
+    public hide() {
+        if (this.enabled) {
+            this.toggle();
+        }
+    }
+
     public toggle() {
         this.enabled = !this.enabled;
+        if (this.enabled) {
+            (this.world.services.getService(HatManager) as HatManager).hide();
+        }
         this.teamList.toggle(this.enabled && this.world.teamId < 0);
         this.memberList.toggle(this.enabled && this.world.teamId > -1);
         this.world.game.input.keyboard.enabled = !this.enabled;

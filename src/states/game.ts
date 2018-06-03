@@ -34,6 +34,8 @@ import TeamManager from "../services/teammanager";
 import DayTimeService from "../services/daytime";
 import NotifyService from "../services/notifyservice";
 import SFXService from "../services/sfxservice";
+import LevelComponent from "../factory/components/level";
+import HatManager from "../services/hatservice";
 
 enum eGameState {
     LOBBY,
@@ -87,6 +89,24 @@ export default class Game extends Phaser.State {
         this.initializeLoginButton();
         this.initializeGameState(eGameState.LOBBY);
         this.initializePartyLink();
+
+        window.onbeforeunload = function (e) {
+            if (this.isNeedToPreventClose()) {
+                let dialogText: string = 'Are you really want to quit?';
+                e.returnValue = dialogText;
+                return dialogText;
+            } else {
+                return;
+            }
+        }.bind(this);
+    }
+
+    private isNeedToPreventClose() {
+        if (this.assignedObject && this.assignedObject.components.level) {
+            return (this.assignedObject.components.level as LevelComponent).currentLevel > 1;
+        } else {
+            return false;
+        }
     }
 
     private initializeLoginButton() {
@@ -122,7 +142,7 @@ export default class Game extends Phaser.State {
             document.getElementById("lobby-layout").style.display = 'none';
             document.getElementById("game-layout").style.display = 'none';
             document.getElementById("respawn-layout").style.display = 'block';
-            this.game.input.keyboard.reset(true);
+            this.game.input.keyboard.reset(false);
             this.game.input.keyboard.enabled = false;
             this.respawnWindow.show();
         }
@@ -344,6 +364,7 @@ export default class Game extends Phaser.State {
         this.services.registerService(new TeamManager(this));
         this.services.registerService(new DayTimeService(this));
         this.services.registerService(new NotifyService(this));
+        this.services.registerService(new HatManager(this));
         $.ajax('http://status.glor.io').done(function (data) {
             this.services.registerService(new ServerSelectionService(this, data));
         }.bind(this));

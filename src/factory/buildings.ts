@@ -18,6 +18,16 @@ export class WoodBlock extends Entity {
     }
 }
 
+export class DarkStoneBlock extends Entity {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, parentId);
+        this.addComponent(new TransformComponent());
+        this.addComponent(new NetworkTransformComponent());
+        this.addComponent(new SpriteComponent(world.LAYER_FOREGROUND_0, Assets.Images.ImagesDarkstonewall.getName(), new Phaser.Point(0.5, 0.5)));
+        this.addComponent(new JumpOnHitComponent());
+    }
+}
+
 export class StoneBlock extends Entity {
     constructor(world: Game, id: number, parentId: number) {
         super(world, id, parentId);
@@ -34,6 +44,17 @@ export class Door extends Entity {
         this.addComponent(new TransformComponent());
         this.addComponent(new NetworkTransformComponent());
         this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Atlases.AtlasesDoor.getName(), new Phaser.Point(0.5, 0.5)));
+        this.addComponent(new DoorAnimatorComponent());
+        this.addComponent(new JumpOnHitComponent());
+    }
+}
+
+export class DarkDoor extends Entity {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, parentId);
+        this.addComponent(new TransformComponent());
+        this.addComponent(new NetworkTransformComponent());
+        this.addComponent(new SpriteComponent(world.LAYER_MIDDLE_0, Assets.Atlases.AtlasesDarkdoor.getName(), new Phaser.Point(0.5, 0.5)));
         this.addComponent(new DoorAnimatorComponent());
         this.addComponent(new JumpOnHitComponent());
     }
