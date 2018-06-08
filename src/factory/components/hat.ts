@@ -89,6 +89,8 @@ export default class HatComponent extends Component {
             return Images.ImagesBuilderhat.getName();
         } else if (type === HatType.HockeyHat) {
             return Images.ImagesHockeyhat.getName();
+        } else if (type === HatType.TankHat) {
+            return Images.ImagesTankhat.getName(); 
         }
 
         // Default

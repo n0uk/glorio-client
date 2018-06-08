@@ -69,6 +69,7 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesBuilderhat.getName(), Assets.Images.ImagesBuilderhat.getPNG());
         this.game.load.image(Assets.Images.ImagesFoxhat.getName(), Assets.Images.ImagesFoxhat.getPNG());
         this.game.load.image(Assets.Images.ImagesHockeyhat.getName(), Assets.Images.ImagesHockeyhat.getPNG());
+        this.game.load.image(Assets.Images.ImagesTankhat.getName(), Assets.Images.ImagesTankhat.getPNG());
 
         this.game.load.image(Assets.Images.ImagesWhitebearhaticon.getName(), Assets.Images.ImagesWhitebearhaticon.getPNG());
         this.game.load.image(Assets.Images.ImagesBrownbearhaticon.getName(), Assets.Images.ImagesBrownbearhaticon.getPNG());
@@ -79,6 +80,7 @@ export default class Preloader extends Phaser.State {
         this.game.load.image(Assets.Images.ImagesBuilderhaticon.getName(), Assets.Images.ImagesBuilderhaticon.getPNG());
         this.game.load.image(Assets.Images.ImagesFoxhaticon.getName(), Assets.Images.ImagesFoxhaticon.getPNG());
         this.game.load.image(Assets.Images.ImagesHockeyhaticon.getName(), Assets.Images.ImagesHockeyhaticon.getPNG());
+        this.game.load.image(Assets.Images.ImagesTankhaticon.getName(), Assets.Images.ImagesTankhaticon.getPNG());
 
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesChicken.getName(), Assets.Atlases.AtlasesChicken.getPNG(), Assets.Atlases.AtlasesChicken.getJSONHash());
         this.game.load.atlasJSONHash(Assets.Atlases.AtlasesKnight.getName(), Assets.Atlases.AtlasesKnight.getPNG(), Assets.Atlases.AtlasesKnight.getJSONHash());

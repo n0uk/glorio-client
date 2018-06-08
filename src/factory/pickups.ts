@@ -107,3 +107,8 @@ export class HockeyHat extends Pickup {
         super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesHockeyhat.getName(), new Phaser.Point(0.5, 0.5));
     }
 }
+export class TankHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesTankhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}

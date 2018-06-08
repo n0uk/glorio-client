@@ -271,6 +271,16 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/stonewall.png'); };
     }
+    export class ImagesTankhat {
+        static getName(): string { return 'images_tankhat'; };
+
+        static getPNG(): string { return require('assets/images/tankhat.png'); };
+    }
+    export class ImagesTankhaticon {
+        static getName(): string { return 'images_tankhaticon'; };
+
+        static getPNG(): string { return require('assets/images/tankhaticon.png'); };
+    }
     export class ImagesTeam {
         static getName(): string { return 'images_team'; };
 

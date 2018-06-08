@@ -33,6 +33,8 @@ class HatListElement extends EventEmitter {
             return Images.ImagesBuilderhaticon.getPNG();
         } else if (type === HatType.HockeyHat) {
             return Images.ImagesHockeyhaticon.getPNG();
+        } else if (type === HatType.TankHat) {
+            return Images.ImagesTankhaticon.getPNG();
         } else {
             return Images.ImagesKnight.getPNG();
         }
