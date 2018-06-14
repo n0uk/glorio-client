@@ -715,14 +715,6 @@ export namespace Atlases {
         static Frames = AtlasesPigFrames;
     }
     enum AtlasesRideablebearFrames {
-        Hit1 = <any>'hit1.png',
-        Hit2 = <any>'hit2.png',
-        Hit3 = <any>'hit3.png',
-        Hit4 = <any>'hit4.png',
-        Hit5 = <any>'hit5.png',
-        Hit6 = <any>'hit6.png',
-        Hit7 = <any>'hit7.png',
-        Hit8 = <any>'hit8.png',
         Walk1 = <any>'walk1.png',
         Walk2 = <any>'walk2.png',
         Walk3 = <any>'walk3.png',
