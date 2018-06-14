@@ -336,7 +336,11 @@
         "hockeyhat": {
             "radius": 24,
             "lifetime": 60
-        }                                        
+        },
+		"tankhat": {
+            "radius": 24,
+            "lifetime": 60
+        }		
     },
     "worldbuildings": {
         "winterwall": {
@@ -388,8 +392,7 @@
         },
         "darkstoneblock": {
             "price": {
-                "stone": 150,
-                "gold": 150
+                "gold": 1000000
             },
             "name": "Dark Wall",
             "description": "Very strong dark wall.",
@@ -420,9 +423,7 @@
         },
         "darkdoor": {
             "price": {
-                "wood": 150,
-                "stone": 150,
-                "gold": 300
+                "gold": 1000000
             },
             "name": "Dark Door",
             "limit": 10,
@@ -484,13 +485,17 @@
             "width": 64,
             "height": 64,
             "damage": 5,
+			"death_spawn": {
+                "night": {
+                    "TankHat": 0.01
+                }
+            },
             "mirror_value": 0.3,
             "description": "Spikes damage your enemies!"
         },
         "portal": {
             "price": {
-                "stone": 300,
-                "gold": 500
+                "gold": 1000000
             },
             "health": 500,
             "name": "Portal",
@@ -556,8 +561,7 @@
             "search_radius": 600,
             "speed": 210.0,
             "price": {
-                "food": 300,
-                "gold": 600
+                "gold": 1000000
             },
             "damage": 50,
             "name": "Dark Guard",
