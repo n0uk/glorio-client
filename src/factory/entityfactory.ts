@@ -9,7 +9,7 @@ import {
     BearMeatPickup, BoxPickup, BrownBearHat, BuilderHat, CarrotPickup, ChessHat, ChickenHat, CoinPickup, CowboyHat,
     EggPickup,
     PigMeatPickup,
-    WhiteBearHat, FoxHat, VikingHat, HockeyHat, SoulPickup, TankHat,
+    WhiteBearHat, FoxHat, VikingHat, HockeyHat, SoulPickup, TankHat, DruidHat, IceHat
 } from "./pickups";
 import {StoneGenerator, WinterStoneGenerator, WinterWoodGenerator, WoodGenerator} from "./generators";
 import {
@@ -135,6 +135,10 @@ export class EntityFactory {
             return new DarkStoneBlock(world, id, parentId);
         } else if (type === EntityType.TankHat) {
             return new TankHat(world, id, parentId);
+        } else if (type === EntityType.DruidHat) {
+            return new DruidHat(world, id, parentId);
+        } else if (type === EntityType.IceHat) {
+            return new IceHat(world, id, parentId);
         }
         return new Entity(world, id, parentId);
     }

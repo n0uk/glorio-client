@@ -141,6 +141,16 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/door.png'); };
     }
+    export class ImagesDruidhat {
+        static getName(): string { return 'images_druidhat'; };
+
+        static getPNG(): string { return require('assets/images/druidhat.png'); };
+    }
+    export class ImagesDruidhaticon {
+        static getName(): string { return 'images_druidhaticon'; };
+
+        static getPNG(): string { return require('assets/images/druidhaticon.png'); };
+    }
     export class ImagesEgg {
         static getName(): string { return 'images_egg'; };
 
@@ -200,6 +210,16 @@ export namespace Images {
         static getName(): string { return 'images_hockeyhaticon'; };
 
         static getPNG(): string { return require('assets/images/hockeyhaticon.png'); };
+    }
+    export class ImagesIcehat {
+        static getName(): string { return 'images_icehat'; };
+
+        static getPNG(): string { return require('assets/images/icehat.png'); };
+    }
+    export class ImagesIcehaticon {
+        static getName(): string { return 'images_icehaticon'; };
+
+        static getPNG(): string { return require('assets/images/icehaticon.png'); };
     }
     export class ImagesKnight {
         static getName(): string { return 'images_knight'; };

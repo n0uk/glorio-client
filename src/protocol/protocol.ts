@@ -76,7 +76,9 @@ export namespace Protocol {
         DarkDoor = 62,
         RideableBear = 63,
         DarkGuardBot = 64,
-        TankHat = 65
+        TankHat = 65,
+        DruidHat = 66,
+        IceHat = 67,
     }
 
     /**
@@ -95,6 +97,8 @@ export namespace Protocol {
         HockeyHat = 9,
         VikingHat = 10,
         TankHat = 11,
+        DruidHat = 12,
+        IceHat = 13,
     }
 
     /**

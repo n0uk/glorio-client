@@ -112,3 +112,13 @@ export class TankHat extends Pickup {
         super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesTankhat.getName(), new Phaser.Point(0.5, 0.5));
     }
 }
+export class DruidHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesDruidhat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
+export class IceHat extends Pickup {
+    constructor(world: Game, id: number, parentId: number) {
+        super(world, id, world.LAYER_BACKGROUND_0, Assets.Images.ImagesIcehat.getName(), new Phaser.Point(0.5, 0.5));
+    }
+}
