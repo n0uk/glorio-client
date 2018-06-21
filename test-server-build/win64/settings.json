@@ -25,7 +25,15 @@
         "radius": 30,
         "reward_for_punch": 1,
         "reward_for_building": 3,
-        "reward_for_killing": 10
+        "reward_for_killing": 10,
+		"death_spawn_player": {
+			"night": {
+				"IceHat": {
+					"chance": 0.02,
+					"min_level": 10
+				}
+			}
+		}
     },
     "bosses": {
         "whitewalker": {
@@ -128,7 +136,8 @@
                     "BuilderHat": 0.01
                 },
                 "night": {
-                    "BuilderHat": 0.05
+                    "BuilderHat": 0.05,
+					"DruidHat": 0.01
                 }
             },            
             "drop": {
@@ -338,6 +347,14 @@
             "lifetime": 60
         },
 		"tankhat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+		"druidhat": {
+            "radius": 24,
+            "lifetime": 60
+        },
+		"icehat": {
             "radius": 24,
             "lifetime": 60
         }		
