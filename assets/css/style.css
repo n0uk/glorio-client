@@ -406,6 +406,14 @@
     #respawn-window {
         display: none;
     }
+
+    .dynastio-banner {
+        display: block;
+        position: fixed;
+        bottom: 10%;
+        left: 50%;
+        margin-left: -364px;
+    }
     
     #respawn-button {
         text-align: center;

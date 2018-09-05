@@ -151,6 +151,11 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/druidhaticon.png'); };
     }
+    export class ImagesDynastiobanner {
+        static getName(): string { return 'images_dynastiobanner'; };
+
+        static getPNG(): string { return require('assets/images/dynastiobanner.png'); };
+    }
     export class ImagesEgg {
         static getName(): string { return 'images_egg'; };
 
